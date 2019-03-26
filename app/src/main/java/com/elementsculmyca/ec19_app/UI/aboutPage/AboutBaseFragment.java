@@ -28,6 +28,7 @@ public class AboutBaseFragment extends Fragment {
 
         @Override
         public void onPageSelected(int i) {
+            //sexy
 
         }
 
