@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.elementsculmyca.ec19_app.DataSources.DataModels.CoordinatorModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 
 import java.text.SimpleDateFormat;
@@ -44,6 +45,8 @@ public class DatabaseInitializer {
                 day="3";
             else
                 day="4";
+            List<CoordinatorModel> coordinatorModelList = data.get(i).getCoordinatorModelList();
+            String coordinator = coordinatorModelList.get(0).getName() + "%" +coordinatorModelList.get(0).getPhone() + "%" + coordinatorModelList.get(1).getName() + "%" +coordinatorModelList.get(1).getPhone();
             EventLocalModel mdData = new EventLocalModel( data.get( i ).getId(),
                     data.get( i ).getTitle() + "",
                     data.get( i ).getClubname() + "",
@@ -55,7 +58,7 @@ public class DatabaseInitializer {
                     data.get( i ).getFee(),
                     data.get(i).getTime().getFrom(),
                     data.get(i).getTime().getTo(),
-                    "",
+                    coordinator,
                     data.get( i ).getPrizes().getPrize1() + "%" + data.get( i ).getPrizes().getPrize2()+"%"+data.get(i).getPrizes().getPrize3(),
                     data.get( i ).getEventType() + "",
                     "",

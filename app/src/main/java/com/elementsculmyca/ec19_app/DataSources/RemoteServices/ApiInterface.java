@@ -48,8 +48,7 @@ public interface ApiInterface {
                                           @Field("college") String college,
                                           @Field("eventid") String eventid,
                                           @Field("eventname") String eventname,
-                                          @Field("team") String team,
-                                          @Field("timestamp") String timestamp
+                                          @Field("timestamp") Long timestamp
     );
 
 }

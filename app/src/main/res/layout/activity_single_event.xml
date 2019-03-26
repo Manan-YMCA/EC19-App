@@ -20,10 +20,11 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="6dp"
                 android:layout_height="30dp"
+                android:id="@+id/back_button"
                 android:background="@drawable/ic_arrow_back_black_24dp" />
             <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="16dp"
@@ -39,14 +40,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#ffffff"
-                    android:textSize="30sp"
+                    android:textSize="28sp"
                     android:id="@+id/event_title"
                     android:fontFamily="@font/overpass_black"
                     android:text="Stage Play" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="7dp"
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -94,7 +95,7 @@
                         android:layout_marginLeft="7dp"/>
                 </LinearLayout>
                 <TextView
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="7dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="17sp"
@@ -124,7 +125,7 @@
                         android:fontFamily="@font/overpass_black"
                         android:text="29 March 2019"
                         android:textColor="#ffffff"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -136,7 +137,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/overpass_black"
                             android:textColor="#ffffff"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:id="@+id/tv_day"
                             tools:text=", Day " />
 
@@ -146,7 +147,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/overpass_black"
                             android:textColor="#ffffff"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             tools:text="2" />
                     </LinearLayout>
 
@@ -178,6 +179,28 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type : "
+                        android:id="@+id/tv_type"
+                        android:textColor="#fff"
+                        android:fontFamily="@font/overpass_black"
+                        android:textSize="18sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@id/event_type"
+                            android:textColor="#fff"
+                            android:text="Team"
+                            android:fontFamily="@font/overpass_black"/>
+                    </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:orientation="horizontal"
@@ -217,8 +240,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:id="@+id/frame"/>
 
     </LinearLayout>

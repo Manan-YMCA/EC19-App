@@ -2,11 +2,14 @@ package com.elementsculmyca.ec19_app.UI.EventPage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.app.PendingIntent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,9 +23,13 @@ import android.util.Patterns;
 import android.content.Intent;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
+import com.elementsculmyca.ec19_app.Util.TicketsGenerator;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -52,8 +59,11 @@ public class RegisterEventFragment extends Fragment {
     ArrayList<TextView> memberno;
     ArrayList<EditText> nameText, collegeText;
     Button addButton;
-    String eventName,eventId,timestamp;
+    LinearLayout addMembers;
+    String eventName,eventId;
+    Long timestamp;
     int count=1;
+    String qrcode;
     SharedPreferences sharedPreferences;
 
 
@@ -77,12 +87,20 @@ public class RegisterEventFragment extends Fragment {
         userEmail=(EditText) view.findViewById(R.id.useremail) ;
         bt = (Button) view.findViewById(R.id.registerNow);
         saveForLater = view.findViewById(R.id.save);
+        addMembers = view.findViewById(R.id.ll_add);
         memberno = new ArrayList<>();
         nameText = new ArrayList<>();
         collegeText = new ArrayList<>();
         nameText.add(userName);
         collegeText.add(userClg);
         addButton=view.findViewById(R.id.add_mem);
+        EventsDao_Impl dao;
+        EventLocalModel eventData;
+        dao=new EventsDao_Impl(AppDatabase.getAppDatabase(getActivity()));
+        eventData =new EventLocalModel();
+        eventData = dao.getEventByEventId(eventId);
+        if(eventData.getEventType().equals("solo"))
+            addMembers.setVisibility(View.GONE);
         final LinearLayout layout = view.findViewById(R.id.layout_infater);
         userName.setText(sharedPreferences.getString("Username",""));
         userClg.setText(sharedPreferences.getString("UserClg",""));
@@ -155,7 +173,7 @@ public class RegisterEventFragment extends Fragment {
                 intentEmail="";
                 intentPhone = "";
                 Long tsLong = System.currentTimeMillis()/1000;
-                timestamp = tsLong.toString();
+                timestamp = tsLong;
                 uname = nameText.get(0).getText().toString();
                 intentPhone += userPhone.getText().toString();
                intentEmail+= userEmail.getText().toString();
@@ -183,15 +201,25 @@ public class RegisterEventFragment extends Fragment {
         }
     }
     void registerEvent() {
-        Call<ResponseModel> call = apiInterface.postregisterEvent( uname, intentPhone, intentEmail,
-                intentClg, eventId, eventId , intentName, timestamp );
+        Call<ResponseModel> call = apiInterface.postregisterEvent( uname+"", intentPhone+"", intentEmail+"",
+                intentClg+"", eventId+"", eventName+"" , timestamp );
         call.enqueue( new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 //TODO YAHAN PE EVENT KA DATA AAEGA API SE UI ME LAGA LENA
-                ResponseModel Rm = response.body();
                 Log.e( "Response", response.body().getStatus() + "" );
+                Log.e("Response",response.body().getQrcode() + "");
+                qrcode = response.body().getQrcode();
+                if(response.body().getStatus().equals("Success")){
+                    TicketFragment ticketFragment = new TicketFragment ();
+                    Bundle args = new Bundle();
+                    args.putString("qrcode", qrcode);
+                    ticketFragment.setArguments(args);
+                    //Inflate the fragment
+                    getFragmentManager().beginTransaction().add(R.id.frame, ticketFragment).remove(RegisterEventFragment.this).commit();
 
+
+                }
             }
 
             @Override

@@ -17,11 +17,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SingleEventActivity extends AppCompatActivity {
-    TextView registerButton,eventName,eventDesc,eventVenue,eventDay,eventDate,eventDayTextView;
-    ImageView sharebutton;
+    TextView registerButton,eventName,eventDesc,eventVenue,eventDay,eventDate,eventDayTextView,eventType,eventTypeTextView;
+    ImageView sharebutton,backButton;
     EventsDao_Impl dao;
     private String eventId;
-    private String eventClubName,eventCatogery,eventRules,eventPhotoLink,eventCoordinator,eventPrize,eventType,eventTags;
+    private String eventClubName,eventCatogery,eventRules,eventPhotoLink,eventCoordinator,eventPrize,eventTags;
     private int eventFee,eventHitCount;
     private long eventStartTime,eventEndTime;
     EventLocalModel eventData;
@@ -38,6 +38,9 @@ public class SingleEventActivity extends AppCompatActivity {
         sharebutton = findViewById(R.id.share_event);
         eventDate = findViewById(R.id.event_date);
         eventDayTextView=findViewById(R.id.tv_day);
+        backButton = findViewById(R.id.back_button);
+        eventTypeTextView = findViewById(R.id.tv_type);
+        eventType = findViewById(R.id.event_type);
         eventDayTextView.setText(", Day ");
         dao=new EventsDao_Impl(AppDatabase.getAppDatabase(SingleEventActivity.this));
 
@@ -67,9 +70,18 @@ public class SingleEventActivity extends AppCompatActivity {
         eventVenue.setText(eventData.getVenue());
         eventPhotoLink = eventData.getPhotolink();
         eventStartTime = eventData.getStartTime();
+        if(eventData.getDay().equals("1")||eventData.getDay().equals("2")||eventData.getDay().equals("3"))
         eventDay.setText(eventData.getDay());
+        else
+            eventDayTextView.setVisibility(View.GONE);
+        if(eventData.getEventType().equals("team"))
+            eventType.setText("Team");
+        else if(eventData.getEventType().equals("solo"))
+            eventType.setText("Solo");
+        else
+            eventType.setText(eventData.getEventType());
         eventStartTime = eventData.getStartTime();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMMM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy h:mm a");
         String dateString= formatter.format(new Date(eventStartTime));
         eventDate.setText(dateString);
 
@@ -83,6 +95,13 @@ public class SingleEventActivity extends AppCompatActivity {
 
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.frame, descriptionEventFragment).commit();
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

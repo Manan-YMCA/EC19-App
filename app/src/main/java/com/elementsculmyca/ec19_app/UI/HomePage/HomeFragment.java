@@ -22,12 +22,15 @@ import android.widget.TextView;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.ClubEventListPage.EventAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -44,7 +47,6 @@ public class HomeFragment extends Fragment {
     Button day1,day2,day3;
     DatabaseInitializer databaseInitializer;
     ProgressBar bar;
-
 
 
 
@@ -154,7 +156,7 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<ArrayList<EventDataModel>> call, Response<ArrayList<EventDataModel>> response) {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
                 ArrayList<EventDataModel> eventList= response.body();
-                databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),eventList);
+                databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),response.body());
                 bar.setVisibility(View.GONE);
                 DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
                 viewPager.setAdapter(adapterday);

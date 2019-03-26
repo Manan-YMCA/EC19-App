@@ -55,9 +55,10 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/drama_x_9_ad_782_cb"
+        android:id="@+id/qrcode"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="10dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

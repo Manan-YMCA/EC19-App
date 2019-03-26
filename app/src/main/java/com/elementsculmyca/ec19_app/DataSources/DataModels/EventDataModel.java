@@ -16,7 +16,7 @@ public class EventDataModel {
     String category;
     @SerializedName("desc")
     String desc;
-    @SerializedName("rules ")
+    @SerializedName("rules")
     String rules;
     @SerializedName("venue")
     String venue;
