@@ -13,7 +13,7 @@ import com.elementsculmyca.ec19_app.R;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simhple {@link Fragment} subclass.
  */
 public class AboutBaseFragment extends Fragment {
 
@@ -28,7 +28,7 @@ public class AboutBaseFragment extends Fragment {
 
         @Override
         public void onPageSelected(int i) {
-            //sexy boy
+            //sexy boy and i know it
         }
 
         @Override
