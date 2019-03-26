@@ -46,7 +46,9 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(EventAdapter.ViewHolder viewHolder, int i) {
         final EventDataModel event = eventList.get(i);
-        viewHolder.eventName.setText(event.getTitle());
+        viewHolder.eventName.setText(event.getTitle().substring(0, Math.min(event.getTitle().length(), 15)));
+        if (event.getTitle().length() > 15)
+            viewHolder.eventName.append("...");
         if(event.getEventType().equals("team"))
         viewHolder.eventType.setText("Team Event");
         else if(event.getEventType().equals("solo"))

@@ -31,6 +31,12 @@ public class MainScreenActivity extends AppCompatActivity {
                 case R.id.navigation_about:
                     switchToFragmentAbout();
                     break;
+//                case R.id.navigation_bookmarks:
+//                    switchToFragmentBookmarks();
+//                case R.id.navigation_developers:
+//                    switchToFragmentDevelopers();
+//                case R.id.navigation_tickets:
+//                    switchToFragmentTickets();
                 case R.id.navigation_logout:
                     SharedPreferences preferences =getSharedPreferences("login_details",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
@@ -60,6 +66,21 @@ public class MainScreenActivity extends AppCompatActivity {
     }
 
     private void switchToFragmentAbout() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.frame, new AboutBaseFragment()).commit();
+    }
+
+    private void switchToFragmentTickets() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
+    }
+
+    private void switchToFragmentDevelopers() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.frame, new DeveloperFragment()).commit();
+    }
+
+    private void switchToFragmentBookmarks() {
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.frame, new BookmarksFragment()).commit();
     }
