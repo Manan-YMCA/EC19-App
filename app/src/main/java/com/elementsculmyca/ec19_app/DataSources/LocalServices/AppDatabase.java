@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {EventLocalModel.class}, version = 1)
+@Database(entities = {EventLocalModel.class, UserLocalModel.class}, version = 1)
 public abstract
 class AppDatabase extends RoomDatabase {
     private static AppDatabase INSTANCE;
@@ -27,4 +27,6 @@ class AppDatabase extends RoomDatabase {
     }
 
     public abstract EventsDao eventsDao();
+
+    public abstract UserDao userDao();
 }

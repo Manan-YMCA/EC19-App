@@ -1,10 +1,10 @@
 package com.elementsculmyca.ec19_app.DataSources.RemoteServices;
 
-import com.elementsculmyca.ec19_app.DataSources.DataModels.ClubEventResponse;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.SponsorModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
+import com.google.gson.JsonArray;
 
 import java.util.ArrayList;
 
@@ -48,7 +48,19 @@ public interface ApiInterface {
                                           @Field("college") String college,
                                           @Field("eventid") String eventid,
                                           @Field("eventname") String eventname,
+                                          @Field("team") JsonArray team,
                                           @Field("timestamp") Long timestamp
     );
+
+    @POST("login")
+    Call<ResponseModel> getLoginStatus(@Field("phone") String phone);
+
+    @FormUrlEncoded
+    @POST("users")
+    Call<ResponseModel> registerUser(@Field("name") String name,
+                                     @Field("phone") String phone,
+                                     @Field("email") String email,
+                                     @Field("college") String college);
+
 
 }

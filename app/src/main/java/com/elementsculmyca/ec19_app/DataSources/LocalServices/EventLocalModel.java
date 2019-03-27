@@ -5,10 +5,6 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-
 @Entity(tableName = "tb_events")
 public class EventLocalModel {
 
@@ -38,7 +34,6 @@ public class EventLocalModel {
     Long endTime;
     @ColumnInfo(name = "coordinators")
     String coordinator;
-
     @ColumnInfo(name = "prizes")
     String prizes;
     @ColumnInfo(name = "eventtype")

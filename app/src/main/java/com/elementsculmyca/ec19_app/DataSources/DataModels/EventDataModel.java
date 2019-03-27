@@ -25,7 +25,7 @@ public class EventDataModel {
     @SerializedName("fee")
     int fee;
      @SerializedName("timing")
-    TimingsModel time;
+     TimingsModel time;
 
     @SerializedName("coordinators")
     List<CoordinatorModel> coordinatorModelList;
