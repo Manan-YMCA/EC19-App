@@ -10,6 +10,21 @@
         android:icon="@drawable/ic_launcher_foreground"
         android:title="About" />
 
+    <!--<item-->
+        <!--android:id="@+id/navigation_bookmarks"-->
+        <!--android:icon="@drawable/ic_launcher_foreground"-->
+        <!--android:title="Bookmarks" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/navigation_developers"-->
+        <!--android:icon="@drawable/ic_launcher_foreground"-->
+        <!--android:title="Developers" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/navigation_tickets"-->
+        <!--android:icon="@drawable/ic_launcher_foreground"-->
+        <!--android:title="Tickets" />-->
+
     <item
         android:id="@+id/navigation_logout"
         android:icon="@drawable/ic_arrow"

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,12 +34,13 @@ public class DescriptionEventFragment extends Fragment{
     private ApiInterface apiInterface;
 
     private String eventId;
-    private TextView rulesHeading,coordinator1Name,coordinator1Phone,coordinator2Name,coordinator2Phone;
+    private TextView rulesHeading,coordinator1Name,coordinator1Phone,coordinator2Name,coordinator2Phone,contactTextView,prizeTextView,prize1Text,prize2Text,prize3Text;
     private int eventFee,eventHitCount;
     private String[] eventTags;
     private PrizeModel eventPrize;
     private TimingsModel eventTime;
     private TextView rules;
+    LinearLayout prize1,prize2,prize3;
     EventsDao_Impl dao;
     EventLocalModel eventData;
 
@@ -55,6 +57,14 @@ public class DescriptionEventFragment extends Fragment{
         coordinator1Phone = view.findViewById(R.id.coordinator1_phone);
         coordinator2Name = view.findViewById(R.id.coordinator2_name);
         coordinator2Phone = view.findViewById(R.id.coordinator2_phone);
+        contactTextView = view.findViewById(R.id.tv_contact);
+        prizeTextView = view.findViewById(R.id.tv_prizes);
+        prize1 = view.findViewById(R.id.ll_prize1);
+        prize2 = view.findViewById(R.id.ll_prize2);
+        prize3 = view.findViewById(R.id.ll_prize3);
+        prize1Text = view.findViewById(R.id.prize1);
+        prize2Text = view.findViewById(R.id.prize2);
+        prize3Text = view.findViewById(R.id.prize3);
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
         //Toast.makeText(getActivity(), eventId, Toast.LENGTH_SHORT).show();
         eventData =new EventLocalModel();
@@ -65,38 +75,47 @@ public class DescriptionEventFragment extends Fragment{
         }
         else
         rules.setText(eventData.getRules());
-
-        PrizeModel prizes= new PrizeModel();
-        List<String> prizeList = Arrays.asList(eventData.getPrizes().split("%"));
-        if(prizeList.size()==1){
-            prizes.setPrize1(prizeList.get(0));
-        }else if(prizeList.size()==2){
-            prizes.setPrize1(prizeList.get(0));
-            prizes.setPrize2(prizeList.get(1));
-        }else if(prizeList.size()==3){
-            prizes.setPrize1(prizeList.get(0));
-            prizes.setPrize2(prizeList.get(1));
-            prizes.setPrize3(prizeList.get(2));
-        }
-        Log.d("prerna",eventData.getCoordinator());
         List<String> coordinator = Arrays.asList(eventData.getCoordinator().split("%"));
-        if(coordinator.size()==0){
+        if(coordinator.get(0).equals("")&&coordinator.get(1).equals("null")&&coordinator.get(2).equals("")&&coordinator.get(3).equals("null"))
+            contactTextView.setVisibility(View.GONE);
+        if(coordinator.get(0).equals("")||coordinator.get(0).equals("null")){
             coordinator1Name.setVisibility(View.GONE);
+        }else
+        coordinator1Name.setText(coordinator.get(0) + " : ");
+        if(coordinator.get(1).equals("")||coordinator.get(1).equals("null")) {
             coordinator1Phone.setVisibility(View.GONE);
-            coordinator2Name.setVisibility(View.GONE);
-            coordinator2Phone.setVisibility(View.GONE);
-        }else if(coordinator.size()==2){
-            coordinator1Name.setText(coordinator.get(0) + " : ");
+        }else
             coordinator1Phone.setText(coordinator.get(1));
+        if(coordinator.get(2).equals("")||coordinator.get(2).equals("null")){
             coordinator2Name.setVisibility(View.GONE);
+        }else
+        coordinator2Name.setText(coordinator.get(2) + " : ");
+        if(coordinator.get(3).equals("")||coordinator.get(3).equals("null")){
             coordinator2Phone.setVisibility(View.GONE);
-        }else if(coordinator.size()==4){
-            coordinator1Name.setText(coordinator.get(0) + " : ");
-            coordinator1Phone.setText(coordinator.get(1));
-            coordinator2Name.setText(coordinator.get(2) + " : ");
-            coordinator2Phone.setText(coordinator.get(3));
-        }
+        }else
+        coordinator2Phone.setText(coordinator.get(3));
 
+        Log.d("prerna",eventData.getPrizes());
+
+        List<String> prizes = Arrays.asList(eventData.getPrizes().split("%"));
+        if(prizes.size()==0||prizes.get(0).equals("null")){
+            prizeTextView.setVisibility(View.GONE);
+            prize1.setVisibility(View.GONE);
+            prize2.setVisibility(View.GONE);
+            prize3.setVisibility(View.GONE);
+        }else if(prizes.size()==1||prizes.get(1).equals("null")){
+            prize1Text.setText(prizes.get(0));
+            prize2.setVisibility(View.GONE);
+            prize3.setVisibility(View.GONE);
+        }else if(prizes.size()==2||prizes.get(2).equals("null")){
+            prize1Text.setText(prizes.get(0));
+            prize2Text.setText(prizes.get(1));
+            prize3.setVisibility(View.GONE);
+        }else {
+            prize1Text.setText(prizes.get(0));
+            prize2Text.setText(prizes.get(1));
+            prize3Text.setText(prizes.get(2));
+        }
         return view;
     }
 
