@@ -65,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="80dp"
+                android:fontFamily="@font/overpass_bold"
                 android:text="Coding Relay is a coding contest in which a team or individual could participate.Paticipants are provided with random competitive programming questions."
                 android:textColor="#fff"
                 android:textSize="12sp" />

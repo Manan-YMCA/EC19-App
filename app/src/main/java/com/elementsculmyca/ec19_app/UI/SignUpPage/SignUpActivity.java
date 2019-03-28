@@ -13,6 +13,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -20,7 +21,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
+import com.elementsculmyca.ec19_app.UI.HomePage.DayAdapter;
 import com.elementsculmyca.ec19_app.UI.LoginScreen.FragmentOtpChecker;
 import com.elementsculmyca.ec19_app.UI.LoginScreen.LoginActivity;
 import com.elementsculmyca.ec19_app.UI.MainScreen.MainScreenActivity;
@@ -28,10 +35,15 @@ import com.elementsculmyca.ec19_app.UI.MainScreen.MainScreenActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 import static com.elementsculmyca.ec19_app.UI.LoginScreen.FragmentOtpChecker.REQUEST_ID_MULTIPLE_PERMISSIONS;
 
 public class SignUpActivity extends AppCompatActivity implements FragmentOtpChecker.otpCheckStatus  {
     TextView login,guest;
+    private ApiInterface apiInterface;
     ImageView submit;
     EditText userName,userCollege,userPhone,userEmail;
     private ProgressDialog mProgress;
@@ -42,6 +54,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        apiInterface = ApiClient.getClient().create( ApiInterface.class );
         login=findViewById(R.id.tv_login);
         submit=findViewById(R.id.submit);
         guest=findViewById(R.id.tv_guest);
@@ -70,7 +83,6 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             public void onClick(View view) {
                 Boolean checker = validateCredentials();
                 if (checker) {
-                    mProgress.show();
                     checkOTP();
                     sharedPreferences=getSharedPreferences("login_details",0);
                     musername = userName.getText().toString();
@@ -162,14 +174,8 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     @Override
     public void updateResult(boolean status) {
         if (status) {
-            SharedPreferences.Editor editor= sharedPreferences.edit();
-            editor.putString("Username",musername);
-            editor.putString("UserClg",muserclg);
-            editor.putString("UserPhone",mUserPhone);
-            editor.putString("UserEmail",mUserEmail);
-            editor.commit();
-            startActivity(new Intent(SignUpActivity.this,MainScreenActivity.class));
-            finish();
+            mProgress.show();
+            registerUser();
         } else {
             mProgress.dismiss();
         }
@@ -185,5 +191,39 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             otpChecker.setArguments(bundle);
             otpChecker.show(fm, "otpCheckerFragment");
         }
+    }
+
+    void registerUser() {
+        Call<ResponseModel> call = apiInterface.registerUser(musername,mUserPhone,mUserEmail,muserclg);
+        call.enqueue( new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                ResponseModel responseModel= response.body();
+                if(responseModel.getStatus().equals("error")){
+                    Toast.makeText(SignUpActivity.this, "User already exists", Toast.LENGTH_SHORT).show();
+                    mProgress.dismiss();
+                }else {
+                    SharedPreferences.Editor editor= sharedPreferences.edit();
+                    editor.putString("Username",musername);
+                    editor.putString("UserClg",muserclg);
+                    editor.putString("UserPhone",mUserPhone);
+                    editor.putString("UserEmail",mUserEmail);
+                    editor.commit();
+                    mProgress.hide();
+                    startActivity(new Intent(SignUpActivity.this,MainScreenActivity.class));
+                    finish();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                mProgress.dismiss();
+                Log.e( "Response", call.request().url() + "" + call.request().body() );
+
+            }
+
+        } );
     }
 }

@@ -2,6 +2,8 @@ package com.elementsculmyca.ec19_app.DataSources.DataModels;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 public class TicketModel {
     @SerializedName("_id")
     String id;
@@ -25,10 +27,8 @@ public class TicketModel {
     Boolean arrived;
     @SerializedName("paymentstatus")
     Boolean paymentstatus;
-    @SerializedName("team")
-    String team;
 
-    public TicketModel(String id, String name, Long phone, String email, String college, String eventid, String eventName, String timestamp, String qrcode, Boolean arrived, Boolean paymentstatus, String team) {
+    public TicketModel(String id, String name, Long phone, String email, String college, String eventid, String eventName, String timestamp, String qrcode, Boolean arrived, Boolean paymentstatus) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -40,7 +40,6 @@ public class TicketModel {
         this.qrcode = qrcode;
         this.arrived = arrived;
         this.paymentstatus = paymentstatus;
-        this.team = team;
     }
 
     public String getId() {
@@ -131,11 +130,4 @@ public class TicketModel {
         this.paymentstatus = paymentstatus;
     }
 
-    public String getTeam() {
-        return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
 }

@@ -2,6 +2,7 @@ package com.elementsculmyca.ec19_app.UI.HomePage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.graphics.Color;
@@ -18,8 +19,10 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
@@ -47,6 +50,8 @@ public class HomeFragment extends Fragment {
     Button day1,day2,day3;
     DatabaseInitializer databaseInitializer;
     ProgressBar bar;
+    SharedPreferences sharedPreferences;
+    String userName,userPhone;
 
 
 
@@ -100,7 +105,9 @@ public class HomeFragment extends Fragment {
         });
 
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
-        getAllEvents();
+        sharedPreferences= this.getActivity().getSharedPreferences("login_details",0);
+        userName = sharedPreferences.getString("Username","");
+        userPhone = sharedPreferences.getString("UserPhone","");
         day1=root.findViewById(R.id.btn_day1);
         day2=root.findViewById(R.id.btn_day2);
         day3=root.findViewById(R.id.btn_day3);
@@ -170,8 +177,8 @@ public class HomeFragment extends Fragment {
             }
 
         } );
-
     }
+
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

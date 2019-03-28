@@ -94,7 +94,7 @@
             android:layout_marginBottom="2dp"
             android:background="@drawable/buttonshapeday1"
             android:fontFamily="@font/overpass_black"
-            android:text="Day1"
+            android:text="Day 1"
             />
         <View
             android:layout_width="1dp"
@@ -113,7 +113,7 @@
             android:layout_marginBottom="2dp"
             android:background="#d8d8d8"
             android:fontFamily="@font/overpass_black"
-            android:text="Day2" />
+            android:text="Day 2" />
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
@@ -131,7 +131,7 @@
             android:layout_marginBottom="2dp"
             android:background="@drawable/buttonshapeday2"
             android:fontFamily="@font/overpass_black"
-            android:text="Day3" />
+            android:text="Day 3" />
     </LinearLayout>
 
 <RelativeLayout

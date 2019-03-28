@@ -17,12 +17,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SingleEventActivity extends AppCompatActivity {
-    TextView registerButton,eventName,eventDesc,eventVenue,eventDay,eventDate,eventDayTextView,eventType,eventTypeTextView;
+    TextView registerButton,eventName,eventDesc,eventVenue,eventDay,eventDate,eventDayTextView,eventFee,eventFeeTextView,category;
     ImageView sharebutton,backButton;
     EventsDao_Impl dao;
     private String eventId;
     private String eventClubName,eventCatogery,eventRules,eventPhotoLink,eventCoordinator,eventPrize,eventTags;
-    private int eventFee,eventHitCount;
     private long eventStartTime,eventEndTime;
     EventLocalModel eventData;
 
@@ -39,8 +38,10 @@ public class SingleEventActivity extends AppCompatActivity {
         eventDate = findViewById(R.id.event_date);
         eventDayTextView=findViewById(R.id.tv_day);
         backButton = findViewById(R.id.back_button);
-        eventTypeTextView = findViewById(R.id.tv_type);
-        eventType = findViewById(R.id.event_type);
+        eventFee = findViewById(R.id.event_fee);
+        category = findViewById(R.id.category);
+        eventFeeTextView = findViewById(R.id.tv_fee);
+        eventFee = findViewById(R.id.event_fee);
         eventDayTextView.setText(", Day ");
         dao=new EventsDao_Impl(AppDatabase.getAppDatabase(SingleEventActivity.this));
 
@@ -70,16 +71,18 @@ public class SingleEventActivity extends AppCompatActivity {
         eventVenue.setText(eventData.getVenue());
         eventPhotoLink = eventData.getPhotolink();
         eventStartTime = eventData.getStartTime();
+        category.setText(eventData.getCategory());
         if(eventData.getDay().equals("1")||eventData.getDay().equals("2")||eventData.getDay().equals("3"))
         eventDay.setText(eventData.getDay());
         else
             eventDayTextView.setVisibility(View.GONE);
         if(eventData.getEventType().equals("team"))
-            eventType.setText("Team");
+            category.setText("Team");
         else if(eventData.getEventType().equals("solo"))
-            eventType.setText("Solo");
+            category.setText("Solo");
         else
-            eventType.setText(eventData.getEventType());
+            category.setVisibility(View.GONE);
+        eventFee.setText(Integer.toString(eventData.getFee()));
         eventStartTime = eventData.getStartTime();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy h:mm a");
         String dateString= formatter.format(new Date(eventStartTime));

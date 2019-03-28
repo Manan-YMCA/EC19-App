@@ -1,22 +1,34 @@
 package com.elementsculmyca.ec19_app.UI.MyTicketsPage;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserLocalModel;
 import com.elementsculmyca.ec19_app.R;
+import com.elementsculmyca.ec19_app.Util.TicketsGenerator;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.ViewHolder> {
 
-    private List<TicketsModel> ticketsDetails;
+    private List<UserLocalModel> ticketsDetails;
     private Context context;
-    public TicketsAdapter(List<TicketsModel> ticketsDetails, Context context){
+    EventsDao_Impl dao;
+    public TicketsAdapter(List<UserLocalModel> ticketsDetails, Context context){
         this.ticketsDetails=ticketsDetails;
         this.context=context;
     }
@@ -30,12 +42,31 @@ public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        TicketsModel ticketDetail = ticketsDetails.get(i);
-        viewHolder.textViewevent.setText(ticketDetail.getEvent());
-        viewHolder.textViewfees.setText(ticketDetail.getFees());
-        viewHolder.textViewvenue.setText(ticketDetail.getVenue());
+        UserLocalModel ticketDetail = ticketsDetails.get(i);
+        viewHolder.textViewevent.setText(ticketDetail.getEventName());
+        dao=new EventsDao_Impl(AppDatabase.getAppDatabase(context));
+         EventLocalModel eventDetails =  dao.getEventByEventId(ticketDetail.getEventid());
+        viewHolder.textViewfees.setText(Integer.toString(eventDetails.getFee()));
+        viewHolder.textViewvenue.setText(eventDetails.getVenue());
         viewHolder.textViewname.setText(ticketDetail.getName());
-        viewHolder.textViewstatus.setText(ticketDetail.getStatus());
+        Boolean paymentStatus = ticketDetail.getPaymentstatus();
+        if(paymentStatus) {
+            viewHolder.textViewstatus.setText("PAID");
+        }else {
+            if(eventDetails.getFee()==0){
+                viewHolder.textViewstatus.setText("FREE");
+            }else {
+                viewHolder.textViewstatus.setText("UNPAID");
+                viewHolder.textViewstatus.setTextColor(Color.parseColor("#d0021b"));
+            }
+        }
+        SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
+        String timeString= formatter.format(new Date(eventDetails.getStartTime()));
+        viewHolder.eventTime.setText(timeString);
+
+        TicketsGenerator ticketsGenerator = new TicketsGenerator();
+        Bitmap qrTicket = ticketsGenerator.GenerateClick(ticketDetail.getQrcode(), context, (int) context.getResources().getDimension(R.dimen.ninety), (int) context.getResources().getDimension(R.dimen.ninety), 40, 40);
+        viewHolder.qrCode.setImageBitmap(qrTicket);
 
     }
 
@@ -51,6 +82,8 @@ public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.ViewHold
         public TextView textViewvenue;
         public TextView textViewname;
         public TextView textViewstatus;
+        public TextView eventTime;
+        ImageView qrCode;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,6 +92,9 @@ public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.ViewHold
             textViewvenue=(TextView) itemView.findViewById(R.id.eventvenue);
             textViewname=(TextView) itemView.findViewById(R.id.username);
             textViewstatus=(TextView) itemView.findViewById(R.id.feestatus);
+            eventTime = itemView.findViewById(R.id.event_time);
+            qrCode = itemView.findViewById(R.id.qrcode);
+
         }
     }
 }

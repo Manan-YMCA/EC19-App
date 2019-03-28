@@ -28,6 +28,7 @@ public interface ApiInterface {
     @POST("clubevent")
     Call<ArrayList<EventDataModel>> getEventByClub(@Field("club") String club);
 
+    @FormUrlEncoded
     @POST("mytickets")
     Call<ArrayList<TicketModel>> getTickets(@Field("phone") String phone);
 
@@ -48,10 +49,10 @@ public interface ApiInterface {
                                           @Field("college") String college,
                                           @Field("eventid") String eventid,
                                           @Field("eventname") String eventname,
-                                          @Field("team") JsonArray team,
+                                          //@Field("team") JsonArray team,
                                           @Field("timestamp") Long timestamp
     );
-
+    @FormUrlEncoded
     @POST("login")
     Call<ResponseModel> getLoginStatus(@Field("phone") String phone);
 

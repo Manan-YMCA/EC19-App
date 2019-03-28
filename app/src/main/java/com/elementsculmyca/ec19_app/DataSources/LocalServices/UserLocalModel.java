@@ -2,10 +2,15 @@ package com.elementsculmyca.ec19_app.DataSources.LocalServices;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 @Entity(tableName = "tb_users")
 public class UserLocalModel {
 
+
+    @NonNull
+    @PrimaryKey
     @ColumnInfo(name = "_id")
     String id;
 
@@ -39,11 +44,9 @@ public class UserLocalModel {
     @ColumnInfo(name = "paymentstatus")
     Boolean paymentstatus;
 
-    @ColumnInfo(name = "team")
-    String team;
 
 
-    public UserLocalModel(String id, String name, Long phone, String email, String college, String eventid, String eventName, String timestamp, String qrcode, Boolean arrived, Boolean paymentstatus, String team) {
+    public UserLocalModel(String id, String name, Long phone, String email, String college, String eventid, String eventName, String timestamp, String qrcode, Boolean arrived, Boolean paymentstatus) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -55,7 +58,6 @@ public class UserLocalModel {
         this.qrcode = qrcode;
         this.arrived = arrived;
         this.paymentstatus = paymentstatus;
-        this.team = team;
     }
 
     public String getId() {
@@ -146,11 +148,4 @@ public class UserLocalModel {
         this.paymentstatus = paymentstatus;
     }
 
-    public String getTeam() {
-        return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
 }

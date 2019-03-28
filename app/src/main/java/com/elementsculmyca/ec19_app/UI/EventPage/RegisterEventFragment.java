@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Patterns;
@@ -202,7 +203,7 @@ public class RegisterEventFragment extends Fragment {
     }
     void registerEvent() {
         Call<ResponseModel> call = apiInterface.postregisterEvent( uname+"", intentPhone+"", intentEmail+"",
-                intentClg+"", eventId+"", eventName+"" , timestamp );
+                intentClg+"", eventId+"", eventName, timestamp );
         call.enqueue( new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {

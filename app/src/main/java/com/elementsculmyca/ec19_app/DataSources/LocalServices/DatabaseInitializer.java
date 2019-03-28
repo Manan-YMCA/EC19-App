@@ -3,6 +3,7 @@ package com.elementsculmyca.ec19_app.DataSources.LocalServices;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.CoordinatorModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class DatabaseInitializer {
 
-    private static final String TAG = DatabaseInitializer.class.getName();
+    private static final String TAG = "prerna";
 
     public static void populateAsync(@NonNull final AppDatabase db, List<EventDataModel> data) {
         PopulateDbAsync task = new PopulateDbAsync( db, data );
@@ -37,6 +38,11 @@ public class DatabaseInitializer {
     private static EventLocalModel addUser(final AppDatabase db, EventLocalModel eventDataItem) {
         db.eventsDao().insertAll( eventDataItem );
         return eventDataItem;
+    }
+
+    private static UserLocalModel addTickets(final AppDatabase db, UserLocalModel ticket) {
+        db.userDao().insertAll( ticket );
+        return ticket;
     }
 
     private static void populateWithData(AppDatabase db, List<EventDataModel> data) {
@@ -77,9 +83,6 @@ public class DatabaseInitializer {
 
             addUser( db, mdData );
         }
-
-        List<EventLocalModel> artList = db.eventsDao().getAll();
-        Log.d( DatabaseInitializer.TAG, "Rows Count: " + artList.size() );
     }
 
 
@@ -89,19 +92,19 @@ public class DatabaseInitializer {
         for (int i = 0; i < data.size(); i++) {
 
             UserLocalModel userLocalModel = new UserLocalModel(
-                    data.get( 0 ).getId() + "",
-                    data.get( 0 ).getArrived() + "",
-                    data.get( 0 ).getPhone(),
-                    data.get( 0 ).getEmail() + "",
-                    data.get( 0 ).getCollege() + "",
-                    data.get( 0 ).getEventid() + "",
-                    data.get( 0 ).getEventName() + "",
-                    data.get( 0 ).getTimestamp() + "",
-                    data.get( 0 ).getQrcode() + "",
-                    data.get( 0 ).getArrived(),
-                    data.get( 0 ).getPaymentstatus(),
-                    data.get( 0 ).getTeam() + ""
+                    data.get( i ).getId() + "",
+                    data.get( i ).getName() + "",
+                    data.get( i ).getPhone(),
+                    data.get( i ).getEmail() + "",
+                    data.get( i ).getCollege() + "",
+                    data.get( i ).getEventid() + "",
+                    data.get( i ).getEventName() + "",
+                    data.get( i ).getTimestamp() + "",
+                    data.get( i ).getQrcode() + "",
+                    data.get( i ).getArrived(),
+                    data.get( i ).getPaymentstatus()
             );
+            addTickets( db, userLocalModel );
         }
     }
 

@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +45,7 @@ public class ClubEventListActivity extends AppCompatActivity {
     private ApiInterface apiInterface;
     private TextView clubDisplayName,clubDescpTextView;
     EventsDao_Impl dao;
+    ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,13 @@ public class ClubEventListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_club_event_list);
         dao=new EventsDao_Impl(AppDatabase.getAppDatabase(ClubEventListActivity.this));
         clubName = getIntent().getStringExtra("clubname");
+        backButton = findViewById(R.id.iv_back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
         String displayName = getIntent().getStringExtra("clubdisplay");
         bar = (ProgressBar)findViewById(R.id.pb);
         clubDisplayName=findViewById(R.id.tv_category_name_heading);

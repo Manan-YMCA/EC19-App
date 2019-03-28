@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:fitsSystemWindows="true"
-    android:layout_marginLeft="10dp"
     tools:context=".UI.ClubEventListPage.ClubEventListActivity">
 
     <RelativeLayout

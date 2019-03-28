@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="match_parent"
+<RelativeLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
@@ -7,7 +7,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:id="@+id/parent">
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -26,12 +27,25 @@
             android:layout_marginRight="5dp"
             android:fontFamily="@font/overpass_black"
             android:textColor="#4a4a4a" />
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/parent"
+            android:id="@+id/rl"
+            android:visibility="visible"
+            >
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/pb"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/imagelogo"
-            android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/ll_username">
         <TextView
@@ -84,16 +98,28 @@
             android:text="You Registered For"
             android:textColor="#9b9b9b"
             android:layout_marginTop="15dp"
+            android:id="@+id/tv_reg"
             android:fontFamily="@font/overpass_black"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/ll_phone"
             android:textSize="20sp"/>
 
-    </RelativeLayout>
+
 
    <android.support.v7.widget.RecyclerView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/recyclertickets"/>
+       android:id="@+id/recyclertickets"
+       android:layout_below="@+id/tv_reg"/>
+</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Log In to View Your Tickets"
+        android:textSize="20sp"
+        android:id="@+id/login"
+        android:fontFamily="@font/overpass_black"
+        android:visibility="gone"/>
 
-</LinearLayout>
+</RelativeLayout>

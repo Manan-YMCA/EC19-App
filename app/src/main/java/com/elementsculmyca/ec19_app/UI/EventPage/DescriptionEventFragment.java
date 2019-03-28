@@ -98,16 +98,16 @@ public class DescriptionEventFragment extends Fragment{
         Log.d("prerna",eventData.getPrizes());
 
         List<String> prizes = Arrays.asList(eventData.getPrizes().split("%"));
-        if(prizes.size()==0||prizes.get(0).equals("null")){
+        if(prizes.size()==0||prizes.get(0).equals("null")||prizes.get(0).equals("0")){
             prizeTextView.setVisibility(View.GONE);
             prize1.setVisibility(View.GONE);
             prize2.setVisibility(View.GONE);
             prize3.setVisibility(View.GONE);
-        }else if(prizes.size()==1||prizes.get(1).equals("null")){
+        }else if(prizes.size()==1||prizes.get(1).equals("null")||prizes.get(1).equals("0")){
             prize1Text.setText(prizes.get(0));
             prize2.setVisibility(View.GONE);
             prize3.setVisibility(View.GONE);
-        }else if(prizes.size()==2||prizes.get(2).equals("null")){
+        }else if(prizes.size()==2||prizes.get(2).equals("null")||prizes.get(2).equals("0")){
             prize1Text.setText(prizes.get(0));
             prize2Text.setText(prizes.get(1));
             prize3.setVisibility(View.GONE);

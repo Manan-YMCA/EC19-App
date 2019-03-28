@@ -2,9 +2,11 @@ package com.elementsculmyca.ec19_app.UI.LoginScreen;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -13,6 +15,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.Window;
@@ -22,12 +25,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.UserModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
+import com.elementsculmyca.ec19_app.UI.HomePage.DayAdapter;
 import com.elementsculmyca.ec19_app.UI.MainScreen.MainScreenActivity;
 import com.elementsculmyca.ec19_app.UI.SignUpPage.SignUpActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.elementsculmyca.ec19_app.UI.LoginScreen.FragmentOtpChecker.REQUEST_ID_MULTIPLE_PERMISSIONS;
 
@@ -35,12 +49,18 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
     TextView guestLogin,signUp;
     EditText phoneNumber;
     private ProgressDialog mProgress;
+    private ApiInterface apiInterface;
     ImageView submit;
+    String phone;
+    SharedPreferences sharedPreferences;
+    FragmentManager fm;
+    FragmentOtpChecker otpChecker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        apiInterface = ApiClient.getClient().create( ApiInterface.class );
 
         phoneNumber = findViewById(R.id.phone_number);
         submit = findViewById(R.id.submit);
@@ -51,6 +71,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
                 startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
             }
         });
+        sharedPreferences=getSharedPreferences("login_details",0);
         mProgress = new ProgressDialog(this);
         mProgress.setMessage("Registering You");
         mProgress.setTitle("Please Wait");
@@ -66,7 +87,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             public void onClick(View view) {
                 Boolean checker = validateCredentials();
                 if (checker) {
-                    mProgress.show();
+                    phone = phoneNumber.getText().toString();
                     checkOTP();
                         }
             }
@@ -144,22 +165,53 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
     @Override
     public void updateResult(boolean status) {
         if (status) {
-            startActivity(new Intent(LoginActivity.this,MainScreenActivity.class));
-            finish();
-        } else {
-            mProgress.dismiss();
+            mProgress.show();
+            registerUser();
         }
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == REQUEST_ID_MULTIPLE_PERMISSIONS){
 
-            FragmentManager fm = getFragmentManager();
-            FragmentOtpChecker otpChecker = new FragmentOtpChecker();
+            fm = getFragmentManager();
+            otpChecker = new FragmentOtpChecker();
             Bundle bundle = new Bundle();
             bundle.putString("phone", phoneNumber.getText().toString());
             otpChecker.setArguments(bundle);
             otpChecker.show(fm, "otpCheckerFragment");
         }
+    }
+
+    void registerUser() {
+        Call<ResponseModel> call = apiInterface.getLoginStatus(phone);
+        call.enqueue( new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                ResponseModel responseModel = response.body();
+                if(responseModel.getStatus().equals("User Not Exist")){
+                    Toast.makeText(LoginActivity.this, "You need to sign up first", Toast.LENGTH_SHORT).show();
+                    mProgress.dismiss();
+                }else{
+                    UserModel user = response.body().getUser();
+                    SharedPreferences.Editor editor= sharedPreferences.edit();
+                    editor.putString("Username",user.getName());
+                    editor.putString("UserClg",user.getCollege());
+                    editor.putString("UserPhone",user.getPhone());
+                    editor.putString("UserEmail",user.getEmail());
+                    editor.commit();
+                    mProgress.hide();
+                    startActivity(new Intent(LoginActivity.this,MainScreenActivity.class));
+                    finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                Log.e( "Response", call.request().url() + "" + call.request().body() );
+
+            }
+
+        } );
     }
 }

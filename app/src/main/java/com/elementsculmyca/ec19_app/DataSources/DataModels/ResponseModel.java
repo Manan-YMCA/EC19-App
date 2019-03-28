@@ -1,5 +1,6 @@
 package com.elementsculmyca.ec19_app.DataSources.DataModels;
 
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserLocalModel;
 import com.google.gson.annotations.SerializedName;
 
 public class ResponseModel {
@@ -9,6 +10,9 @@ public class ResponseModel {
 
     @SerializedName("qrcode")
     String qrcode;
+
+    @SerializedName("data")
+    UserModel user;
 
     public ResponseModel(String status) {
         this.status = status;
@@ -28,5 +32,13 @@ public class ResponseModel {
 
     public void setQrcode(String qrcode) {
         this.qrcode = qrcode;
+    }
+
+    public UserModel getUser() {
+        return user;
+    }
+
+    public void setUser(UserModel user) {
+        this.user = user;
     }
 }
