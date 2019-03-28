@@ -60,11 +60,12 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.ClubEventListPage.ClubEventListActivity"></activity>
+        <activity android:name=".UI.ClubEventListPage.ClubEventListActivity" />
         <activity
             android:name=".UI.SignUpPage.SignUpActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
-        <activity android:name=".UI.HomePage.Searchable"></activity>
+        <activity android:name=".UI.HomePage.Searchable" />
+        <activity android:name=".UI.MenuPage.fragment_menuu"></activity>
     </application>
 
 </manifest>
