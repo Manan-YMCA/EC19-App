@@ -46,7 +46,7 @@ public class ClubEventListActivity extends AppCompatActivity {
     EventsDao_Impl dao;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club_event_list);
         dao=new EventsDao_Impl(AppDatabase.getAppDatabase(ClubEventListActivity.this));
@@ -69,13 +69,13 @@ public class ClubEventListActivity extends AppCompatActivity {
         } else if (clubName.equals("Ananya")) {
             clubDescpTextView.setText("We can break the world into words.");
         } else if (clubName.equals("Vividha")) {
-            clubDescpTextView.setText("Dramatics is what that keeps you in the seats");
+            clubDescpTextView.setText("Dramatics is what keeps you in the seats");
         } else if (clubName.equals("Jhalak")) {
-            clubDescpTextView.setText("The word “photography” is derived from the Greek words photos (light) and graphé (representation by means of lines)....");
+            clubDescpTextView.setText("A good snapshot keeps a moment from running away");
         } else if (clubName.equals("Eklavya")) {
-            clubDescpTextView.setText("If you can't have fun there is no sense of doing it. So, Ask yourself, 'Am I having fun?'");
+            clubDescpTextView.setText("If you can't have fun there is no sense of doing it. So, ask yourself, 'Am I having fun?'");
         } else if (clubName.equals("IEEE")) {
-            clubDescpTextView.setText("People who are crazy enough enough to think they can change the world are the ones who do.");
+            clubDescpTextView.setText("People who are crazy enough to think they can change the world are the ones who do!");
         } else if (clubName.equals("Mechnext")) {
             clubDescpTextView.setText("Blood, Sweat and Tears? Nah! Blood, Swear and Gears. ;)");
         } else if (clubName.equals("Microbird")) {
@@ -83,13 +83,13 @@ public class ClubEventListActivity extends AppCompatActivity {
         } else if (clubName.equals("Nataraja")) {
             clubDescpTextView.setText("Dance dance dance till your feet will follow your heart.");
         } else if (clubName.equals("SAE")) {
-            clubDescpTextView.setText("We create! We destroy! But when we screw, even metals would cry.");
+            clubDescpTextView.setText("We create! We destroy! But when we screw, even metals cry.");
         } else if (clubName.equals("Samarpan")) {
-            clubDescpTextView.setText("The different merited people who gets together and extends the technical bond to family bond.");
+            clubDescpTextView.setText("Electricity is really just organized lightning");
         } else if (clubName.equals("Srijan")) {
-            clubDescpTextView.setText("People here play with colours and experiment with varied forms of  art to embrace the hidden artistic element in every sphere of life as what are days with no colours...");
+            clubDescpTextView.setText("The principles of true art is not to portray, but to evoke");
         } else if (clubName.equals("Taranuum")) {
-            clubDescpTextView.setText("Tarannum originated in India meaning 'melody' and justifying the name we give melody to the words; calling it music.");
+            clubDescpTextView.setText("When words fail, music speaks");
         } else if (clubName.equals("Vivekanand Manch")) {
             clubDescpTextView.setText("Inspired by Swami Vivekanand this is the category where cultural and fun activities fuse with social values. Witness the Social Bonanza.");
         }
