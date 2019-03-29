@@ -34,6 +34,8 @@ import com.elementsculmyca.ec19_app.UI.MainScreen.MainScreenActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -160,17 +162,16 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         }
 
         if(userEmail.getText().toString().equals("")){
-            userEmail.setError("Enter a email address");
+            userEmail.setError("Enter an email address");
             return false;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()){
-            userEmail.setError("Enter a valid email address");
+        if (!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()) {
+            userEmail.setError("Enter a Valid Email Address");
             return false;
         }
         return true;
     }
-
     @Override
     public void updateResult(boolean status) {
         if (status) {

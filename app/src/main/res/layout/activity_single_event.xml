@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#fff">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -19,7 +19,6 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:background="@drawable/drama_x_9_ad_782">
-
             <ImageView
                 android:id="@+id/back_button"
                 android:layout_width="30dp"
@@ -253,15 +252,15 @@
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/Image_event"
-        android:id="@+id/frame"/>
+        android:id="@+id/frame">
+    </FrameLayout>
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

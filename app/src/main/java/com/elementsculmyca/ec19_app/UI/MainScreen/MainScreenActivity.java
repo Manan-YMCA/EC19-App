@@ -12,6 +12,7 @@ import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.BookmarksPage.BookmarksFragment;
 import com.elementsculmyca.ec19_app.UI.DeveloperPage.DeveloperFragment;
 import com.elementsculmyca.ec19_app.UI.HomePage.HomeFragment;
+import com.elementsculmyca.ec19_app.UI.MenuPage.MenuFragment;
 import com.elementsculmyca.ec19_app.UI.MyTicketsPage.MyTicketsFragment;
 import com.elementsculmyca.ec19_app.UI.aboutPage.AboutBaseFragment;
 
@@ -62,7 +63,7 @@ public class MainScreenActivity extends AppCompatActivity {
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchToFragmentBookmarks();
+                switchToFragmentMenu();
             }
         });
     }
@@ -86,9 +87,9 @@ public class MainScreenActivity extends AppCompatActivity {
         manager.beginTransaction().replace(R.id.frame, new DeveloperFragment()).commit();
     }
 
-    private void switchToFragmentBookmarks() {
+    private void switchToFragmentMenu() {
         FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.frame, new BookmarksFragment()).commit();
+        manager.beginTransaction().replace(R.id.frame, new MenuFragment()).commit();
     }
 
     @Override
@@ -97,7 +98,11 @@ public class MainScreenActivity extends AppCompatActivity {
         Fragment f =  fragmentManager.findFragmentById(R.id.frame);
         if(f instanceof HomeFragment){
             super.onBackPressed();
-        }else{
+        }else if(f instanceof BookmarksFragment){
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.frame, new MenuFragment()).commit();
+        }
+        else{
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
         }

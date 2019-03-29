@@ -17,6 +17,8 @@ import com.elementsculmyca.ec19_app.DataSources.DataModels.TimingsModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserLocalModel;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
@@ -43,6 +45,9 @@ public class DescriptionEventFragment extends Fragment{
     LinearLayout prize1,prize2,prize3;
     EventsDao_Impl dao;
     EventLocalModel eventData;
+    UserLocalModel user;
+    UserDao_Impl daoUser;
+    TextView registerButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,8 +70,15 @@ public class DescriptionEventFragment extends Fragment{
         prize1Text = view.findViewById(R.id.prize1);
         prize2Text = view.findViewById(R.id.prize2);
         prize3Text = view.findViewById(R.id.prize3);
+        registerButton = getActivity().findViewById(R.id.register);
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
-        //Toast.makeText(getActivity(), eventId, Toast.LENGTH_SHORT).show();
+        daoUser=new UserDao_Impl(AppDatabase.getAppDatabase(getActivity()));
+        user = daoUser.getTicketbyId(eventId);
+        if(user==null) {
+            registerButton.setText("Register Now!");
+        }
+        else
+            registerButton.setText("View Ticket");
         eventData =new EventLocalModel();
         eventData = dao.getEventByEventId(eventId);
         if(eventData.getRules().equals("")||eventData.getRules().equals("NA")) {

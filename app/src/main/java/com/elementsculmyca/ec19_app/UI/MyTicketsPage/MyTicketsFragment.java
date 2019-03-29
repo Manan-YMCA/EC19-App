@@ -75,13 +75,8 @@ public class MyTicketsFragment extends Fragment {
             login.setVisibility(View.GONE);
             if(isNetworkAvailable()){
                 progressBar.setVisibility(View.VISIBLE);
-                relativeLayout.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.GONE);
                 getAllTickets();
-                relativeLayout.setVisibility(View.VISIBLE);
-                data = dao.getAll();
-                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-                adapter = new TicketsAdapter(data, getActivity());
-                recyclerView.setAdapter(adapter);
             }else {
                 data = dao.getAll();
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
@@ -111,12 +106,21 @@ public class MyTicketsFragment extends Fragment {
                 Log.d("Response",Integer.toString(ticketList.size()));
                 databaseInitializer.populateTicketSync(AppDatabase.getAppDatabase(getActivity()),ticketList);
                 progressBar.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
+                data = dao.getAll();
+                Log.d("Response",Integer.toString(data.size()));
+                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                adapter = new TicketsAdapter(data, getActivity());
+                recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onFailure(Call<ArrayList<TicketModel>> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
-                Log.e( "Response",  t.getMessage() );
+                data = dao.getAll();
+                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                adapter = new TicketsAdapter(data, getActivity());
+                recyclerView.setAdapter(adapter);
 
             }
 

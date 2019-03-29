@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,13 +26,22 @@ import android.util.Patterns;
 import android.content.Intent;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
+import com.elementsculmyca.ec19_app.UI.MyTicketsPage.TicketsAdapter;
 import com.elementsculmyca.ec19_app.Util.TicketsGenerator;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -49,7 +60,7 @@ public class RegisterEventFragment extends Fragment {
 
     private ApiInterface apiInterface;
     EditText userName,userEmail;
-    EditText userClg,name,college,userPhone;
+    EditText userClg,name,phone,userPhone;
     String intentTeam;
     String intentEmail;
     String intentPhone;
@@ -58,15 +69,18 @@ public class RegisterEventFragment extends Fragment {
     String intentName;
     Button bt,saveForLater;
     ArrayList<TextView> memberno;
-    ArrayList<EditText> nameText, collegeText;
+    ArrayList<EditText> nameText, phoneText;
     Button addButton;
     LinearLayout addMembers;
     String eventName,eventId;
     Long timestamp;
     int count=1;
     String qrcode;
+    JSONArray team;
     SharedPreferences sharedPreferences;
-
+    ProgressBar pb;
+    LinearLayout parentLayout;
+    DatabaseInitializer databaseInitializer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -89,11 +103,14 @@ public class RegisterEventFragment extends Fragment {
         bt = (Button) view.findViewById(R.id.registerNow);
         saveForLater = view.findViewById(R.id.save);
         addMembers = view.findViewById(R.id.ll_add);
+        parentLayout = view.findViewById(R.id.parent_layout);
         memberno = new ArrayList<>();
+        pb = view.findViewById(R.id.pb);
         nameText = new ArrayList<>();
-        collegeText = new ArrayList<>();
+        phoneText = new ArrayList<>();
+        team = new JSONArray();
         nameText.add(userName);
-        collegeText.add(userClg);
+        phoneText.add(userPhone);
         addButton=view.findViewById(R.id.add_mem);
         EventsDao_Impl dao;
         EventLocalModel eventData;
@@ -113,7 +130,7 @@ public class RegisterEventFragment extends Fragment {
             public void onClick(View view) {
                 final View v = LayoutInflater.from(getActivity()).inflate(R.layout.add_member_layout, layout, false);
                 name = (EditText) v.findViewById(R.id.memname);
-                college = (EditText) v.findViewById(R.id.memclg);
+                phone = (EditText) v.findViewById(R.id.memphone);
                 final Button remove = v.findViewById(R.id.remove_btn);
                 final TextView tv_2 =  v.findViewById(R.id.member_no_count);
                 remove.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +143,7 @@ public class RegisterEventFragment extends Fragment {
                         Integer remove_member = Integer.parseInt(tv_2.getText().toString());
 
                         nameText.remove(remove_member - 1);
-                        collegeText.remove(remove_member - 1);
+                        phoneText.remove(remove_member - 1);
                         memberno.remove(tv_2);
                         update();
                         p4.removeView(p3);
@@ -137,7 +154,7 @@ public class RegisterEventFragment extends Fragment {
                 tv_2.setText(String.valueOf(count));
                 memberno.add(tv_2);
                 nameText.add(name);
-                collegeText.add(college);
+                phoneText.add(phone);
 
                 layout.addView(v);
             }
@@ -180,15 +197,27 @@ public class RegisterEventFragment extends Fragment {
                intentEmail+= userEmail.getText().toString();
 
                 for (int i = 0; i < nameText.size(); i++) {
-                    intentName += nameText.get(i).getText().toString() + ",";
+                    JSONObject jo = new JSONObject();
+                    try {
+                        jo.put("name", nameText.get(i).getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        jo.put("phone", Double.parseDouble(phoneText.get(i).getText().toString()));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    team.put(jo);
                 }
-                intentName = intentName.substring(0, intentName.length() - 1);
 
                 intentClg = userClg.getText().toString();
 
 //
                 Boolean checker = validateCredentials();
                 if (checker) {
+                    pb.setVisibility(View.VISIBLE);
+                    parentLayout.setVisibility(View.GONE);
                     registerEvent();
                 }
             }
@@ -203,7 +232,7 @@ public class RegisterEventFragment extends Fragment {
     }
     void registerEvent() {
         Call<ResponseModel> call = apiInterface.postregisterEvent( uname+"", intentPhone+"", intentEmail+"",
-                intentClg+"", eventId+"", eventName, timestamp );
+                intentClg+"", eventId+"", eventName, team ,timestamp );
         call.enqueue( new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
@@ -212,10 +241,12 @@ public class RegisterEventFragment extends Fragment {
                 Log.e("Response",response.body().getQrcode() + "");
                 qrcode = response.body().getQrcode();
                 if(response.body().getStatus().equals("Success")){
+                    getAllTickets();
                     TicketFragment ticketFragment = new TicketFragment ();
                     Bundle args = new Bundle();
                     args.putString("qrcode", qrcode);
                     ticketFragment.setArguments(args);
+                    pb.setVisibility(View.GONE);
                     //Inflate the fragment
                     getFragmentManager().beginTransaction().add(R.id.frame, ticketFragment).remove(RegisterEventFragment.this).commit();
 
@@ -230,6 +261,26 @@ public class RegisterEventFragment extends Fragment {
         } );
     }
 
+    void getAllTickets(){
+        Call<ArrayList<TicketModel>> call = apiInterface.getTickets(sharedPreferences.getString("UserPhone",""));
+        call.enqueue( new Callback<ArrayList<TicketModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<TicketModel>> call, Response<ArrayList<TicketModel>> response) {
+                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                ArrayList<TicketModel> ticketList= response.body();
+                Log.d("Response",Integer.toString(ticketList.size()));
+                databaseInitializer.populateTicketSync(AppDatabase.getAppDatabase(getActivity()),ticketList);;
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<TicketModel>> call, Throwable t) {
+
+            }
+
+        } );
+
+    }
+
 
 
     private Boolean validateCredentials() {
@@ -242,9 +293,9 @@ public class RegisterEventFragment extends Fragment {
                 return false;
             }
         }
-        for (EditText collegeTextView : collegeText) {
+        for (EditText collegeTextView : phoneText) {
             if (collegeTextView.getText().toString().equals("")) {
-                collegeTextView.setError("Enter a College Name");
+                collegeTextView.setError("Enter a Phone Number");
                 return false;
             }
         }

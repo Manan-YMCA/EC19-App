@@ -68,14 +68,10 @@ public class Searchable extends AppCompatActivity {
         eventList=new  ArrayList<EventDataModel>();
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
         bar.setVisibility(View.VISIBLE);
-        if(isNetworkAvailable()) {
-            bar.setVisibility(View.VISIBLE);
-            getAllEvents();
-        }else {
             if(dao.countUsers()==0)
                 Toast.makeText(this, "Check your Internet Connection", Toast.LENGTH_SHORT).show();
+            else
             getEvents();
-        }
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -137,7 +133,6 @@ public class Searchable extends AppCompatActivity {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
                 ArrayList<EventDataModel>  eventList = response.body();
                 adapter = new EventAdapter( eventList,Searchable.this);
-
                 eventsrecyclerview.setAdapter(adapter);
                 bar.setVisibility(View.GONE);
 

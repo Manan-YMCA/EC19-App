@@ -2,6 +2,7 @@ package com.elementsculmyca.ec19_app.UI.DeveloperPage;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ public class DeveloperFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         developers = new ArrayList<>();
         addData();
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);

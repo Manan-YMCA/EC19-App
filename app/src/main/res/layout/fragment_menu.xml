@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,78 +39,147 @@
             android:padding="10dp"
             android:fontFamily="@font/overpass_bold"/>
     </RelativeLayout>
-    
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#0000"
-        android:padding="30dp">
+        android:id="@+id/bookmarks"
+        android:padding="15dp">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ec_logo_2019"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bookmark_black_24dp"
+            android:id="@+id/bookmarks_img"
+            android:layout_centerVertical="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bookmarks"
-            android:textSize="25dp"
-            android:layout_marginLeft="30dp"
+            android:text="BOOKMARKS"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/bookmarks_img"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/overpass_bold"
+            android:textColor="#000"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            />
+    </RelativeLayout>
 
-            android:fontFamily="@font/overpass_black"/>
-    </LinearLayout>
-
-    <LinearLayout
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d8d8d8" />
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#0000"
-        android:padding="30dp">
+        android:id="@+id/hackon"
+        android:padding="15dp">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ec_logo_2019"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ec_logo_2019"
+            android:id="@+id/hackon_img"
+            android:layout_centerVertical="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hackon"
-            android:textSize="25dp"
-            android:layout_marginLeft="30dp"
-            android:fontFamily="@font/overpass_black"/>
-    </LinearLayout>
+            android:text="HACK ON"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/hackon_img"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/overpass_bold"
+            android:textColor="#000"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            />
+    </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d8d8d8" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#0000"
-        android:padding="30dp">
+        android:id="@+id/xunbao"
+        android:padding="15dp">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ec_logo_2019"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ec_logo_2019"
+            android:id="@+id/xunbao_img"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xunbao"
-            android:textSize="25dp"
-            android:layout_marginLeft="30dp"
-            android:fontFamily="@font/overpass_black"/>
-    </LinearLayout>
-    <TextView
+            android:text="XUNBAO"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/xunbao_img"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/overpass_bold"
+            android:textColor="#000"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            />
+    </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d8d8d8" />
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="LOGOUT"
-        android:gravity="center"
-        android:fontFamily="@font/overpass_bold"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:layout_marginTop="30dp"
-
-        android:textColor="#000"
-        android:background="#f5a623"/>
-
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#0000"
+        android:id="@+id/logout"
+        android:padding="15dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_power_settings_new_black_24dp"
+            android:id="@+id/logout_img"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG OUT"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/logout_img"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/overpass_bold"
+            android:textColor="#000"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            />
+    </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d8d8d8" />
+    </LinearLayout>
+</ScrollView>

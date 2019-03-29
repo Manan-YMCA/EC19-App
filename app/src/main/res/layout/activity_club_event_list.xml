@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff"
     android:fitsSystemWindows="true"
     tools:context=".UI.ClubEventListPage.ClubEventListActivity">
@@ -75,8 +76,8 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_weight="0.7"
-                android:src="@drawable/ic_launcher_foreground"
-                android:tint="#333131" />
+                android:tint="#333131"
+                android:src="@drawable/ec_logo_2019"/>
 
             <LinearLayout
                 android:layout_width="0dp"

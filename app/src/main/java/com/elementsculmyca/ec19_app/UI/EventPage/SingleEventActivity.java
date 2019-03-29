@@ -1,16 +1,25 @@
 package com.elementsculmyca.ec19_app.UI.EventPage;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserLocalModel;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
 
 import java.text.SimpleDateFormat;
@@ -24,6 +33,10 @@ public class SingleEventActivity extends AppCompatActivity {
     private String eventClubName,eventCatogery,eventRules,eventPhotoLink,eventCoordinator,eventPrize,eventTags;
     private long eventStartTime,eventEndTime;
     EventLocalModel eventData;
+    SharedPreferences sharedPreferences;
+    String phone;
+    UserLocalModel user;
+    UserDao_Impl daoUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +56,10 @@ public class SingleEventActivity extends AppCompatActivity {
         eventFeeTextView = findViewById(R.id.tv_fee);
         eventFee = findViewById(R.id.event_fee);
         eventDayTextView.setText(", Day ");
+        sharedPreferences = getSharedPreferences("login_details",0);
+        phone = sharedPreferences.getString("UserPhone","");
         dao=new EventsDao_Impl(AppDatabase.getAppDatabase(SingleEventActivity.this));
-
+        daoUser=new UserDao_Impl(AppDatabase.getAppDatabase(SingleEventActivity.this));
         // ATTENTION: This was auto-generated to handle app links.
         Intent appLinkIntent = getIntent();
         String appLinkAction = appLinkIntent.getAction();
@@ -87,7 +102,12 @@ public class SingleEventActivity extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy h:mm a");
         String dateString= formatter.format(new Date(eventStartTime));
         eventDate.setText(dateString);
-
+        user = daoUser.getTicketbyId(eventId);
+        if(user==null) {
+            registerButton.setText("Register Now!");
+        }
+        else
+            registerButton.setText("View Ticket");
         final Bundle descFrag = new Bundle();
         descFrag.putString("eventId",eventId);
         descFrag.putString("eventName",eventData.getTitle());
@@ -109,13 +129,31 @@ public class SingleEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (registerButton.getText().equals("Register Now!")) {
-                    registerButton.setText("View Details");
-                    FragmentManager manager = getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.frame, registerEventFragment).commit();
-                } else {
-                    registerButton.setText("Register Now!");
+                    if(phone.equals("")){
+                        Toast.makeText(SingleEventActivity.this, "Login to register for events", Toast.LENGTH_SHORT).show();
+                    }else {
+                        registerButton.setText("Show Details");
+                        FragmentManager manager = getSupportFragmentManager();
+                        manager.beginTransaction().replace(R.id.frame, registerEventFragment).commit();
+                    }
+                } else if(registerButton.getText().equals("Show Details")) {
+                    user = daoUser.getTicketbyId(eventId);
+                    if(user==null) {
+                        registerButton.setText("Register Now!");
+                    }
+                    else
+                        registerButton.setText("View Ticket");
                     FragmentManager manager = getSupportFragmentManager();
                     manager.beginTransaction().replace(R.id.frame, descriptionEventFragment).commit();
+                } else if(registerButton.getText().equals("View Ticket"))
+                {
+                    TicketFragment ticketFragment = new TicketFragment ();
+                    Bundle args = new Bundle();
+                    args.putString("qrcode", user.getQrcode());
+                    ticketFragment.setArguments(args);
+                    FragmentManager manager = getSupportFragmentManager();
+                    manager.beginTransaction().replace(R.id.frame, ticketFragment).commit();
+                    registerButton.setText("Show Details");
                 }
             }
         });

@@ -6,6 +6,8 @@ import com.elementsculmyca.ec19_app.DataSources.DataModels.SponsorModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.google.gson.JsonArray;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -49,7 +51,7 @@ public interface ApiInterface {
                                           @Field("college") String college,
                                           @Field("eventid") String eventid,
                                           @Field("eventname") String eventname,
-                                          //@Field("team") JsonArray team,
+                                          @Field("team") JSONArray team,
                                           @Field("timestamp") Long timestamp
     );
     @FormUrlEncoded

@@ -14,7 +14,7 @@ public interface UserDao {
     List<UserLocalModel> getAll();
 
     @Query("SELECT * FROM tb_users WHERE eventid LIKE :search ")
-    public List<UserLocalModel> getTicketbyId(String search);
+    public UserLocalModel getTicketbyId(String search);
 
     @Insert
     void insertAll(UserLocalModel... articles);

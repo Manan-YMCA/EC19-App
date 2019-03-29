@@ -165,14 +165,23 @@ public class HomeFragment extends Fragment {
                 ArrayList<EventDataModel> eventList= response.body();
                 databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),response.body());
                 bar.setVisibility(View.GONE);
-                DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
-                viewPager.setAdapter(adapterday);
+                try {
+                    DayAdapter adapterday = new DayAdapter(getChildFragmentManager());
+                    viewPager.setAdapter(adapterday);
+                }catch (Exception e){
+
+                }
             }
 
             @Override
             public void onFailure(Call<ArrayList<EventDataModel>> call, Throwable t) {
                 bar.setVisibility(View.GONE);
-                Log.e( "Response", call.request().url() + "" + call.request().body() );
+                try {
+                    DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
+                    viewPager.setAdapter(adapterday);
+                }
+                catch (Exception e){
+                }
 
             }
 
