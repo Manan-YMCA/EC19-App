@@ -162,10 +162,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<ArrayList<EventDataModel>> call, Response<ArrayList<EventDataModel>> response) {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                try{
                 ArrayList<EventDataModel> eventList= response.body();
                 databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),response.body());
                 bar.setVisibility(View.GONE);
-                try {
                     DayAdapter adapterday = new DayAdapter(getChildFragmentManager());
                     viewPager.setAdapter(adapterday);
                 }catch (Exception e){
