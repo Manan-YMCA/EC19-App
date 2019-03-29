@@ -1,5 +1,6 @@
 package com.elementsculmyca.ec19_app.UI.LoginScreen;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -150,7 +151,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         List<String> listPermissionsNeeded = new ArrayList<>();
 
         if (receiveSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(android.Manifest.permission.RECEIVE_MMS);
+            listPermissionsNeeded.add(Manifest.permission.RECEIVE_SMS);
         }
         if (readSMS != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(android.Manifest.permission.READ_SMS);
