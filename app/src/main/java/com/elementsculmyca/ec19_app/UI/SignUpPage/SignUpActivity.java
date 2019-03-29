@@ -1,5 +1,6 @@
 package com.elementsculmyca.ec19_app.UI.SignUpPage;
 
+import android.Manifest;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -122,7 +123,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         List<String> listPermissionsNeeded = new ArrayList<>();
 
         if (receiveSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(android.Manifest.permission.RECEIVE_MMS);
+            listPermissionsNeeded.add(Manifest.permission.RECEIVE_SMS);
         }
         if (readSMS != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(android.Manifest.permission.READ_SMS);
