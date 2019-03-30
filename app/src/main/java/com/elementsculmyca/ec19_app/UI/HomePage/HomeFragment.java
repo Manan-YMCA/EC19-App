@@ -31,6 +31,7 @@ import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.ClubEventListPage.EventAdapter;
+import com.elementsculmyca.ec19_app.UI.MyTicketsPage.TicketsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -165,6 +166,7 @@ public class HomeFragment extends Fragment {
                 try{
                 ArrayList<EventDataModel> eventList= response.body();
                 databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),response.body());
+                getAllTickets();
                 bar.setVisibility(View.GONE);
                     DayAdapter adapterday = new DayAdapter(getChildFragmentManager());
                     viewPager.setAdapter(adapterday);
@@ -186,6 +188,24 @@ public class HomeFragment extends Fragment {
             }
 
         } );
+    }
+
+    void getAllTickets(){
+        Call<ArrayList<TicketModel>> call = apiInterface.getTickets(userPhone);
+        call.enqueue( new Callback<ArrayList<TicketModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<TicketModel>> call, Response<ArrayList<TicketModel>> response) {
+                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                ArrayList<TicketModel> ticketList= response.body();
+                databaseInitializer.populateTicketSync(AppDatabase.getAppDatabase(getActivity()),ticketList);
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<TicketModel>> call, Throwable t) {
+            }
+
+        } );
+
     }
 
     private boolean isNetworkAvailable() {
@@ -279,6 +299,14 @@ public class HomeFragment extends Fragment {
         vivekanand.setDisplayName("Socio-Cultural");
         //vivekanand.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vivekanand));
         allSampleData.add(vivekanand);
+
+        ClubEventModel niramayam = new ClubEventModel();
+        niramayam.setClubName("Niramayam");
+        niramayam.setDisplayName("Yoga");
+        //vivekanand.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vivekanand));
+        allSampleData.add(niramayam);
+
+
     }
 
 }

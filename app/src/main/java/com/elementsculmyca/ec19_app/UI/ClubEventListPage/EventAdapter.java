@@ -9,9 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao_Impl;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserLocalModel;
 import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.EventPage.SingleEventActivity;
 
@@ -46,15 +52,24 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(EventAdapter.ViewHolder viewHolder, int i) {
         final EventDataModel event = eventList.get(i);
+        UserDao_Impl daoUser;
+        daoUser=new UserDao_Impl(AppDatabase.getAppDatabase(context));
         viewHolder.eventName.setText(event.getTitle().substring(0, Math.min(event.getTitle().length(), 15)));
         if (event.getTitle().length() > 15)
             viewHolder.eventName.append("...");
-        if(event.getEventType().equals("team"))
-        viewHolder.eventType.setText("Team Event");
-        else if(event.getEventType().equals("solo"))
+        if(event.getEventType().equals("team")) {
+            viewHolder.eventTypeLayout.setVisibility(View.VISIBLE);
+            viewHolder.eventType.setText("Team Event");
+            viewHolder.eventTypeImage.setBackgroundResource(R.drawable.ic_people_black_24dp);
+        }
+        else if(event.getEventType().equals("solo")) {
+            viewHolder.eventTypeLayout.setVisibility(View.VISIBLE);
             viewHolder.eventType.setText("Solo Event");
-        else
-            viewHolder.eventType.setText(event.getEventType());
+            viewHolder.eventTypeImage.setBackgroundResource(R.drawable.ic_person_black_24dp);
+        }
+        else{
+            viewHolder.eventTypeLayout.setVisibility(View.GONE);
+        }
         String description;
         viewHolder.eventDescription.setText(event.getDesc().substring(0, Math.min(event.getDesc().length(), 150)));
         if (event.getDesc().length() > 150)
@@ -65,6 +80,12 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
         String timeString= formatter.format(new Date(event.getTime().getFrom()));
         viewHolder.eventTime.setText(timeString);
+        UserLocalModel user = daoUser.getTicketbyId(event.getId());
+        if(user==null) {
+            viewHolder.registerButton.setText("Register Now!");
+        }
+        else
+            viewHolder.registerButton.setText("View Ticket");
         viewHolder.registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,6 +145,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView eventName, eventDescription, eventTime,eventVenue,eventType,registerButton;
+        ImageView eventTypeImage;
+        LinearLayout eventTypeLayout;
 
         public ViewHolder(View view) {
             super(view);
@@ -135,6 +158,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
             eventTime = (TextView) view.findViewById(R.id.event_time);
             eventVenue=(TextView)view.findViewById(R.id.event_venue);
             registerButton=view.findViewById(R.id.register);
+            eventTypeImage = view.findViewById(R.id.img_type);
+            eventTypeLayout = view.findViewById(R.id.ll_event_type);
 
         }
     }

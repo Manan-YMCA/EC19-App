@@ -73,6 +73,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
+                finishAffinity();
             }
         });
         guest.setOnClickListener(new View.OnClickListener() {
@@ -167,11 +168,30 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             return false;
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()) {
-            userEmail.setError("Enter a Valid Email Address");
+//        if (!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()) {
+//            userEmail.setError("Enter a Valid Email Address");
+//            return false;
+//        }
+
+        if(!isEmailValid(userEmail.getText().toString())){
+            userEmail.setError("Enter valid email");
             return false;
         }
         return true;
+    }
+
+    public static boolean isEmailValid(String email) {
+        boolean isValid = false;
+
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
     }
     @Override
     public void updateResult(boolean status) {

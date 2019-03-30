@@ -42,8 +42,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:id="@+id/about"
-            android:src="@drawable/ic_info_outline_black_24dp"
+            android:id="@+id/bookmarks"
+            android:src="@drawable/ic_bookmark_black_24dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"/>
 
@@ -53,6 +53,8 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:id="@+id/tickets"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
             android:src="@drawable/ec_logo_2019" />
 
         <ImageView
@@ -61,7 +63,9 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:id="@+id/developers"
-            android:src="@drawable/ec_logo_2019" />
+            android:src="@drawable/developers"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"/>
 
         <ImageView
             android:layout_width="0dp"

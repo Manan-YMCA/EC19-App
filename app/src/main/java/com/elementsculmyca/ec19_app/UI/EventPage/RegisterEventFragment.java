@@ -185,40 +185,44 @@ public class RegisterEventFragment extends Fragment {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intentName = "";
-                intentClg = "";
-                intentTeam="";
-                intentEmail="";
-                intentPhone = "";
-                Long tsLong = System.currentTimeMillis()/1000;
-                timestamp = tsLong;
-                uname = nameText.get(0).getText().toString();
-                intentPhone += userPhone.getText().toString();
-               intentEmail+= userEmail.getText().toString();
+                if (!isNetworkAvailable())
+                    Toast.makeText(getActivity(), "Check your Internet Connection", Toast.LENGTH_SHORT).show();
+                else {
+                    intentName = "";
+                    intentClg = "";
+                    intentTeam = "";
+                    intentEmail = "";
+                    intentPhone = "";
+                    Long tsLong = System.currentTimeMillis() / 1000;
+                    timestamp = tsLong;
+                    uname = nameText.get(0).getText().toString();
+                    intentPhone += userPhone.getText().toString();
+                    intentEmail += userEmail.getText().toString();
 
-                for (int i = 0; i < nameText.size(); i++) {
-                    JSONObject jo = new JSONObject();
-                    try {
-                        jo.put("name", nameText.get(i).getText().toString());
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    for (int i = 0; i < nameText.size(); i++) {
+                        JSONObject jo = new JSONObject();
+                        try {
+                            jo.put("name", nameText.get(i).getText().toString());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                            jo.put("phone", Double.parseDouble(phoneText.get(i).getText().toString()));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        team.put(jo);
                     }
-                    try {
-                        jo.put("phone", Double.parseDouble(phoneText.get(i).getText().toString()));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    team.put(jo);
-                }
 
-                intentClg = userClg.getText().toString();
+                    intentClg = userClg.getText().toString();
 
 //
-                Boolean checker = validateCredentials();
-                if (checker) {
-                    pb.setVisibility(View.VISIBLE);
-                    parentLayout.setVisibility(View.GONE);
-                    registerEvent();
+                    Boolean checker = validateCredentials();
+                    if (checker) {
+                        pb.setVisibility(View.VISIBLE);
+                        parentLayout.setVisibility(View.GONE);
+                        registerEvent();
+                    }
                 }
             }
 
@@ -322,6 +326,13 @@ public class RegisterEventFragment extends Fragment {
             return false;
         }
         return true;
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 

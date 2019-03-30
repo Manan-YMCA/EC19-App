@@ -101,6 +101,8 @@ public class ClubEventListActivity extends AppCompatActivity {
             clubDescpTextView.setText("When words fail, music speaks");
         } else if (clubName.equals("Vivekanand Manch")) {
             clubDescpTextView.setText("Inspired by Swami Vivekanand this is the category where cultural and fun activities fuse with social values. Witness the Social Bonanza.");
+        } else if(clubName.equals("Niramayam")){
+            clubDescpTextView.setText("mann shant chitt shant aatma prasan");
         }
         recyclerView=findViewById(R.id.events_list);
         apiInterface = ApiClient.getClient().create( ApiInterface.class );

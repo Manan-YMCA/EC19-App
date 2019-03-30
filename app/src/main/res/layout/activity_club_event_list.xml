@@ -77,7 +77,7 @@
                 android:layout_height="120dp"
                 android:layout_weight="0.7"
                 android:tint="#333131"
-                android:src="@drawable/ec_logo_2019"/>
+                android:src="@drawable/ic_launcher_foreground"/>
 
             <LinearLayout
                 android:layout_width="0dp"

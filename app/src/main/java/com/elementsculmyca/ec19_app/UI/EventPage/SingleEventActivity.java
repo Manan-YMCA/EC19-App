@@ -26,7 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SingleEventActivity extends AppCompatActivity {
-    TextView registerButton,eventName,eventDesc,eventVenue,eventDay,eventDate,eventDayTextView,eventFee,eventFeeTextView,category;
+    TextView registerButton,eventName,eventDesc,eventVenue,eventDay,eventDate,eventDayTextView,eventFee,eventFeeTextView,category,eventCategory;
     ImageView sharebutton,backButton;
     EventsDao_Impl dao;
     private String eventId;
@@ -53,6 +53,7 @@ public class SingleEventActivity extends AppCompatActivity {
         backButton = findViewById(R.id.back_button);
         eventFee = findViewById(R.id.event_fee);
         category = findViewById(R.id.category);
+        eventCategory = findViewById(R.id.event_category);
         eventFeeTextView = findViewById(R.id.tv_fee);
         eventFee = findViewById(R.id.event_fee);
         eventDayTextView.setText(", Day ");
@@ -86,7 +87,7 @@ public class SingleEventActivity extends AppCompatActivity {
         eventVenue.setText(eventData.getVenue());
         eventPhotoLink = eventData.getPhotolink();
         eventStartTime = eventData.getStartTime();
-        category.setText(eventData.getCategory());
+        eventCategory.setText(eventData.getCategory());
         if(eventData.getDay().equals("1")||eventData.getDay().equals("2")||eventData.getDay().equals("3"))
         eventDay.setText(eventData.getDay());
         else
@@ -97,6 +98,9 @@ public class SingleEventActivity extends AppCompatActivity {
             category.setText("Solo");
         else
             category.setVisibility(View.GONE);
+        if(eventData.getFee() == 0)
+            eventFee.setText("FREE");
+        else
         eventFee.setText(Integer.toString(eventData.getFee()));
         eventStartTime = eventData.getStartTime();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy h:mm a");
@@ -162,8 +166,8 @@ public class SingleEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String baseUrl = "http://elementsculmyca.com/events/";
-                String parsedUrl = baseUrl + "#" + eventData.getTitle().toString().replaceAll(" ", "%20");
-                String message = "Elements Culmyca 2K19: " + "Code Relay " + "View event by clicking the link: " + parsedUrl;
+                String parsedUrl = baseUrl + "#" + eventData.getTitle().replaceAll(" ", "%20");
+                String message = "Elements Culmyca 2K19: " + eventData.getTitle() + " View event by clicking the link: " + parsedUrl;
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");

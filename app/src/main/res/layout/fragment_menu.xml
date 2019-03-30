@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/drama_x_9_ad_782">
         <ImageView
             android:id="@+id/menu"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ec_logo_2019"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             />
         <TextView
             android:layout_below="@+id/menu"
@@ -27,17 +27,26 @@
             android:text="ELEMENTS CULMYCA"
             android:textColor="#ffff"
             android:fontFamily="@font/overpass_bold"
-            android:textSize="25dp"
+            android:textSize="25sp"
+            android:id="@+id/tv_ec"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffff"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:layout_below="@+id/tv_ec"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:text="Login/SignUp"
+            android:id="@+id/tv_login"
+            android:background="@drawable/button_background"
             android:padding="10dp"
-            android:fontFamily="@font/overpass_bold"/>
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/overpass_bold"
+            android:backgroundTint="#99f5a623"
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -45,20 +54,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#0000"
-        android:id="@+id/bookmarks"
+        android:id="@+id/about"
         android:padding="15dp">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_bookmark_black_24dp"
-            android:id="@+id/bookmarks_img"
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:id="@+id/about_img"
             android:layout_centerVertical="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BOOKMARKS"
+            android:text="ABOUT"
             android:textSize="20sp"
-            android:layout_toRightOf="@+id/bookmarks_img"
+            android:layout_toRightOf="@+id/about_img"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/overpass_bold"
             android:textColor="#000"
@@ -86,7 +95,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ec_logo_2019"
+            android:src="@drawable/hackon2"
             android:id="@+id/hackon_img"
             android:layout_centerVertical="true"/>
         <TextView
@@ -122,7 +131,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/ec_logo_2019"
+            android:src="@drawable/xunbao"
             android:id="@+id/xunbao_img"/>
         <TextView
             android:layout_width="wrap_content"
