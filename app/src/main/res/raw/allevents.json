@@ -1,0 +1,3268 @@
+{
+  "success": 1,
+  "data": [
+    {
+      "timing": {
+        "from": 1554957000000,
+        "to": 1554967800000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9313b71038b40004cfd75a",
+      "clubname": "Ananya",
+      "hitCount": 0,
+      "title": "Insurrection",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Insurrection is a conventional debate competition where both the stances of a single topic will come under one roof and battle against a spate of questions to emerge at the top. ",
+      "rules": "1. The debate is a team event and each team will comprise of two participants, one speaking for the motion and the other speaking against the motion.\n2. This is a bilingual debate i.e. speaker can speak either in English or in Hindi, but you can use only one medium throughout your speech.\n3. Both the teammates will have to speak in the same medium of language.\n4. Speaking time of 2+1 minutes will be allotted to every speaker (2 minutes for argumentation + 1 minute for conclusion)\n5. Cross college teams are also allowed.\n6. Decision of the judges will be final and binding on all.\n7. Topic for debate will be declared few days prior to the day of competition. \n8. Rules regarding interjections will be declared on the spot. \n",
+      "fee": 0,
+      "venue": "LT-02",
+      "coordinators": [
+        {
+          "name": "Bhumika Mudgal",
+          "phone": 9818437867,
+          "_id": "5c9fb74f3ac02f0004c9a575"
+        },
+        {
+          "name": "Utkarsh Srivastava",
+          "phone": 9654005801,
+          "_id": "5c9fb74f3ac02f0004c9a574"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555061400000,
+        "to": 1555068600000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9314f71038b40004cfd75d",
+      "clubname": "Ananya",
+      "hitCount": 0,
+      "title": "Alphaaz",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Alphaaz is a bilingual creative writing competition that will provide the participants a platform to showcase their writing skills and give their own interpretations to a given topic.\n\nRegistration Link: https://goo.gl/forms/Xl1GAuKaIfGZ531p1",
+      "rules": "1. Only individual participation is allowed.\n2. The topic will be given on the spot.\n3. One can present their ideas either in English or Hindi.\n4. Entries can be in any form of prose that is essay, letter, article, story, plays etc. \n(Poetry is not allowed.)\n5. Plagiarism is highly condemned.",
+      "fee": 0,
+      "venue": "LT-02",
+      "coordinators": [
+        {
+          "name": "Bhumika Mudgal",
+          "phone": 9818437867,
+          "_id": "5c9cced43ffa1800042886a1"
+        },
+        {
+          "name": "Utkarsh Srivastava",
+          "phone": 9654005801,
+          "_id": "5c9cced43ffa1800042886a0"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554964200000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c946820a9b0620004d2b8fe",
+      "clubname": "SAE",
+      "hitCount": 0,
+      "title": "Steer&Gear ",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "It is a stimulation gaming event. ",
+      "rules": "",
+      "fee": null,
+      "venue": "G7",
+      "coordinators": [
+        {
+          "name": "Bhavya ",
+          "phone": 8505925060,
+          "_id": "5c946820a9b0620004d2b900"
+        },
+        {
+          "name": "Ashish kumar Jha ",
+          "phone": 8826389509,
+          "_id": "5c946820a9b0620004d2b8ff"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555075800000,
+        "to": 1555077600000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9521bbfd86f90004edc9e1",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Laser Show",
+      "eventtype": "NA",
+      "category": "Main Stage",
+      "desc": "A Mesmerising laser show which you may have never witnessed.",
+      "rules": "",
+      "fee": null,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9521bbfd86f90004edc9e3"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9521bbfd86f90004edc9e2"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555048800000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c952316fd86f90004edc9e4",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Smash it",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "A Mesmerising laser show which you may have never witnessed\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Outside Administration Block",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c952316fd86f90004edc9e6"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c952316fd86f90004edc9e5"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552280400000,
+        "to": 1552473000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c953d3afd86f90004edca29",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "J.C. Bose  UST Logo",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "Unveiling of the University’s logo.",
+      "rules": "",
+      "fee": null,
+      "venue": "Lal Chowk (LC)",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953d3afd86f90004edca2b"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953d3afd86f90004edca2a"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554958800000,
+        "to": 1555237800000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9547edfd86f90004edca37",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "J.C. Bose  UST Logo",
+      "eventtype": "NA",
+      "category": "Main Stage",
+      "desc": "Unveiling of the University’s logo.",
+      "rules": "",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9547edfd86f90004edca39"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9547edfd86f90004edca38"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554957000000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95dd25ae5a3c0004c7e485",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Antarang",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": " An exquisite art exhibition imbibing varied art forms.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Electrical Chowk",
+      "coordinators": [
+        {
+          "name": "Sachin Arya",
+          "phone": 9812119366,
+          "_id": "5c95dd25ae5a3c0004c7e487"
+        },
+        {
+          "name": "Inderjeet",
+          "phone": 7683087596,
+          "_id": "5c95dd25ae5a3c0004c7e486"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555214400000,
+        "to": 1555245360000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98fb46d848980004aa92c1",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "Zenith 19 hackathon",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "",
+      "rules": "",
+      "fee": null,
+      "venue": "MMC",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c98fb46d848980004aa92c3"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c98fb46d848980004aa92c2"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555129800000,
+        "to": 1555140600000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9315bd1038b40004cfd760",
+      "clubname": "Ananya",
+      "hitCount": 0,
+      "title": "Witsvilla",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "WITSVILLA is a multi-level debate that tests your wits and spontaneity. It comprises of three rounds namely:\n\nROUND I -GROUP DISCUSSION\nGet into a discussion with your fellow participants on the given topic.\n \nROUND II -TURNCOAT\nSpeak both for and against the motion on the topic given.\n\nROUND III -FACE OFF\nGo face to face with your competitor, debating either for or against the motion.\n\nRegistration Link: https://goo.gl/forms/Xl1GAuKaIfGZ531p1",
+      "rules": "Rules:\n1. The event is bilingual.\n2. Topics will be given on the spot.\n3. The decision of the judges will be final and binding.\n4. Separate rules of each round will be announced on the spot.",
+      "fee": 0,
+      "venue": "IT-05",
+      "coordinators": [
+        {
+          "name": "Bhumika Mudgal",
+          "phone": 9818437867,
+          "_id": "5c9ccf203ffa1800042886a3"
+        },
+        {
+          "name": "Utkarsh Srivastava",
+          "phone": 9654005801,
+          "_id": "5c9ccf203ffa1800042886a2"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554967800000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9316801038b40004cfd763",
+      "clubname": "Ananya",
+      "hitCount": 0,
+      "title": "Big Fact Hunt ",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Big Fact Hunt is a multi-round quiz that lets you use the internet in your quest for answers. It’s about who leads the war of knowledge and strives forward with awareness. So, buck up and prove your mettle in the art of quizzing.\n\nRegistration Link: https://goo.gl/forms/Xl1GAuKaIfGZ531p1",
+      "rules": "1. At least one participant from every team should have a twitter account. \n2. Maximum 3 members are allowed.\n3. Participants must bring their own handsets with internet access. \n4. Decision of the Quiz master(s) will be final.",
+      "fee": null,
+      "venue": "LT-02",
+      "coordinators": [
+        {
+          "name": "Bhumika Mudgal",
+          "phone": 9818437867,
+          "_id": "5c9316801038b40004cfd765"
+        },
+        {
+          "name": "Utkarsh Srivastava",
+          "phone": 9654005801,
+          "_id": "5c9316801038b40004cfd764"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555061400000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9317251038b40004cfd766",
+      "clubname": "Ananya",
+      "hitCount": 0,
+      "title": "Tell A Tale",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Hello Storytellers!  \nThe storytelling competition is the event for you if want some patient listeners for your stories.\n \nThe event will have two rounds: \nRound 1:\nSend your entries in the form of text via the registration form. \n( Entries sent along with video/audio are most appreciated)\nRound 2:\nThe selected storytellers will receive a confirmation mail and will have to present the story on the day of the event.\n",
+      "rules": "1. It's a bilingual event. You can use 1-2 words from the not-chosen language, but try to steer clear of that.\n2. Single or at maximum a team of two can participate.\n3. Time limit is 5 minutes.\n4. Participation in both rounds is mandatory.\n5. The story sent in the first round and the story presented should be the same.\n6. Plagiarism is highly condemned.\n7. The decision of the judges will be final.",
+      "fee": 0,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "Bhumika Mudgal",
+          "phone": 9818437867,
+          "_id": "5c9cd0363ffa1800042886a7"
+        },
+        {
+          "name": "Utkarsh Srivastava",
+          "phone": 9654005801,
+          "_id": "5c9cd0363ffa1800042886a6"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555140600000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9317e61038b40004cfd769",
+      "clubname": "Ananya",
+      "hitCount": 0,
+      "title": "JAM (Just a Minute)",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "JAM is a battlefield for all the grammar nazis out there, who think they can spot even the minute errors of speech and knock people off their wits. Table of 7 to 8 participants depending upon number of presenters and time available will compete in one round. One speaker will start and others will slam the table when and if they find error.",
+      "rules": "1. The JAM master is God. No questions or arguments once the final decision has been made. \n2. To object, slam the table. The JAM master decides when you are allowed to put forth your objection.\n\n3. The total time is sixty seconds, inclusive of all the time that all the speakers in a given round are allowed to speak. \n4. Usage of only 'Queen's English' is allowed.\n5. Topic will be given on the spot. \n6. Points are given in the following manner:\n    a. Positive points for every second that you speak. \n    b. Positive points for every correct objection. \n7. The winner is the person with the maximum number of points at the end of all rounds. ",
+      "fee": 0,
+      "venue": "MBA Language Lab",
+      "coordinators": [
+        {
+          "name": "Bhumika Mudgal",
+          "phone": 9818437867,
+          "_id": "5c9cd0d23ffa1800042886a9"
+        },
+        {
+          "name": "Utkarsh Srivastava",
+          "phone": 9654005801,
+          "_id": "5c9cd0d23ffa1800042886a8"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554988200000,
+        "to": 1554990000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93935d68c9b3000476be44",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "Blaze-O-Rama",
+      "eventtype": "NA",
+      "category": "Main Stage",
+      "desc": "When love speaks the voice of heaven and stars set the dazzling night to emotions, time must cease to contemplate this glorious fusion of dance and romance. So, let this Light of Love set the stage on fire with a pinch of drama adding even more flavours to it. So, put on your dancing shoes and hold on your breaths for Blaze-O-Rama: the penumbral light and dance show.",
+      "rules": "NA",
+      "fee": null,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "Daksh Bakshi",
+          "phone": 9205848563,
+          "_id": "5c93935d68c9b3000476be46"
+        },
+        {
+          "name": "Ankita Chawla",
+          "phone": 7404490622,
+          "_id": "5c93935d68c9b3000476be45"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554958800000,
+        "to": 1555153200000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93945768c9b3000476be47",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "MicroWorld",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "Get ready to enter into the small world of electronics which only seems to be small but has infinite boundaries when it comes to fun and learning. Let the machines foretell your future, counsel your personality, find a ghost near you and maybe give a piece of love advice for you.\nMicrobird hereby announces its self-designed mini-world, MicroWorld: an abode for technology. Come and let's share this world of fun and secrets together!!\n",
+      "rules": "NA",
+      "fee": null,
+      "venue": "Shakuntalam",
+      "coordinators": [
+        {
+          "name": "Daksh Bakshi",
+          "phone": 9205848563,
+          "_id": "5c93945768c9b3000476be49"
+        },
+        {
+          "name": "Khush Virmani",
+          "phone": 9582421360,
+          "_id": "5c93945768c9b3000476be48"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554958800000,
+        "to": 1555153200000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93955c68c9b3000476be4a",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "Whack'em All",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "Still got an urge to step on things in your way? Still got a child inside you? Still crave to play the frog hitting game that everyone had in their playing box? \nMicrobird brings to you the classic frog and hammer game in an all new avatar! So, let the child inside you born again and hit it out coz its Whack’em All. Come all, play all and may the fastest mind win.",
+      "rules": "NA",
+      "fee": null,
+      "venue": "Reception",
+      "coordinators": [
+        {
+          "name": "Khush Virmani",
+          "phone": 9582421360,
+          "_id": "5c93955c68c9b3000476be4c"
+        },
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c93955c68c9b3000476be4b"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554958800000,
+        "to": 1555153200000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9395c168c9b3000476be4d",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "Kaleidoscope",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "Modernization is the new perseverance. Growing to progress has always been the call of the hour be it for our ideas or their reflection to the real world. Ponder upon being able to think of any word or pattern and showing it to the world on a big screen the very next moment! Sounds like a miraculous invention! \nHeeding to this, Microbird presents a contemporary way to showcase our imagination through our much-awaited event Kaleidoscope: The Modern Display,changing the world from proposition to presentation.\n",
+      "rules": "NA",
+      "fee": null,
+      "venue": "Reception",
+      "coordinators": [
+        {
+          "name": "Ankita Chawla",
+          "phone": 7404490622,
+          "_id": "5c9395c168c9b3000476be4f"
+        },
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c9395c168c9b3000476be4e"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554964200000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93966068c9b3000476be50",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "RoboSoccer",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "Ever thought about playing soccer with your creation and no physical exertion. Do you think you have an ability to fuse technology with sports? So, get ready for the challenge and make your own bots to compete in the soccer world.\nSo here’s presenting RoboSoccer: an blend of robotics and soccer that is bound to check out your technical dexterity.",
+      "rules": "Problem statement: Fabricate a manually controlled robot capable of playing football.                                                                                                   \nMaximum number of members in one team: 4.\nBOT SPECIFICATIONS:\nMaximum size: 35x35x25 cm.\nWeight:- The weight of the bot should not exceed 4 kg.     \nPower supply:- The voltage at any point in the bot should not be more than 24 volts.  Internal combustion engines are not allowed. \nOrganizers will provide 230 V AC supply.\nControl:Wired or wireless. For wired control, length of wire should be at least 10 m and for wireless control, the remote should have dual frequency.\nGeneral rules: The bot should not damage the arena. Points will be deducted in any such case. Winner will be declared on knockout basis.  \nDecision of judges will be final.\nNote:There should not be any mechanism of trapping the ball. The kicking mechanism employed should be well within the bot specifications.\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Khush Virmani",
+          "phone": 9582421360,
+          "_id": "5c93966068c9b3000476be52"
+        },
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c93966068c9b3000476be51"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555050600000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9396ff68c9b3000476be53",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "Ex-QUIZ-Me",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "What is the first thought that manages to persist in your mind whenever you listen to the word ‘Quiz’? Gameplay for nerds? Isn’t it? \nWell, Microbird-The Techno club brings you Ex-QUIZ-Me, the competitive event that brings you fun with the essence of the quiz.\nIf you feel like exploring the fun element in you with your wits and brain, then stay ready and make your teams to answer the question, Ex-Quiz-Me: Can you prove your wits?\n",
+      "rules": "General Rules: - \n1.The maximum number of members in each team will be 4. Candidates from different institutes can make a team.\n2. There will be three rounds. Rounds will be declared at the moment.\n3. Use of internet is strictly prohibited.\n4. The team getting maximum points at the end of all rounds will be declared as winner.\n5. Decision of the judges shall remain final.\n",
+      "fee": null,
+      "venue": "MMC",
+      "coordinators": [
+        {
+          "name": "Ankita Chawla",
+          "phone": 7404490622,
+          "_id": "5c9396ff68c9b3000476be55"
+        },
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c9396ff68c9b3000476be54"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555047000000,
+        "to": 1555054200000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93977268c9b3000476be5c",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "TechChef",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Are you crazy for technical stuffs? Do you like cooking but love to move your hands on electronic stuffs, looking for breadboards to build up new freaking outputs? So, here is a chance to enhance your knowledge and storm your brain.\nMicrobird brings to you TechChef- an event where you have to apply your basic knowledge and make a circuit with the given components with various exciting twists and turns.\n",
+      "rules": "Round 1: It will be an electronics questionnaire round. \nRound 2: Case Study of an electronic problem statement.\nRound 3:PCB Designing Round.\nGeneral Rules: \n1. Task will be performed individually. \n2. Accuracy in work will be given highest privilege. \n3. Time constraints will be there.\n4. Use of internet will lead to immediate disqualification.\n5.Candidate should not carry any electronic equipment with themselves.\n6.Decision of the judges shall be final.\n",
+      "fee": null,
+      "venue": "S-8",
+      "coordinators": [
+        {
+          "name": "Daksh Bakshi",
+          "phone": 9205848563,
+          "_id": "5c93977268c9b3000476be5e"
+        },
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c93977268c9b3000476be5d"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555050600000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9397e468c9b3000476be5f",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "Catch'em All",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "It is hard to believe when a 90's kid says that he doesn't know what 'Pinball' is. So, its time that you set the ball rolling, crossing over all bumpers and ramps.\nMicrobird- the Techno club, brings a journey filled with nostalgia and amusement through its one of its most awaited event Catch'em All-a twist of flippers for you gotta catch’em all to win it!\n",
+      "rules": "Problem statement: Fabricate a manually controlled robot capable of catching balls that are falling after passing through hurdles in least time.                                                                                                   \nMaximum number of members in one team: 4.\nBOT SPECIFICATIONS:\nMaximum size: 25x25x25 cm.     \nPower supply:- The voltage at any point in the bot should not be more than 24 volts.  Internal combustion engines are not allowed. \nOrganizers will provide 230 V AC supply.\nControl:Wired or wireless. For wired control, length of wire should be at least 10 m and for wireless control, the remote should have dual frequency.\nGeneral rules: \nThe bot should not damage the arena.Points will be deducted in any such case. \nDecision of the judges will be final.\nNote: The catching  area  of the  bot  must  be  a  hole  of  diameter  5 cm only.  There must  not  be  any addition (like a v-funnel etc.) to the hole.\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Daksh Bakshi",
+          "phone": 9205848563,
+          "_id": "5c9397e468c9b3000476be61"
+        },
+        {
+          "name": "Khush Virmani",
+          "phone": 9582421360,
+          "_id": "5c9397e468c9b3000476be60"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555050600000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93985f68c9b3000476be68",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "RoboRennen",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "Does the world of robotics interest you? A robot which carries load, collects and overcomes all the hurdles, just like a superhero. Make winning a habit, it doesn't matter if you win by an inch or a mile. \nSo, Microbird introduces you the most thrilling event of the year- RoboRennen.\n",
+      "rules": "Problem statement: Fabricate a manually controlled robot capable of lifting obstacles and traversing hurdles.                                                                                                   \nMaximum number of members in one team: 4.\nBOT SPECIFICATIONS:\nMaximum size: 35x35x25 cm.\nWeight:- The weight of the bot should not exceed 4 kg.     \nPower supply:- The voltage at any point in the bot should not be more than 24 volts.  Internal combustion engines are not allowed. \nOrganizers will provide 230 V AC supply.\nControl: Wired or wireless. For wired control, length of wire should be at least 10 m and for wireless control, the remote should have dual frequency.\nGeneral rules: \nThe bot should not damage the arena. Points will be deducted in any such case. \nThe competition is based on a time trail system. The bot taking the minimum time will be considered as the winner.\nTwo hand touches are allowed with no penalty otherwise it is allowed with a penalty of 10 seconds\nYou can skip one hurdle during the race.\nIf the block falls in between, then the player has to restart from the checkpoint.\nDecision of judges will be final.\n",
+      "fee": null,
+      "venue": "Main Ground",
+      "coordinators": [
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c93985f68c9b3000476be6a"
+        },
+        {
+          "name": "Khush Virmani",
+          "phone": 9582421360,
+          "_id": "5c93985f68c9b3000476be69"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554057000000,
+        "to": 1554920940000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c939aea68c9b3000476be6e",
+      "clubname": "Microbird",
+      "hitCount": 0,
+      "title": "Hashtag Geek",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "''Shoot, Click and Flick''. Here comes an online encounter where shooting a tag will take you to an another level. \nMicrobird-The Electronics club presents to you a big time blast of witty and informative online event a.k.a Hashtag Geek.\n",
+      "rules": "General Rules:-\n1. Mention your friend in the post with a unique style of comment.\n2. The comment with the most number of reactions in a day shall be considered as the daily winner.\n3. People commenting on the post, or being mentioned in it, must like our Facebook page in order to be eligible for consideration.\n4.Use of auto-likers or fake likes will lead to disqualification.\n",
+      "fee": null,
+      "venue": "NA",
+      "coordinators": [
+        {
+          "name": "Priya Sethi",
+          "phone": 7988343293,
+          "_id": "5c939aea68c9b3000476be70"
+        },
+        {
+          "name": "Daksh Bakshi",
+          "phone": 9205848563,
+          "_id": "5c939aea68c9b3000476be6f"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554960600000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c939df168c9b3000476be71",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Quasar lights",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Fest is incomplete without dance..Do you want to rock the dance floor and feel the vibes?? A magical dance floor in which choose your colour and turned off their respective lights by jumping on them.. Come and participate along with your friends and whoever turned them off first won the game..",
+      "rules": "",
+      "fee": null,
+      "venue": "Reception",
+      "coordinators": [
+        {
+          "name": "Saurabh",
+          "phone": 7289801558,
+          "_id": "5c939df168c9b3000476be73"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c939df168c9b3000476be72"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554960600000,
+        "to": 1554935400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c939f8168c9b3000476be74",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Ping Pong",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Have you ever thought about playing air hockey with led lights?? It's a fun game against between two people and it will be more fun to watch when speed of lights become faster ... So ramped up your excitement and challenge your patience and control level.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Outside Library",
+      "coordinators": [
+        {
+          "name": "Rahul",
+          "phone": 9990087279,
+          "_id": "5c939f8168c9b3000476be76"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c939f8168c9b3000476be75"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554967800000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93a8f768c9b3000476be86",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Arm Wrestling",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Many strong people often believe to show their strength in arm wrestling, so why not here with our robo arm? Gear up yourself to beat the robo arm and show your exceptional strength and intelligence ...\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Shoham",
+          "phone": 9812632291,
+          "_id": "5c93a8f768c9b3000476be88"
+        },
+        {
+          "name": "Amarpreet",
+          "phone": 7015808813,
+          "_id": "5c93a8f768c9b3000476be87"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554960600000,
+        "to": 1555140600000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c93abef68c9b3000476be8c",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Tic Tac Toe",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Who hasn't played Tic Tac Toe since childhood on paper, benches, walls and even in mobile games.. But its time to play this old fun game on a big board...\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Outside Administration Block",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c93abef68c9b3000476be8e"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c93abef68c9b3000476be8d"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554975000000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c945689d8d3d00004092b40",
+      "clubname": "Vividha",
+      "hitCount": 0,
+      "title": "Skit ",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Comedy sketch or  piece of humorous writing especially a parody.",
+      "rules": "NA",
+      "fee": null,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c945689d8d3d00004092b42"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c945689d8d3d00004092b41"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554960600000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c951fdafd86f90004edc9db",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Musical Band",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "A fiesta for all the ,music lovers in the house.All of you have seen drums,guitar, piano but have you ever thought of a piano which itself teaches you how to play it, drum sticks beating in air having no base..Get your music without touching without pressing the keys of this piano and beating the drum sticks in the air.",
+      "rules": "",
+      "fee": null,
+      "venue": "Outside VC Office",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c951fdafd86f90004edc9dd"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c951fdafd86f90004edc9dc"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554960600000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c952167fd86f90004edc9de",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Musical fountain",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "Have you ever seen water dancing??Can you think how much water can be beautiful?? So here is the musical fountain with wonderful lights and melodious music that soothen up your mind..",
+      "rules": "",
+      "fee": null,
+      "venue": "Outside VC Office",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c952167fd86f90004edc9e0"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c952167fd86f90004edc9df"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552280400000,
+        "to": 1552473000000
+      },
+      "prizes": {
+        "prize1": null,
+        "prize2": null,
+        "prize3": null
+      },
+      "tags": null,
+      "_id": "5c953a48fd86f90004edca0b",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Jenga Tower Game",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "With only 54 wooden blocks, this game is simple and loads of fun for all ages. Object: The object of Jenga is to remove one block at a time from the Jenga tower and then stack it on top. The last player to stack a block without making the tower fall wins the game.\n\n",
+      "rules": "Moving in Jenga consists of taking one and only one block from any level (except the one below the incomplete top level) of the tower, and placing it on the topmost level to complete it. Only one hand should be used at a time when taking blocks from the tower. \nEach Team can have a maximum of 2 participants.",
+      "fee": 20,
+      "venue": "MBA Park",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95ac89ae5a3c0004c7e45a"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95ac89ae5a3c0004c7e459"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1552280400000,
+        "to": 1552473000000
+      },
+      "prizes": {
+        "prize1": null,
+        "prize2": null,
+        "prize3": null
+      },
+      "tags": null,
+      "_id": "5c953afcfd86f90004edca11",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Mega Project (Bowling Alley)",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "A complete bowling alley with all the international standards for an amazing and fantastic game of ten-pin bowling with automatic pin-setters for the purpose of recreation.",
+      "rules": "•\tThe game is divided into ten frames.\n•\tIn each frame the bowler will be given two chances to knock down as many  pins \n        as possible\n•       Each participant will be given 3 chances.",
+      "fee": 50,
+      "venue": "Shakuntalam",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95aca2ae5a3c0004c7e45c"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95aca2ae5a3c0004c7e45b"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1554960600000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": null,
+        "prize2": null,
+        "prize3": null
+      },
+      "tags": null,
+      "_id": "5c93ac5468c9b3000476be92",
+      "clubname": "Samarpan",
+      "hitCount": 0,
+      "title": "Grand Prixx",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Have a dream, chase it down, jump over every single hurdle and run through fire and ice to get there. Here is the new edition of Grand Prixx with more challenging hurdles..So get ready along with your bots to test its efficiency and skills.\n",
+      "rules": "\"1.The size of bot must be in dimensions 25×25×15cm{L×B×H}\n2.The team must consist of a maximum of 4 participants.\n3.The decision made by judges are final and no arguments will be entertained.\n3.The team or bot causing any damage to the arena is considered to be disqualified.\n4. A team can get only one chance to participate with one bot.\n5.If a team want to participate again with a different bot then it is allowable after again doing the registration .\n6. All teams are required to do registration before entering the event area.\"\n",
+      "fee": 100,
+      "venue": "Main Ground",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95cef5ae5a3c0004c7e466"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95cef5ae5a3c0004c7e465"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1555151400000,
+        "to": 1555156800000
+      },
+      "prizes": {
+        "prize1": null,
+        "prize2": null,
+        "prize3": null
+      },
+      "tags": null,
+      "_id": "5c944373d8d3d00004092b31",
+      "clubname": "Vividha",
+      "hitCount": 0,
+      "title": "Street Play",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Do you have a voice against the social stigmas or political ideologies? Do you want to change the myths of the Society? Do you have a story felt by millions but shared by few? Then bring  the theatre to the streets,own the streets , raise and enact your voice.",
+      "rules": "1. Team size must be between 15-25(including musicians).\n2. The maximum time limit for performance is 25 min.\n3.No electrical appliances shall be allowed during the performance.\n4.Only live music is allowed. \n5.Language can be either Hindi or English or both.\n6.Any kind of fluid,flames and live animals are not allowed.\n7.Dry colors may be used.\n8.Obscenity of any kind is not allowed and may lead to disqualification.\n9.The decision of the judges will be final and binding.   ",
+      "fee": 500,
+      "venue": "Lal Chawk",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c97d0451eeec10004579699"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c97d0451eeec10004579698"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1586683800000,
+        "to": 1555063200000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9446aad8d3d00004092b34",
+      "clubname": "Vividha",
+      "hitCount": 0,
+      "title": "Stage Play ",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "For the ones who enjoy proper theatre, with props to use , track and whole stage to utilize the participants completely immersed into the character. This  event is treat to watch, with so much fascinations.",
+      "rules": "NA",
+      "fee": null,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "Sandeep Yadav",
+          "phone": 8700997225,
+          "_id": "5c9446aad8d3d00004092b36"
+        },
+        {
+          "name": "Srishti Pandey",
+          "phone": 9205634367,
+          "_id": "5c9446aad8d3d00004092b35"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1586614200000,
+        "to": 1554993000000
+      },
+      "prizes": {
+        "prize1": null,
+        "prize2": null,
+        "prize3": null
+      },
+      "tags": null,
+      "_id": "5c944b04d8d3d00004092b37",
+      "clubname": "Vividha",
+      "hitCount": 0,
+      "title": "Mime",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Talking is hard enough as it is. But if you can tell a story without being vocal, now that says a lot about you. Join the act as you get to do all but talk to tell your story . After all it's good to shut up sometimes.  ",
+      "rules": "1. Team size must be between 6-10.(two accompanists for backstage assistance like music control and lights are allowed).\n2. Time limit is 5-10 min.\n3. The act should be performed in one go. Falling of curtains for any change in act's scene will not be allowed. Curtains will opened and closed at the beginning of the act  and the closing respectively.\n4. Heavy props like chair, table, mirror, etc. are not allowed but light props like ribbon, loops, etc. may be used by contacting the coordinator before.\n5.Act must not depict anything that might hurt the religious or moral sentiments of the audience.\n6.The act should be thematic,clearly depicting theme and conclusion.\n7.Decision of judges will be final.",
+      "fee": 250,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c967a0323fb85000426e960"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c967a0323fb85000426e95f"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1554964200000,
+        "to": 1554971400000
+      },
+      "prizes": {
+        "prize1": "10,000",
+        "prize2": "4000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c946f57a9b0620004d2b901",
+      "clubname": "SAE",
+      "hitCount": 0,
+      "title": "Chitr-Car",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "It is a designing event in which participants has to make designs given to them accurately in least possible time on whatever software they feel comfortable. ",
+      "rules": "The person with the maximum points will be the winner.\nPoints will be given on the basis of :\n1) Accuracy of design\n2)Time taken to make the design ",
+      "fee": null,
+      "venue": "Shakuntalam",
+      "coordinators": [
+        {
+          "name": "Gourav kumar ",
+          "phone": 8860231737,
+          "_id": "5c946f57a9b0620004d2b903"
+        },
+        {
+          "name": "Himanshu Taneja ",
+          "phone": 7011480931,
+          "_id": "5c946f57a9b0620004d2b902"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555057800000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c94721aa9b0620004d2b904",
+      "clubname": "SAE",
+      "hitCount": 0,
+      "title": "PitCrew",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "This event requires the team of max 4 members. The participants has to assemble the parts of vehicle in least possible time. ",
+      "rules": "1) A team must have minimum 2 members & max 4 members.\n2) Use only the tools which will be provided at the time of event.\n3) Scoring will be done on basis of time taken by the team & if parts are assembled correctly or not. ",
+      "fee": null,
+      "venue": "Main Ground ",
+      "coordinators": [
+        {
+          "name": "Ankush Bhardwaj ",
+          "phone": 7065771443,
+          "_id": "5c94721aa9b0620004d2b906"
+        },
+        {
+          "name": "Jayant Garg ",
+          "phone": 9599097305,
+          "_id": "5c94721aa9b0620004d2b905"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552280400000,
+        "to": 1552473000000
+      },
+      "prizes": {
+        "prize1": null,
+        "prize2": null,
+        "prize3": null
+      },
+      "tags": null,
+      "_id": "5c953a96fd86f90004edca0e",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Pinball Game",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Pinball is a type of arcade game, in which points are scored by a player manipulating one or more steel balls on a play field inside a glass-covered cabinet called a pinball table (or \"pinball machine\"). The primary objective of the game is to score as many points as possible. Many modern pinball machines include a story line where the player must complete certain objectives in a certain fashion to complete the story, usually earning high scores for different methods of completing the game. Points are earned when the ball strikes different targets on the play field. A drain is situated at the bottom of the play field, partially protected by player-controlled plastic bats called flippers. A game ends after all the balls fall into the drain a certain number of times. Secondary objectives are to maximize the time spent playing (by earning \"extra balls\" and keeping the ball in play as long as possible) and to earn bonus games (known as \"replays\").",
+      "rules": "Moving in Jenga consists of taking one and only one block from any level (except the one below the incomplete top level) of the tower, and placing it on the topmost level to complete it. Only one hand should be used at a time when taking blocks from the tower",
+      "fee": 20,
+      "venue": "MBA Park",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95acc6ae5a3c0004c7e45e"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c95acc6ae5a3c0004c7e45d"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1552289400000,
+        "to": 1552296600000
+      },
+      "prizes": {
+        "prize1": "2500",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c953bbbfd86f90004edca1a",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "UDAAN (Racing Tournament of RC Aircrafts)",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "Time to conquer the air and rule the sky with your mightiest aircraft. Fasten your seatbelts; bring on your mightiest aircrafts. The mighty clash between the best racers is going to take off. Personalize your flying beasts and bring them in the ultimate race of the century. \nThe annual Aeromodelling and Racing competition for college students is launched with the vision to provide unified platform for students interested in aerospace and related engineering disciplines – to demonstrate their aero-modeling expertise.\nThe competition provides students an opportunity to design and build their own Aircrafts to participate in the Championship. Winners are determined by a combination of their report score and their flight score. The contest will provide a real world aircraft design experience for engineering students by giving them the opportunity to validate their analytic studies.\n",
+      "rules": "\tRules on Team Structure:\n•\tMaximum of 4 members in a team.\n•\tMembers of a team may be from same college/school or different.\n•\tAny number of teams can participate from one college/school.\n•\tProfessionals are not allowed. Only students can participate.\n\tDesign Constraints:\n•\tT/W<0.75 (if excess thrust is found, it will be neutralized by adding weight below the plane at center of gravity).\n•\tPropeller diameter should not be greater than 10 inches.\n•\tBattery weight should not be more than 120 grams.\n•\tOnly electrical motors are allowed.\n•\tUse of gyroscopes(gyros) and programming assistance in receivers is prohibited. \n\n\tCriteria for Judgement:\n•\tExquisite Finish\n•\tFlight Performance\n•\tSleek Design\n•\tUpgraded Technologies\n•\tBest Aero-Modeling\n",
+      "fee": null,
+      "venue": "Lal Chowk (LC)",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953bbbfd86f90004edca1c"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953bbbfd86f90004edca1b"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552372200000,
+        "to": 1552383000000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c953c3afd86f90004edca1d",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Clash of Designers (Software’s  Used: Auto CAD  and CATIA)",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "The main purpose of this designing competition is to inspire and prepare students for career in architecture, engineering and the digital arts.\nThe challenge offers a great opportunity for students to create some exclusive design projects.\n\n",
+      "rules": "•\tIt may consist of an individual/team.\n•\tCompetitors will model small objects within a designated time period.\n",
+      "fee": null,
+      "venue": "Mechanical Department",
+      "coordinators": [
+        {
+          "name": "Vinod",
+          "phone": 1,
+          "_id": "5c953c3afd86f90004edca1f"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953c3afd86f90004edca1e"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552375800000,
+        "to": 1552386600000
+      },
+      "prizes": {
+        "prize1": "750",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c953c83fd86f90004edca20",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Quiz Me Up! ",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Quiz competition is a pursuit of trivial knowledge, encourage students to achieve academic excellence and increase their awareness of the world around them. The quiz will be beneficial to those who are enthusiastic in technical field and the one who are ready to share and gain knowledge.\nThe quiz competition will feature the questionnaires from different aspect of technical world. \nThe competition provides an opportunity to the students to widen up their knowledge and be acquainted with the information in various fields of knowledge. \nIt provides a chance to realize and enhance their potentialities. \n",
+      "rules": "•\tNo team is allowed in this event.\n•\tAny kind of discrepancy may lead to disqualification from the event.\n•\tThere will be two rounds:\n1.\tWritten Test (Screening Round) - It will be conducted before the Quiz as a selection procedure.\n2.\tGrand Finale (Masters Round) – The Final Championship Round.\n",
+      "fee": null,
+      "venue": "Mechanical Department",
+      "coordinators": [
+        {
+          "name": "Rahul Yadav",
+          "phone": 2,
+          "_id": "5c953c83fd86f90004edca22"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953c83fd86f90004edca21"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552280400000,
+        "to": 1552473000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c953cd9fd86f90004edca23",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Technomela (Technical Exhibition)",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "Facilitate and develop the exchange of engineering knowledge and information between engineering personnel and technical specialists.\nAn opportunity to display their state of the art productsand technologies to the largest gathering.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Shakuntalam",
+      "coordinators": [
+        {
+          "name": "Pawan Tanwar",
+          "phone": 3,
+          "_id": "5c953cd9fd86f90004edca25"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953cd9fd86f90004edca24"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1552280400000,
+        "to": 1552473000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c953d10fd86f90004edca26",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "Mega structure (Army Man)",
+      "eventtype": "NA",
+      "category": "Technical",
+      "desc": "Cast into the making of the biggest engineering marvels as we unravel the science and art that goes behind it.\nA tribute to Army and Pulwama attack victims.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "Shakuntalam",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953d10fd86f90004edca28"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c953d10fd86f90004edca27"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554964200000,
+        "to": 1554975000000
+      },
+      "prizes": {
+        "prize1": "2500",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c954470fd86f90004edca34",
+      "clubname": "Mechnext",
+      "hitCount": 0,
+      "title": "4)\tRobot War",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "The competition is carried out in a tournament format: competitors bring their bots ready to battle and are pitted against their competitor bots in one-on–one matches where the aim is to push the opponent robots off the arena and scoring maximum points.\nGet ready to witness the most incredible sports entertainment that the world has ever seen;\nMulti-ton behemoths will swing punches, tearing steel armor panels off each other until one king of the ring is left standing, while the opponent is a heap of scrap metal.\nWatch out for the bots, the builders, the flames, the sparks and all the robot guts and glory.\n",
+      "rules": "•       Each team can have a maximum of 4 participants.\n•\tThe bots need to clash inside the arena (Arena Size: 5*6 feet).\n•       There will be 3 rounds.\n•       Specified Dimensions for the bot: 45 x 30 x 25 cc.\n•\tThe weight of the bot should be less than 8 Kg.\n•\tSource of power can be both A.C. and D.C., Max. power supply: 24 Volts/ 220 \n         Volts for AC supply.\n•\tThe bot can be wired or non-wired.\n•\tAny kind of damage to the arena by the bot may lead to disqualification.\n•\tPoints System-\n        a) 1 point: For defense and making the opponent's bot move backward.\n        b) 2 points: For striking with weapon and destroying any of the opponent's \n                                part.\n        c) 3 points: For making the opponent's bot touch the arena and throwing the \n                                 opponent's bot out of the arena.\n         d) 4 points: For knocking out the opponent's bot.\n• Judges decision will be final\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c954470fd86f90004edca36"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c954470fd86f90004edca35"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554957000000,
+        "to": 1554967800000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95d05bae5a3c0004c7e46a",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "2 Shades",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Fabricate a piece by using  only two colours, black and white.\n",
+      "rules": "1. This is an individual event.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 3 hours.\n4. Theme will be provided on spot.\n5. Use of external help is not allowed.\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Sachin Arya",
+          "phone": 9812119366,
+          "_id": "5c95d05bae5a3c0004c7e46c"
+        },
+        {
+          "name": "Inderjeet",
+          "phone": 7683087596,
+          "_id": "5c95d05bae5a3c0004c7e46b"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554971400000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95d21dae5a3c0004c7e46d",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Off Brush",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Make a master piece with everything except brushes.\n",
+      "rules": "\"1. This is an individual event.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 2 hours.\n4. Theme will be provided on spot.\n5. Use of External help is not allowed.",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95d21dae5a3c0004c7e46f"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95d21dae5a3c0004c7e46e"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554971400000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95d35aae5a3c0004c7e470",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Off Brush",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Make a master piece with everything except brushes.\n",
+      "rules": "\"1. This is an individual event.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 2 hours.\n4. Theme will be provided on spot.\n5. Use of external help is not allowed.",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95d35aae5a3c0004c7e472"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95d35aae5a3c0004c7e471"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554971400000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95d46cae5a3c0004c7e473",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Off Brush",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Make a master piece with everything except brushes.\n",
+      "rules": "1. This is an individual event.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 2 hours.\n4. Theme will be provided on spot.\n5. Use of external help is not allowed.",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95d46cae5a3c0004c7e475"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95d46cae5a3c0004c7e474"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555054200000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95d596ae5a3c0004c7e476",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "T-Shirt Painting",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Show your artistic side by designing your T-Shirt.\n",
+      "rules": "1. This is a team event of 2.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 3 hours.\n4. Theme will be provided on spot.\n5. Use of external help is not allowed.",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Sachin Arya",
+          "phone": 9812119366,
+          "_id": "5c95d596ae5a3c0004c7e478"
+        },
+        {
+          "name": "Inderjeet",
+          "phone": 7683087596,
+          "_id": "5c95d596ae5a3c0004c7e477"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554971400000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95d642ae5a3c0004c7e479",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Off Brush",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Make a master piece with everything except brushes.\n",
+      "rules": "\"1. This is an individual event.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 2 hours.\n4. Theme will be provided on spot.\"\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95d642ae5a3c0004c7e47b"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95d642ae5a3c0004c7e47a"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554971400000,
+        "to": 1554978600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95da14ae5a3c0004c7e47c",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Off Brush",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Make a master piece with everything except brushes.\n",
+      "rules": "\"1. This is an individual event.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 2 hours.\n4. Theme will be provided on spot.\"\n5. Use of external help is not allowed.",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95da14ae5a3c0004c7e47e"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95da14ae5a3c0004c7e47d"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555054200000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95db00ae5a3c0004c7e47f",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "T-Shirt Painting",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Show your artistic side by designing your T-Shirt.\n",
+      "rules": "\"1. This is a team event of 2.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 3 hours.\n4. Theme will be provided on spot.\"\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Sachin Arya",
+          "phone": 9812119366,
+          "_id": "5c95db00ae5a3c0004c7e481"
+        },
+        {
+          "name": "Inderjeet",
+          "phone": 7683087596,
+          "_id": "5c95db00ae5a3c0004c7e480"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555129800000,
+        "to": 1555140600000
+      },
+      "prizes": {
+        "prize1": "2000",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95dc4cae5a3c0004c7e482",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Wink with the Ink",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Get on your funky ideas for the exclusive tattoo making round.\n",
+      "rules": "1. This is a team event of 2.\n2. Material will be provided by us but participants may carry their own material.\n3. Time limit for the event is 3 hours.\n4. Theme will be provided on spot.\n5. Use of external help is not allowed.",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95dc4cae5a3c0004c7e484"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95dc4cae5a3c0004c7e483"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555140600000,
+        "to": 1555144200000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95dde0ae5a3c0004c7e488",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Guide and Draw",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Show your friendship bond while your friend guides and you draw.\n\n",
+      "rules": "1. This is a team event of 2.\n2. Instructions will be provided on spot.\n\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Sachin Arya",
+          "phone": 9812119366,
+          "_id": "5c95dde0ae5a3c0004c7e48a"
+        },
+        {
+          "name": "Inderjeet",
+          "phone": 7683087596,
+          "_id": "5c95dde0ae5a3c0004c7e489"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555054200000,
+        "to": 1555057800000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95de83ae5a3c0004c7e48b",
+      "clubname": "Srijan",
+      "hitCount": 0,
+      "title": "Pictionary",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Get your guessing game strong by identifying the picture.\n",
+      "rules": "\"1. This is a team event of 2.\n2. Instructions will be provided on spot.\n\"\n",
+      "fee": null,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Maninder Singh",
+          "phone": 7290850599,
+          "_id": "5c95de83ae5a3c0004c7e48d"
+        },
+        {
+          "name": "Depali",
+          "phone": 9899380625,
+          "_id": "5c95de83ae5a3c0004c7e48c"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555057800000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c95ef285f7db50004ce4a50",
+      "clubname": "SAE",
+      "hitCount": 0,
+      "title": "Auto Show ",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "The event will consist of Auto car show of ATV (All Terrain Vehicle) by SAE collegiate Club. \nThe students are allowed to ask any questions related to vehicle design, manufacturing, etc.   ",
+      "rules": "",
+      "fee": null,
+      "venue": "LC",
+      "coordinators": [
+        {
+          "name": "Divyanshu Garg",
+          "phone": 918447869709,
+          "_id": "5c95ef285f7db50004ce4a52"
+        },
+        {
+          "name": "Sumit Jha",
+          "phone": 918708873539,
+          "_id": "5c95ef285f7db50004ce4a51"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1553293860000,
+        "to": 1553320800000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9618d57e294400045f1099",
+      "clubname": "Taranuum",
+      "hitCount": 0,
+      "title": "WOODSTOCK",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "As is rightly said by Jon Batiste , “In a live performance, it’s a collaboration with the audience ;you ride the ebb and the flow of the crowd’s energy”. \n And what better way to ride the crowd’s energy than by giving them enthralling band performances which leave them wanting for more .  WOODSTOCK , the Battle Of Bands does exactly that. So let us celebrate music with this ultimate rock band carnage.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9618d57e294400045f109b"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9618d57e294400045f109a"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1553293860000,
+        "to": 1553320860000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9619107e294400045f109c",
+      "clubname": "Taranuum",
+      "hitCount": 0,
+      "title": "WEIS",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "WESTERN EASTERN INSTRUMENTAL  SOLO or WEIS is a competitive solo singing and instrumental event for both western and eastern music. So if you have a knack for tuning in your melodious notes, this is the chance to showcase your talents.  ",
+      "rules": "",
+      "fee": null,
+      "venue": "",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9619107e294400045f109e"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9619107e294400045f109d"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1553293860000,
+        "to": 1553320920000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c96194b7e294400045f109f",
+      "clubname": "Taranuum",
+      "hitCount": 0,
+      "title": "DOT",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "It doesn’t matter whether you can or cannot sing in tune , all that matters here is unbound love for music along with some fun. DAY OF TARANNUM includes fun events which may or may not be related to music. All it requires is untangling puzzles with the eye of a music lover.  ",
+      "rules": "",
+      "fee": null,
+      "venue": "",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c96194b7e294400045f10a1"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c96194b7e294400045f10a0"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1553293860000,
+        "to": 1553320980000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9619817e294400045f10a2",
+      "clubname": "Taranuum",
+      "hitCount": 0,
+      "title": "SECRET SET",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "“Music is the only way to run away without leaving home .”                                                                                                                                            \n -Twyla Tharp\nMusic truly transports you to an imaginary world where only you and those melodious tunes exist. Join us while we jam along to some of the favourite tunes of the crowd in SECRET SET.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9619817e294400045f10a4"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9619817e294400045f10a3"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1553293860000,
+        "to": 1553321040000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c9619ce7e294400045f10a5",
+      "clubname": "Taranuum",
+      "hitCount": 0,
+      "title": "GROUP SONG",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "“When you get together in a group,it becomes like a family, with the different personalities that comes from being in a musical group. It’s different than bringing something in by yourself.”                                                       \n-Albert Hammond , Jr.\nA Group song is performed by the music society which has both eastern and western essence to it. So join us and rejuvenate yourselves with our uplifting tunes.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9619ce7e294400045f10a7"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9619ce7e294400045f10a6"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1553293860000,
+        "to": 1553321160000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c961a477e294400045f10a8",
+      "clubname": "Taranuum",
+      "hitCount": 0,
+      "title": "GHAZAL-E-SHAAM",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "“The thought content of ghazals must be meaningful,related to life, it’s emotions of joy and sorrow. It must have the human touch, it should not be phoney.\"                                                                                                                           \n -Jagjit Singh\nGhazal is poetry in motion. So if you want to be a part of a soulful evening with evergreen , filmy and classic music, join us at GHAZAL-E-SHAAM , an evening of soul stirring music.\n",
+      "rules": "",
+      "fee": null,
+      "venue": "",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c961a477e294400045f10aa"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c961a477e294400045f10a9"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554955200000,
+        "to": 1554958800000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c97061dec493600040fbff8",
+      "clubname": "Vivekanand Manch",
+      "hitCount": 0,
+      "title": "Zumba",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "A fun with fitness event centred at increasing the endurance and flexibility of the body. Performed on all 3 days of fest.",
+      "rules": "",
+      "fee": 0,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Bhuvan",
+          "phone": 9469173335,
+          "_id": "5c9b52f3ae1fde0004ccbbb4"
+        },
+        {
+          "name": "Shivam",
+          "phone": 7988493771,
+          "_id": "5c9b52f3ae1fde0004ccbbb3"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554935400000,
+        "to": 1554936000000
+      },
+      "prizes": {
+        "prize1": "0",
+        "prize2": "0",
+        "prize3": "0"
+      },
+      "tags": null,
+      "_id": "5c97c34d1eeec10004579680",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "Welcome dance",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "“DANCE – DEFEAT ALL NEGATIVITY VIA CREATIVE EXPRESSION.” \n\nAn opening dance performance to welcome our honorable VC and the audience. \n",
+      "rules": "This is a presentation event.",
+      "fee": 0,
+      "venue": "Main stage",
+      "coordinators": [
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9a35e8881fc90004031e19"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9a35e8881fc90004031e18"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1554946800000,
+        "to": 1554948600000
+      },
+      "prizes": {
+        "prize1": "3500",
+        "prize2": "2000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97c4251eeec10004579683",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "RAKZZ",
+      "eventtype": "team",
+      "category": "Main Stage",
+      "desc": " “OH, WITH THE DANCE, LET JOY BE UNCONFINED; NO SLEEP TILL MORN, WHEN SOUL AND ART MEET, TO CHASE THE GLOWING HOURS WITH FLYING FEET.” \n\nDance is passion embodied, a realisation of being alive, being free. Life, for some, is battle; for rest it is dance. So, gear up, group yourselves with the rest of those peeps and come together for \none of the most exciting and breath-taking main stage dance events - RAKZZ. From choreography to your synchronous moves, costumes to props, every little detail matters. \n\n",
+      "rules": "-It is a team event. \n-Dance form : Western/Bollywood. \n-There will be Qualifier, prelims and a final round. \n\nQUALIFIER: - \n\nParticipating teams have to send their dance video of about 5-7 minutes for the prelims.\nThe finalists will be performing on the stage. You must send your videos on 02aastha02@gmail.com\n\nPRELIMINARY ROUND:-\n\n1.Qualified teams shall showcase  their performance of 5-6 minutes to make to it to the finals.\n2.The performance of this round should bea version of their final performance.\n\n\nFINALS: - \n1.Maximum time allowed for the performance is 9+6minutes. Teams exceeding this time          will be penalized.  \n2.\tA minimum of 6 members must be on stage at any time during the performance.  \n3.\tThere is restriction on the use of fire or any inflammable object and glass shatter on stage. Negative points may be awarded in such a case.  \n4.\tThe teams should restore the stage to its previous condition after their performance. \n5.\tTeams can consist of a maximum of 40 members. \n6.\tThe teams must bring pen drives for the music track( mp3 audio format).  \n",
+      "fee": null,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "Aastha",
+          "phone": 7838959611,
+          "_id": "5c97c4251eeec10004579685"
+        },
+        {
+          "name": "Siddharth",
+          "phone": 9971813129,
+          "_id": "5c97c4251eeec10004579684"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554949800000,
+        "to": 1554951600000
+      },
+      "prizes": {
+        "prize1": "3500",
+        "prize2": "2000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97c4f21eeec10004579686",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "FOLKLORE",
+      "eventtype": "team",
+      "category": "Main Stage",
+      "desc": "“DON'T BREATHE TO SURVIVE; DANCE AND FEEL ALIVE.” \n\nDance till you drop! Rock the floor with your ecstatic dance mix of intensity, energy and enthusiasm. Let your feet speak the hidden language of your soul. Let the rhythm carry you away where the hand goes. So, here’s a chance to mesmerize the audience with your energy. Folklore is a folk-dance event which reflects our culture. Here begins a celebration recited through dance, colours, music and stories. Join us, live a culture and share one.  \n\n",
+      "rules": "1.\tEach team may not exceed more than 40 members.  \n2.\tMaximum time allowed for the performance is 8+6 minutes. Teams exceeding this time will be penalized.  \n3.\tA minimum of 6 members must be on stage at any time during the performance.  \n4.\tThere is restriction on the use of fire or any inflammable object and glass shatter on stage. Negative points may be awarded in such a case.  \n5.\tThe teams should restore the stage to its previous condition after their performance.  \n6.\tThe teams must bring pen drives for the music track(mp3 audio format). \n\n",
+      "fee": null,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "Diljeet",
+          "phone": 7357695705,
+          "_id": "5c97c4f21eeec10004579688"
+        },
+        {
+          "name": "Eiti",
+          "phone": 9717044753,
+          "_id": "5c97c4f21eeec10004579687"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555030800000,
+        "to": 1555032600000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97c6391eeec10004579689",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "FLASHBACK",
+      "eventtype": "NA",
+      "category": "Main Stage",
+      "desc": "DHAKKITIKI, DHAKKITIKI, DHAKKITIKI ... DHAA! \n\nNot letting you forget the evergreen rhythms of the 80s and 90s, to make you groove on the songs of the time of \"Akhiyon se golimaare\" and \"Tucheezbadihai mast mast\", we bring you FLASHBACK, our group dance event that makes you hop on your seats and urges you to come on the stage and join the crazy dance on board! Kicking the technicalities far away, If you're looking for a fun Bollywood dance that leaves you craving for more, it is the place to be!  As the name suggest, FLASHBACK takes you to a trip to that era of rock and roll music which you don't want to miss!  \n",
+      "rules": "This is a presentation event.",
+      "fee": null,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "Shweta",
+          "phone": 7291967796,
+          "_id": "5c97c6391eeec1000457968b"
+        },
+        {
+          "name": "Eiti",
+          "phone": 9717044753,
+          "_id": "5c97c6391eeec1000457968a"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555133400000,
+        "to": 1555137000000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97c9621eeec1000457968c",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "DANCE YOUR HEART OUT",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "“SHE DECIDED TO FREE HERSELF, DANCE INTO THE WIND, CREATE A NEW LANGUAGE. AND BIRDS FLUTTERED AROUND HER, WRITING YES IN THE SKY.”\n\n“Great dancers are not great because of their technique; it’s because of their passion.” Do you think you have it in you what it takes to do the locking and popping of be-Boer? Or you consider yourself more of a freestyler? It doesn’t matter if you are a jazz dancer or a \"chakdephatte\" bhangra specialist. Put your dancing shoes and compete in the solo dance competition to prove that you are a connoisseur when it comes to grooving to the beats. \n\n“KYUNKI TALI EK HATH SE NAHI BAJTI” \nJoin hands with your partner and make the onlookers join theirs to create the fitting combination of two artists in a single view. Enhance the hotness quotient of the stage and match your steps to become the perfect completing pieces to/of this dancing duo puzzle. \n\nWHEN IN DOUBT, DANCE YOUR HEART OUT. \nYMCA presents Solo and Duo dance competition. All those bitten by the dance bug are cordially invited to relieve themselves. So wear your dancing shoes, let lose your moves and break a jig.  \n\n\t\n\n",
+      "rules": "RULES FOR SOLO DANCE: 1. Only Solo entries allowed.  \n2.\tParticipants will be given 3+2 minutes to perform. Participants exceeding this time limit will be penalized.  \n3.\tAll dance forms are allowed.  \n4.\tThere is restriction on the use of fire or any inflammable object and glass shatter on stage. \nNegative points may be awarded in such a case.  \n5.\tParticipants are required to restore the stage to its initial condition after their performance.  \n6.\tIn case of conflicts, judge’s decision would be considered final.  \n7.\tThe Participants must bring their songs in a pen drive in mp3 audio format.  \n\nRULES FOR DUO DANCE: 1. Only Duo entries allowed.  \n2.\tParticipants will be given 4+2 minutes to perform. Participants exceeding this time limit will be penalized.  \n3.\tAll dance forms are allowed.  \n4.\tThere is restriction on the use of fire or any inflammable object and glass shatter on stage. Negative points may be awarded in such a case.  \n5.\tParticipants are required to restore the stage to its initial condition after their performance.  \n6.\tIn case of conflicts, judges decision would be considered final.  \n7.\tThe teams must bring their songs in a pen-drive in mp3 audio format.  \n\nEVALUATION CRITERIA: The performances will be judged by our panel based on skill, choreography, presence of mind, confidence and stage presence. The result will be declared after all the performances. \n",
+      "fee": null,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "Siddharth",
+          "phone": 9971813129,
+          "_id": "5c97c9621eeec1000457968e"
+        },
+        {
+          "name": "Aastha",
+          "phone": 7838959611,
+          "_id": "5c97c9621eeec1000457968d"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555137000000,
+        "to": 1555097400000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97ca341eeec1000457968f",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "FOOTLOOSE",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "“AGAR KOI MUSIC FEEL KAR SAKTA HAI ... THEN ANYBODY CAN DANCE!” \nThe beauty of dance is the opportunity to highlight your greatest strengths as a dancer, to reveal a character's story which people only dared to imagine, to be the story teller where the audience watches your body tell a story. FOOTLOOSE invites you to come showcase your talent as the audience watches in awe how you turn imagination into reality. \nSo you think that you are the boss? You can be a slave to the rhythm? Come on then. Dance on the spot for twisted and surprising music tracks.\n",
+      "rules": "1.\tOnly solo entries allowed.  \n2.\tParticipants must perform for 2+1 minutes.  \n3.\tRandom music of varying pace(motion) shall be played by the event organizers.\n4.\tParticipants must match the music type and adapt accordingly.  \n5.\tParticipants would be judged based on their skill to adapt, presence of mind, stage presence and confidence.  \n6.\tRestriction on the use of vulgar, abusive and improper actions. In case of conflict, judge’s decision would be considered final\n",
+      "fee": null,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "Siddharth",
+          "phone": 9971813129,
+          "_id": "5c97ca341eeec10004579691"
+        },
+        {
+          "name": "Aastha",
+          "phone": 7838959611,
+          "_id": "5c97ca341eeec10004579690"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555097400000,
+        "to": 1555101000000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97caed1eeec10004579692",
+      "clubname": "Nataraja",
+      "hitCount": 0,
+      "title": "FACE-OFF",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "“ITS SHAKE YOUR BOOTY TIME!” \n\nIf you have got the moves that can make the music groove along, come forth and shake on the beats. Unleash the free spirited dancer within you because a positive instinct has got all it takes. Befriend spontaneity, let your entropy shoot up and make the best of your crazy dancing time. \n\n",
+      "rules": "Prelims - \n•\tA group of four participants will be formed randomly and they will have to dance on random music that will be played on the spot. \n•\tBest out of those participants from each group will be finalized for the final round. \nFinals - \n•\tGroups of four participants will be formed randomly from the finalists and they will have to dance on random music that will be played on the spot. \n•\tInstant choreographic skills and synchronization to music will fetch more points. \n\nJudging parameters: \n•\tFacial expressions and body language \n•\tFootwork and hand movements \n•\tPresentation\n•\tStage presence\n",
+      "fee": null,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "SHWETA",
+          "phone": 7291967796,
+          "_id": "5c97caed1eeec10004579694"
+        },
+        {
+          "name": "Aastha",
+          "phone": 7838959611,
+          "_id": "5c97caed1eeec10004579693"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555129800000,
+        "to": 1555135200000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c97cf981eeec10004579695",
+      "clubname": "Vividha",
+      "hitCount": 0,
+      "title": "Mono Act",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "A mono act is a theatrical or operatic piece played by a single actor, usually portraying one character. ",
+      "rules": "1. Only one invdividual is limited as per the team size. \n2. The time limit for the act is 5 to 10 minutes.\n3. The act can be in either English or Hindi.\n4. There can be one person to assist with the lights and one with the sounds.\n5. Any kind of fluid, flame, heavy object or any material that damages the stage may lead to disqualification.\n6. Pre-recorded content should be brought in a pen drive in MP3 format.\n7. Any performance of a monologue from a movie will also lead to disqualification.\n8. Decision of judges should be final and binding.",
+      "fee": 100,
+      "venue": "Auditorium",
+      "coordinators": [
+        {
+          "name": "Paras",
+          "phone": 8221005944,
+          "_id": "5c97cf981eeec10004579697"
+        },
+        {
+          "name": "Jatin Khatri",
+          "phone": 9999609383,
+          "_id": "5c97cf981eeec10004579696"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "800",
+        "prize2": "500",
+        "prize3": "300"
+      },
+      "tags": null,
+      "_id": "5c98e03cd848980004aa9288",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "LAN Gaming",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "Enjoy the all time classic LAN games - Need For Speed: Most Wanted and Counter-Strike. Everyone completes the blacklist (easily), but on LAN, it's a whole new difficulty with the players as good as you. Compete and win exciting prizes.",
+      "rules": "1. Each team shall consist of 2 members.\n2. No cheat codes are allowed and will lead to direct disqualification otherwise.\n3. Other rules shall be provided on the spot",
+      "fee": 0,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Shubham Kachroo",
+          "phone": 8860376249,
+          "_id": "5c9c496f8e51c6000408c2c6"
+        },
+        {
+          "name": "Shubham Sharma",
+          "phone": 7840844065,
+          "_id": "5c9c496f8e51c6000408c2c5"
+        }
+      ],
+      "__v": 0,
+      "photolink": null
+    },
+    {
+      "timing": {
+        "from": 1555230600000,
+        "to": 1555240260000
+      },
+      "prizes": {
+        "prize1": "750",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98e2b9d848980004aa928b",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "AR Treasure Hunt",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "Put your mind and body into action to unravel the secrets spread around the college by following a series of clues using Augmented Reality. A team event consisting of puzzles that'll take you to places, as occurring according to the current puzzle and the first team to go through all the checkpoints WINS! The hint is CAT. MAT. XAT. Park.",
+      "rules": " 1.Each team shall consist of 2 members.\n2. Adoption of wrong means(asking or telling answers to other teams, handing over the clue to another team) shall lead to immediate disqualification.\n3. The team that reaches the Treasure Destination first, wins the event.\n4. Volunteers are free to enquire from participants about the solution of the previous clue.\n5. In case of any dispute, the decision of organisers will be considered final. \\n 7. Cross-college teams are allowed.",
+      "fee": null,
+      "venue": "College",
+      "coordinators": [
+        {
+          "name": "Prince ",
+          "phone": 9034731981,
+          "_id": "5c98e2b9d848980004aa928d"
+        },
+        {
+          "name": "Neha",
+          "phone": 9711917480,
+          "_id": "5c98e2b9d848980004aa928c"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555067760000
+      },
+      "prizes": {
+        "prize1": "500",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98e362d848980004aa928e",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "PS4 Gaming ",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Looking for something awesome to play today? There are great PS4 games like God of War, Far Cry available right here at Culymca. Be there to get an experience.",
+      "rules": "This is a fun event.\nDuration: 15 minutes",
+      "fee": null,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Prince ",
+          "phone": 9034731981,
+          "_id": "5c98e362d848980004aa9290"
+        },
+        {
+          "name": "Neha",
+          "phone": 9711917480,
+          "_id": "5c98e362d848980004aa928f"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "800",
+        "prize2": "400",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98e59ed848980004aa9291",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "Mobile Gaming Tournament",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "PUBG, the game which nearly broke the internet and is the current obsession of the youth is getting a competitive makeover by Manan. It is an individual event where gamers will come and battle for the prize. The one who will survive till last will win the event.",
+      "rules": "1. No cheat codes are allowed and will lead to direct disqualification otherwise.\n2. In case of any dispute, the decision of organizers will be considered final. \n3. Other rules shall be provided on the spot.\n",
+      "fee": null,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Prince ",
+          "phone": 9034731981,
+          "_id": "5c98e59ed848980004aa9293"
+        },
+        {
+          "name": "Shubham",
+          "phone": 7840444065,
+          "_id": "5c98e59ed848980004aa9292"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555043400000,
+        "to": 1555056540000
+      },
+      "prizes": {
+        "prize1": "1500",
+        "prize2": "1000",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98e7f6d848980004aa929d",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "CodeXplode",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "A coding challenge for all the geeks out there. We promise you a diverse set of problems, ranging from breadth-first-search to greedy approach, from bit-manipulation to dynamic programming. If you have an appetite for solving problems, this challenge is definitely for you.",
+      "rules": "1. Each team can have maximum 2 participants.\n2. Cross-college teams are allowed.\n3. Total number of problems - 8\n4. Total time - 3 hours\n5. Use of internet resources is prohibited.\n6. Judgement Criteria i) Number of problems solved ii) Total time taken iii) Plagiarism\n7. No extra time shall be given to the teams reaching late.",
+      "fee": null,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Manmeet",
+          "phone": 8816818721,
+          "_id": "5c98e7f6d848980004aa929f"
+        },
+        {
+          "name": "Sahil",
+          "phone": 8745959048,
+          "_id": "5c98e7f6d848980004aa929e"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554172200000,
+        "to": 1554920880000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c98e847d848980004aa92a3",
+      "clubname": "Jhalak",
+      "hitCount": 0,
+      "title": "Theme Photography",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "A splendid platform for all the budding photographers as well as the experienced cameramen to showcase their talent. Make this world your playground, play around with the lens and come up with exquisite photographs from specific fields, photographs that are full of life, photographs that can move our souls. Send us these entries online and the winning photographers are up for cool goodies and cash prizes. ",
+      "rules": "1. Each theme will have separate judging.\n2. Individual entries for each category need to be sent to our facebook page .\n3. An individual can send a maximum of 3 photographs in each category.\n4. Photos can be clicked using DSLRs, Digital Cameras or Cameraphones .\n5. Photo morphing and editing is allowed.\n6. Photos are to be sent to the facebook page of JHALAK \n7. Submissions may be watermarked if desired, but the watermark should be inconspicuous enough to not interfere with the judging of the photo.\n8.Themes will be disclosed on 2 April,2019 on our facebook page(https://www.facebook.com/jhalakcaptus).",
+      "fee": 0,
+      "venue": "Online Event",
+      "coordinators": [
+        {
+          "name": "Sanjeev Singh",
+          "phone": 9871166093,
+          "_id": "5c9c547ced848b0004188892"
+        },
+        {
+          "name": "Jatin Khandelwal",
+          "phone": 9953292583,
+          "_id": "5c9c547ced848b0004188891"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555137000000,
+        "to": 1555147800000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98ea92d848980004aa92a6",
+      "clubname": "Jhalak",
+      "hitCount": 0,
+      "title": "Design revolution",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "Do you have the creative bug in you? It’s time to bring it to test.You will get instructions to create a poster for an upcoming event or a logo for the firm. \n",
+      "rules": "1. It is on the spot designing competition.\n2. Only individual entries will be accepted.\n3. Only Adobe Photoshop, Illustrator, GIMP, Inkscape or CorelDRAW may be used.\n4. Use of the internet is allowed.",
+      "fee": 0,
+      "venue": "MBA room no.1",
+      "coordinators": [
+        {
+          "name": "Sanjeev Singh",
+          "phone": 9871166093,
+          "_id": "5c98ea92d848980004aa92a8"
+        },
+        {
+          "name": "Vikas",
+          "phone": 7292067469,
+          "_id": "5c98ea92d848980004aa92a7"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554993000000,
+        "to": 1555180140000
+      },
+      "prizes": {
+        "prize1": "1500",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98ece6d848980004aa92a9",
+      "clubname": "Jhalak",
+      "hitCount": 0,
+      "title": "Pic of the Day ",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "It  is a great opportunity to take some fantastic action-packed photographs that can help you win wonderful prizes and capture the essence of each day of Elements Culmyca!\n",
+      "rules": "1.The task is  to submit your best photographs on each day of fest.\n2.There will be 1 winner on each day of fest. \n3.You have to send  your entries to our email with the subject as Pic of the Day \n4.You can submit maximum 5 photograph on each day.\n 5. The photos should be submitted by 12 mid-night of respective day. \n6.3.Send your entries to our facebook page(https://www.facebook.com/jhalakcaptus) \n",
+      "fee": 0,
+      "venue": "Online event",
+      "coordinators": [
+        {
+          "name": "Simran Devan",
+          "phone": 9467430187,
+          "_id": "5c98ece6d848980004aa92ab"
+        },
+        {
+          "name": "Jayapreet Kaur ",
+          "phone": 9953128658,
+          "_id": "5c98ece6d848980004aa92aa"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555054200000,
+        "to": 1555065000000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98edc8d848980004aa92ac",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "Code Relay",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "It is a coding contest in which each team will be provided with random coding question. \nCoding has never been this fun. We have mixed the process of developing beautiful lines of code into a relay race, where your team has to solve question to progress towards victory. Teamwork, harmony and companionship will lead your way to be the ultimate winner. For the duration of 16 minutes, after every 4 minutes, team members will switch the place and continue the code. The team that solves a problem in minimum time, wins the event.",
+      "rules": " 1.Each team consists of 2 participants.\n2. Cross-college teams are allowed\n3. Total time - 16 minutes for each team\n4. Use of internet resources is prohibited.\n5. Communication between the team members during the event is prohibited.\n",
+      "fee": null,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Prince",
+          "phone": 9034731981,
+          "_id": "5c98edc8d848980004aa92ae"
+        },
+        {
+          "name": "Neha",
+          "phone": 9711917480,
+          "_id": "5c98edc8d848980004aa92ad"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555056000000,
+        "to": 1555063200000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "750",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c98eec8d848980004aa92af",
+      "clubname": "Jhalak",
+      "hitCount": 0,
+      "title": "Ghanchakkar",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "It’s a fun event.Details will be disclosed on the spot.\n",
+      "rules": "1.It is on the spot team event.Each team should consist of  2 members.\n2.It will consist of 3 levels .\n3.You can win exciting cash prizes. \n4.Details will be disclosed on the spot\n",
+      "fee": 10,
+      "venue": "LC",
+      "coordinators": [
+        {
+          "name": "Parul Garg",
+          "phone": 8708579448,
+          "_id": "5c9c6bed4b368900046cb053"
+        },
+        {
+          "name": "Jayapreet Kaur ",
+          "phone": 9953128658,
+          "_id": "5c9c6bed4b368900046cb052"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554553800000,
+        "to": 1554920940000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98efd0d848980004aa92b2",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "Hack On",
+      "eventtype": "solo",
+      "category": "Technical",
+      "desc": "Hack On is a prefest hacking and penetration testing contest. With technical clues and cryptographic answers, put yourself in the race",
+      "rules": "Visit hackon.elementsculmyca.com for rules.",
+      "fee": null,
+      "venue": "Online Event",
+      "coordinators": [
+        {
+          "name": "Prince",
+          "phone": 9034731981,
+          "_id": "5c98efd0d848980004aa92b4"
+        },
+        {
+          "name": "Sahil",
+          "phone": 8745959048,
+          "_id": "5c98efd0d848980004aa92b3"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554172200000,
+        "to": 1554831000000
+      },
+      "prizes": {
+        "prize1": "750",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98f036d848980004aa92b5",
+      "clubname": "Jhalak",
+      "hitCount": 0,
+      "title": "Make a Meme",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "In this competition we want you to get creative and make a funny meme that will make people laugh .So,come make us laugh with a chance of winning some exciting cash prizes.\n",
+      "rules": "1.The task is simple, make a meme. \n2.There will be 3 winners in every 3 days till fest. \n3.Send your entries to our fb page(https://www.facebook.com/jhalakcaptus). \n4.You can submit only one entry in every 3 days. \n5. The one with maximum likes will be the winner.\n",
+      "fee": 0,
+      "venue": "Online event",
+      "coordinators": [
+        {
+          "name": "Simran Devan",
+          "phone": 9467430187,
+          "_id": "5c98f036d848980004aa92b7"
+        },
+        {
+          "name": "Jayapreet Kaur ",
+          "phone": 9953128658,
+          "_id": "5c98f036d848980004aa92b6"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554294600000,
+        "to": 1554660840000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98f100d848980004aa92b8",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "Xunbao",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "o all Lara Crofts and Indiana Jones out there, there is a new treasure in town. Where? It is up to you to find. Hidden in the depths of the Internet, do not lose trail while following or you might get lost forever.\nXunbao is a multi-level contest where you will be given clues to solve.\nWith every step challenging your wit, it is a race against time and fellows. So get on your Black Pearls, in other words your Mobile and surf the waves on the internet to claim your fame.This year the stakes could not get any higher. \nTo all the smarty pants out there who think they can win by cheating, don\\\\'t even try because every move you make we'll be watching you! \\n GOOD LUCK EXPLORING! \\n Visit: xunbao.elementsculmyca.com",
+      "rules": "Date format is DD/MM/YYY. E.g.- 12/05/2018.\n2. 24-hour format is HH/MM/SS. E.g.- 19/45/15.\n3. Adoption of wrong means (asking or telling answers to other players, handing over the clue to other players) shall lead to immediate disqualification!",
+      "fee": null,
+      "venue": "Online Event",
+      "coordinators": [
+        {
+          "name": "Prince",
+          "phone": 9034731981,
+          "_id": "5c98f100d848980004aa92ba"
+        },
+        {
+          "name": "Manmeet",
+          "phone": 8816818721,
+          "_id": "5c98f100d848980004aa92b9"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555219800000,
+        "to": 1555230600000
+      },
+      "prizes": {
+        "prize1": "750",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98f1c7d848980004aa92bb",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "WYSIWYG CHALLENGE",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "What You See Is What You Get' Challenge is one of its kind.\nWe call all the frontend web developers out there to come and combat in your own desired challenge where you'll have to make a design in pure and vanilla HTML,CSS and JavaScript. ",
+      "rules": "1. Each team can have maximum 2 participants.\n2. Cross-college teams are allowed.\n3. Scoring will be based on the similarities and dissimilarities between the mockup and the final output.\n4. Cases of plagiarism will lead to direct disqualification. \n5. Bootstrap and other frameworks should not be used.",
+      "fee": null,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Neha",
+          "phone": 9711917480,
+          "_id": "5c98f1c7d848980004aa92bd"
+        },
+        {
+          "name": "Mohit",
+          "phone": 9953884453,
+          "_id": "5c98f1c7d848980004aa92bc"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555131600000,
+        "to": 1555151400000
+      },
+      "prizes": {
+        "prize1": "750",
+        "prize2": "500",
+        "prize3": ""
+      },
+      "tags": [],
+      "_id": "5c98f9e7d848980004aa92be",
+      "clubname": "Manan",
+      "hitCount": 0,
+      "title": "Android Development",
+      "eventtype": "team",
+      "category": "Technical",
+      "desc": "This contest calls the developers to build innovative android apps.\nDuring the realization of the project, participants can use any existing tool that suits to solving their tasks. It is important to note that participants must have the rights to use tools. For example, if they use a paid third-party library, then you are bound to have its license. The same rule applies to any used resources (images, music, etc.).",
+      "rules": "1. Each team can have maximum 2 participants.\n2. Cross-college teams are allowed.\n3. Teams must adhere to the deadline timetable defined on this page, or else their submissions will be invalid. \n4. Teams must not accept or use any help from people not in their team. \n5. Usage of free and/or open source Internet resources is allowed, but plagiarism and cheating is not. ",
+      "fee": null,
+      "venue": "CC Labs",
+      "coordinators": [
+        {
+          "name": "Rishabh",
+          "phone": 7404893577,
+          "_id": "5c98f9e7d848980004aa92c0"
+        },
+        {
+          "name": "Shubham",
+          "phone": 7840844120,
+          "_id": "5c98f9e7d848980004aa92bf"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1575570600000,
+        "to": 1575441000000
+      },
+      "prizes": {
+        "prize1": "1000",
+        "prize2": "0",
+        "prize3": "0"
+      },
+      "tags": null,
+      "_id": "5c9a6c3c99f3882e88de9226",
+      "clubname": "admin",
+      "hitCount": 0,
+      "title": "adminevent",
+      "eventtype": "solo",
+      "category": "Cultural",
+      "desc": "na",
+      "rules": "na",
+      "fee": 0,
+      "venue": "lc",
+      "coordinators": [
+        {
+          "name": "Manmeet",
+          "phone": 7988481668,
+          "_id": "5c9a6dfc881fc90004031e26"
+        },
+        {
+          "name": "",
+          "phone": null,
+          "_id": "5c9a6dfc881fc90004031e25"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554981600000,
+        "to": 1554983400000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9b4831ae1fde0004ccbbaa",
+      "clubname": "Vivekanand Manch",
+      "hitCount": 0,
+      "title": "Shashtri:The little sparrow",
+      "eventtype": "NA",
+      "category": "Cultural",
+      "desc": "A play on the life of Indian historical personality Lal Bahadur Shastri to commemorate their work and inspire all the students.",
+      "rules": "",
+      "fee": 0,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "Ayush Sinha",
+          "phone": 9113350065,
+          "_id": "5c9b5358ae1fde0004ccbbb6"
+        },
+        {
+          "name": "Sahil Jindal",
+          "phone": 8168969030,
+          "_id": "5c9b5358ae1fde0004ccbbb5"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555061400000,
+        "to": 1555068600000
+      },
+      "prizes": {
+        "prize1": "1500",
+        "prize2": "1000",
+        "prize3": "500"
+      },
+      "tags": [],
+      "_id": "5c9b498cae1fde0004ccbbad",
+      "clubname": "Vivekanand Manch",
+      "hitCount": 0,
+      "title": "Infinity Search",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "A competitive fun event which is a quick check of how much the student know the campus.",
+      "rules": "There must be 4 members(2 boys & 2 girls) per team.\n*The clues are to be found in a particular order.\n*Do not spoil other team’s clue if you find any.\n*Any damage to college property will be liable to disqualification.\n",
+      "fee": 0,
+      "venue": "MBA park",
+      "coordinators": [
+        {
+          "name": "Ayush ",
+          "phone": 9716769216,
+          "_id": "5c9b498cae1fde0004ccbbaf"
+        },
+        {
+          "name": "Dhruv",
+          "phone": 8950463858,
+          "_id": "5c9b498cae1fde0004ccbbae"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555061400000,
+        "to": 1555068600000
+      },
+      "prizes": {
+        "prize1": "1500",
+        "prize2": "1000",
+        "prize3": "500"
+      },
+      "tags": [],
+      "_id": "5c9b498dae1fde0004ccbbb0",
+      "clubname": "Vivekanand Manch",
+      "hitCount": 0,
+      "title": "Infinity Search",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "A competitive fun event which is a quick check of how much the student know the campus.",
+      "rules": "There must be 4 members(2 boys & 2 girls) per team.\n*The clues are to be found in a particular order.\n*Do not spoil other team’s clue if you find any.\n*Any damage to college property will be liable to disqualification.\n",
+      "fee": 0,
+      "venue": "MBA park",
+      "coordinators": [
+        {
+          "name": "Ayush ",
+          "phone": 9716769216,
+          "_id": "5c9b498dae1fde0004ccbbb2"
+        },
+        {
+          "name": "Dhruv",
+          "phone": 8950463858,
+          "_id": "5c9b498dae1fde0004ccbbb1"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1554982800000,
+        "to": 1554984000000
+      },
+      "prizes": {
+        "prize1": "",
+        "prize2": "",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9d04fcbf1a3d00041d1059",
+      "clubname": "Niramayam",
+      "hitCount": 0,
+      "title": "Sandhaan",
+      "eventtype": "team",
+      "category": "Cultural",
+      "desc": "It is a Yoga Dance Show by our club members on the main \nstage.This is a creative form of movement combining yoga \nand expressive free dance as a means of power charge of \nbody and soul in combination with music.\n\n",
+      "rules": "Nil",
+      "fee": 0,
+      "venue": "Main Stage",
+      "coordinators": [
+        {
+          "name": "Neeraj",
+          "phone": 8506951260,
+          "_id": "5c9d09a8bf1a3d00041d1064"
+        },
+        {
+          "name": "Anshika Chaudhary",
+          "phone": 851087102,
+          "_id": "5c9d09a8bf1a3d00041d1063"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "timing": {
+        "from": 1555047000000,
+        "to": 1555048800000
+      },
+      "prizes": {
+        "prize1": "0",
+        "prize2": "0",
+        "prize3": ""
+      },
+      "tags": null,
+      "_id": "5c9d0853bf1a3d00041d105c",
+      "clubname": "Niramayam",
+      "hitCount": 0,
+      "title": "Challenge Me",
+      "eventtype": "solo",
+      "category": "Main Stage",
+      "desc": "It is a fun event of yoga competition.\nHere the participant has to come and show his / her strength,\nflexibility and balance of body by showing yoga postures \nwhatever will be asked to do. \nThe competition will be among the participants.",
+      "rules": "The participant has to hold the posture for a certain time \napprox . 1 minute.\nThe best performer will be the winner.\n\n",
+      "fee": 0,
+      "venue": "Lal Chowk",
+      "coordinators": [
+        {
+          "name": "Yogesh",
+          "phone": 9899094174,
+          "_id": "5c9d09e0bf1a3d00041d1066"
+        },
+        {
+          "name": "Nitin",
+          "phone": 9599517944,
+          "_id": "5c9d09e0bf1a3d00041d1065"
+        }
+      ],
+      "__v": 0
+    }
+  ]
+}

@@ -88,24 +88,24 @@ public class DescriptionEventFragment extends Fragment{
         else
         rules.setText(eventData.getRules());
         List<String> coordinator = Arrays.asList(eventData.getCoordinator().split("%"));
-        if(coordinator.get(0).equals("")&&coordinator.get(1).equals("null")&&coordinator.get(2).equals("")&&coordinator.get(3).equals("null"))
+        if(coordinator.get(0).equals("")&&(coordinator.get(1).equals("null")||coordinator.get(1).equals("0"))&&coordinator.get(2).equals("")&&(coordinator.get(3).equals("null")||coordinator.get(3).equals("0")))
             contactTextView.setVisibility(View.GONE);
         if(coordinator.get(0).equals("")||coordinator.get(0).equals("null")){
             coordinator1Name.setVisibility(View.GONE);
         }else
         coordinator1Name.setText(coordinator.get(0));
-        if(coordinator.get(1).equals("")||coordinator.get(1).equals("null")) {
+        if(coordinator.get(1).equals("")||coordinator.get(1).equals("null")||coordinator.get(1).equals("0")) {
             coordinator1Phone.setVisibility(View.GONE);
         }else
             coordinator1Phone.setText(" : " + coordinator.get(1));
         if(coordinator.get(2).equals("")||coordinator.get(2).equals("null")){
             coordinator2Name.setVisibility(View.GONE);
         }else
-        coordinator2Name.setText(coordinator.get(2) + " : ");
-        if(coordinator.get(3).equals("")||coordinator.get(3).equals("null")){
+        coordinator2Name.setText(coordinator.get(2) );
+        if(coordinator.get(3).equals("")||coordinator.get(3).equals("null")||coordinator.get(3).equals("0")){
             coordinator2Phone.setVisibility(View.GONE);
         }else
-        coordinator2Phone.setText(coordinator.get(3));
+        coordinator2Phone.setText(" : " + coordinator.get(3));
 
         Log.d("prerna",eventData.getPrizes());
 

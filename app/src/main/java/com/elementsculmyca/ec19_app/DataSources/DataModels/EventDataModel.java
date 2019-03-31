@@ -38,6 +38,8 @@ public class EventDataModel {
     @SerializedName("hitCount ")
     int hitcount;
 
+    public EventDataModel(){}
+
     public EventDataModel(String id, String title, String clubname, String category, String desc, String rules, String venue, String photolink, int fee, TimingsModel time, List<CoordinatorModel> coordinatorModelList, PrizeModel prizes, String eventType, String[] tags, int hitcount) {
         this.id = id;
         this.title = title;

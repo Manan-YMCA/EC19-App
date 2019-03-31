@@ -28,8 +28,10 @@ import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.UserModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
@@ -56,6 +58,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
     SharedPreferences sharedPreferences;
     FragmentManager fm;
     FragmentOtpChecker otpChecker;
+    DatabaseInitializer databaseInitializer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -201,6 +204,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
                     editor.putString("UserPhone",user.getPhone());
                     editor.putString("UserEmail",user.getEmail());
                     editor.commit();
+                    getAllTickets();
                     mProgress.hide();
                     startActivity(new Intent(LoginActivity.this,MainScreenActivity.class));
                     finish();
@@ -214,5 +218,23 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             }
 
         } );
+    }
+
+    void getAllTickets(){
+        Call<ArrayList<TicketModel>> call = apiInterface.getTickets(sharedPreferences.getString("UserPhone",""));
+        call.enqueue( new Callback<ArrayList<TicketModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<TicketModel>> call, Response<ArrayList<TicketModel>> response) {
+                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                ArrayList<TicketModel> ticketList= response.body();
+                databaseInitializer.populateTicketSync(AppDatabase.getAppDatabase(LoginActivity.this),ticketList);
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<TicketModel>> call, Throwable t) {
+            }
+
+        } );
+
     }
 }

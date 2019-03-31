@@ -54,6 +54,12 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         final EventDataModel event = eventList.get(i);
         UserDao_Impl daoUser;
         daoUser=new UserDao_Impl(AppDatabase.getAppDatabase(context));
+        UserLocalModel user = daoUser.getTicketbyId(event.getId());
+        if(user==null) {
+            viewHolder.registerButton.setText("Register Now!");
+        }
+        else
+            viewHolder.registerButton.setText("View Ticket");
         viewHolder.eventName.setText(event.getTitle().substring(0, Math.min(event.getTitle().length(), 15)));
         if (event.getTitle().length() > 15)
             viewHolder.eventName.append("...");
@@ -80,12 +86,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
         String timeString= formatter.format(new Date(event.getTime().getFrom()));
         viewHolder.eventTime.setText(timeString);
-        UserLocalModel user = daoUser.getTicketbyId(event.getId());
-        if(user==null) {
-            viewHolder.registerButton.setText("Register Now!");
-        }
-        else
-            viewHolder.registerButton.setText("View Ticket");
         viewHolder.registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

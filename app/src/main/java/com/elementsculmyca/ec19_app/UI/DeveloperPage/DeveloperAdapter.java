@@ -42,7 +42,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
     @Override
     public DeveloperAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_developers, viewGroup, false);
-        return new DeveloperAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -50,7 +50,8 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
         final DeveloperModel developer = developerList.get(i);
         viewHolder.name.setText(developer.getName());
         viewHolder.designation.setText(developer.getDesignation());
-        Picasso.get().load(developer.getImageUri()).into(viewHolder.photo);
+        Uri uri= Uri.parse(developer.getDesignation());
+        Picasso.get().load(uri).into(viewHolder.photo);
         final Intent facebookIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getFacebookLink()));
         final Intent instagramIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getInstagramLink()));
         final Intent githubIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getGithubLink()));

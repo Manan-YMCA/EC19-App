@@ -1,6 +1,8 @@
 package com.elementsculmyca.ec19_app.UI.DeveloperPage;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,7 +26,16 @@ public class DeveloperFragment extends Fragment {
     RecyclerView recyclerView;
     DeveloperAdapter mAdapter;
     DeveloperModel developer;
+    Context mContext;
+
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext = context;
+    }
+
+    @Override
+    @NonNull
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
@@ -32,8 +43,8 @@ public class DeveloperFragment extends Fragment {
         developers = new ArrayList<>();
         addData();
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        mAdapter = new DeveloperAdapter(developers,getContext());
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        mAdapter = new DeveloperAdapter(developers, mContext);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(mAdapter);
         return view;

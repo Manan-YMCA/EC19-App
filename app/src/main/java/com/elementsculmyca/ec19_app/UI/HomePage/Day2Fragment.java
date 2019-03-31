@@ -57,8 +57,6 @@ public class Day2Fragment extends Fragment {
         recyclerView=root.findViewById(R.id.schdule_recycler2);
 
         dao=new EventsDao_Impl(AppDatabase.getAppDatabase(getActivity()));
-        if(dao.countUsers()==0&&!isNetworkAvailable())
-            Toast.makeText(getActivity(), "Check your Internet Connection", Toast.LENGTH_SHORT).show();
         eventList=new ArrayList<>();
         data = dao.getEventByDay("2");
         for (int i = 0; i < data.size(); i++) {

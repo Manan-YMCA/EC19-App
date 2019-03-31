@@ -24,7 +24,9 @@ import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
@@ -53,6 +55,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     private String musername;
     private String muserclg,mUserPhone,mUserEmail;
     SharedPreferences sharedPreferences;
+    DatabaseInitializer databaseInitializer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -236,16 +239,12 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
                     startActivity(new Intent(SignUpActivity.this,MainScreenActivity.class));
                     finish();
                 }
-
             }
-
             @Override
             public void onFailure(Call<ResponseModel> call, Throwable t) {
                 mProgress.dismiss();
-                Log.e( "Response", call.request().url() + "" + call.request().body() );
-
+                Log.e( "Response", call.request().url() + "" + call.request().body());
             }
-
         } );
     }
 }

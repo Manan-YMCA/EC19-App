@@ -62,7 +62,7 @@ public class DatabaseInitializer {
             else
                 day = "4";
             List<CoordinatorModel> coordinatorModelList = data.get( i ).getCoordinatorModelList();
-            String coordinator = coordinatorModelList.get( 0 ).getName() + "%" + coordinatorModelList.get( 0 ).getPhone() + "%" + coordinatorModelList.get( 1 ).getName() + "%" + coordinatorModelList.get( 1 ).getPhone();
+           String coordinator = coordinatorModelList.get( 0 ).getName() + "%" + coordinatorModelList.get( 0 ).getPhone() + "%" + coordinatorModelList.get( 1 ).getName() + "%" + coordinatorModelList.get( 1 ).getPhone();
             EventLocalModel mdData = new EventLocalModel( data.get( i ).getId(),
                     data.get( i ).getTitle() + "",
                     data.get( i ).getClubname() + "",

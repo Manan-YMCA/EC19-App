@@ -106,9 +106,6 @@ public class ClubEventListActivity extends AppCompatActivity {
         }
         recyclerView=findViewById(R.id.events_list);
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
-        if(dao.countUsers()==0&&!isNetworkAvailable())
-            Toast.makeText(ClubEventListActivity.this, "Check your Internet Connection", Toast.LENGTH_SHORT).show();
-        else
         getEventsByClubName(clubName);
     }
     void getEventsByClubName(String clubName) {
