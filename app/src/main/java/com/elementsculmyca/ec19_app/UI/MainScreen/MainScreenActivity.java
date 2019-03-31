@@ -1,6 +1,9 @@
 package com.elementsculmyca.ec19_app.UI.MainScreen;
 
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
+import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.BookmarksPage.BookmarksFragment;
 import com.elementsculmyca.ec19_app.UI.DeveloperPage.DeveloperFragment;
@@ -17,15 +25,23 @@ import com.elementsculmyca.ec19_app.UI.MenuPage.MenuFragment;
 import com.elementsculmyca.ec19_app.UI.MyTicketsPage.MyTicketsFragment;
 import com.elementsculmyca.ec19_app.UI.aboutPage.AboutBaseFragment;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainScreenActivity extends AppCompatActivity {
     ImageView home,bookmarks,tickets,developers,more;
+    DatabaseInitializer databaseInitializer;
+    private ApiInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main_screen );
+        apiInterface = ApiClient.getClient().create( ApiInterface.class );
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
         home = findViewById(R.id.home);
@@ -33,6 +49,9 @@ public class MainScreenActivity extends AppCompatActivity {
         tickets = findViewById(R.id.tickets);
         developers = findViewById(R.id.developers);
         more = findViewById(R.id.more);
+        if(isNetworkAvailable()) {
+            getAllEvents();
+        }
         home.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY);
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         tickets.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -73,6 +92,35 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
     }
+
+    void getAllEvents() {
+        Call<ArrayList<EventDataModel>> call = apiInterface.getEventList();
+        call.enqueue( new Callback<ArrayList<EventDataModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<EventDataModel>> call, Response<ArrayList<EventDataModel>> response) {
+                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
+                try{
+                    databaseInitializer.populateSync(AppDatabase.getAppDatabase(MainScreenActivity.this),response.body());
+                }catch (Exception e){
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<EventDataModel>> call, Throwable t) {
+
+            }
+
+        } );
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
     public void switchToFragmentHome() {
         home.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY);
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);

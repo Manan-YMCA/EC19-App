@@ -237,7 +237,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
                     editor.commit();
                     mProgress.hide();
                     startActivity(new Intent(SignUpActivity.this,MainScreenActivity.class));
-                    finish();
+                    finishAffinity();
                 }
             }
             @Override

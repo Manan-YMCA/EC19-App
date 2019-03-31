@@ -205,9 +205,6 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
                     editor.putString("UserEmail",user.getEmail());
                     editor.commit();
                     getAllTickets();
-                    mProgress.hide();
-                    startActivity(new Intent(LoginActivity.this,MainScreenActivity.class));
-                    finish();
                 }
             }
 
@@ -228,6 +225,9 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
                 ArrayList<TicketModel> ticketList= response.body();
                 databaseInitializer.populateTicketSync(AppDatabase.getAppDatabase(LoginActivity.this),ticketList);
+                mProgress.hide();
+                startActivity(new Intent(LoginActivity.this,MainScreenActivity.class));
+                finishAffinity();
             }
 
             @Override

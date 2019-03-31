@@ -115,9 +115,6 @@ public class HomeFragment extends Fragment {
         viewPager.addOnPageChangeListener(onchange);
         DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
         viewPager.setAdapter(adapterday);
-        if(isNetworkAvailable()) {
-            getAllEvents();
-        }
         day1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,36 +148,6 @@ public class HomeFragment extends Fragment {
         return viewPager.getCurrentItem();
     }
 
-    void getAllEvents() {
-        Call<ArrayList<EventDataModel>> call = apiInterface.getEventList();
-        call.enqueue( new Callback<ArrayList<EventDataModel>>() {
-            @Override
-            public void onResponse(Call<ArrayList<EventDataModel>> call, Response<ArrayList<EventDataModel>> response) {
-                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
-                try{
-                databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),response.body());
-                    Toast.makeText(getActivity(), "abc", Toast.LENGTH_SHORT).show();
-                    DayAdapter adapterday = new DayAdapter(getChildFragmentManager());
-                    viewPager.setAdapter(adapterday);
-                }catch (Exception e){
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<EventDataModel>> call, Throwable t) {
-
-            }
-
-        } );
-    }
-
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
     private void addData() {
         ClubEventModel manan = new ClubEventModel();
         manan.setClubName("Manan");
