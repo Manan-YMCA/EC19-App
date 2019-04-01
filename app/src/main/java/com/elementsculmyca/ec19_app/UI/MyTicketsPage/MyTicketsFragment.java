@@ -49,6 +49,7 @@ public class MyTicketsFragment extends Fragment {
     List<UserLocalModel> data;
     ProgressBar progressBar;
     ApiInterface apiInterface;
+    TextView tickets;
     String phoneNumber;
     DatabaseInitializer databaseInitializer;
     @Override
@@ -61,6 +62,7 @@ public class MyTicketsFragment extends Fragment {
         relativeLayout = root.findViewById(R.id.rl);
         login = root.findViewById(R.id.login);
         progressBar = root.findViewById(R.id.pb);
+        tickets = root.findViewById(R.id.no_tickets);
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
         dao=new UserDao_Impl(AppDatabase.getAppDatabase(getActivity()));
         sharedPreferences= this.getActivity().getSharedPreferences("login_details",0);
@@ -73,16 +75,17 @@ public class MyTicketsFragment extends Fragment {
         }else{
             relativeLayout.setVisibility(View.VISIBLE);
             login.setVisibility(View.GONE);
-            if(isNetworkAvailable()){
-                progressBar.setVisibility(View.VISIBLE);
-                recyclerView.setVisibility(View.GONE);
-                getAllTickets();
-            }else {
                 data = dao.getAll();
-                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-                adapter = new TicketsAdapter(data, getActivity());
-                recyclerView.setAdapter(adapter);
-            }
+                if(data.size() == 0&&!isNetworkAvailable())
+                    Toast.makeText(getActivity(), "Check your internet connection", Toast.LENGTH_SHORT).show();
+                else if(data.size()==0 &&isNetworkAvailable())
+                    tickets.setVisibility(View.VISIBLE);
+                else {
+                    tickets.setVisibility(View.GONE);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                    adapter = new TicketsAdapter(data, getActivity());
+                    recyclerView.setAdapter(adapter);
+                }
         }
 
 
@@ -94,37 +97,5 @@ public class MyTicketsFragment extends Fragment {
                 = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
-    void getAllTickets(){
-        Call<ArrayList<TicketModel>> call = apiInterface.getTickets(phoneNumber);
-        call.enqueue( new Callback<ArrayList<TicketModel>>() {
-            @Override
-            public void onResponse(Call<ArrayList<TicketModel>> call, Response<ArrayList<TicketModel>> response) {
-                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
-                ArrayList<TicketModel> ticketList= response.body();
-                Log.d("Response",Integer.toString(ticketList.size()));
-                databaseInitializer.populateTicketSync(AppDatabase.getAppDatabase(getActivity()),ticketList);
-                progressBar.setVisibility(View.GONE);
-                recyclerView.setVisibility(View.VISIBLE);
-                data = dao.getAll();
-                Log.d("Response",Integer.toString(data.size()));
-                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-                adapter = new TicketsAdapter(data, getActivity());
-                recyclerView.setAdapter(adapter);
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<TicketModel>> call, Throwable t) {
-                progressBar.setVisibility(View.GONE);
-                data = dao.getAll();
-                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-                adapter = new TicketsAdapter(data, getActivity());
-                recyclerView.setAdapter(adapter);
-
-            }
-
-        } );
-
     }
 }

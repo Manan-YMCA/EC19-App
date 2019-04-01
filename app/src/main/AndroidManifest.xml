@@ -65,7 +65,8 @@
             android:name=".UI.SignUpPage.SignUpActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".UI.HomePage.Searchable" />
-        <activity android:name=".UI.MenuPage.fragment_menuu"></activity>
+        <activity android:name=".UI.MenuPage.fragment_menuu" />
+        <activity android:name=".UI.aboutPage.AboutActivity"></activity>
     </application>
 
 </manifest>

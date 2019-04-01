@@ -101,12 +101,11 @@ public class ClubEventListActivity extends AppCompatActivity {
             clubDescpTextView.setText("When words fail, music speaks");
         } else if (clubName.equals("Vivekanand Manch")) {
             clubDescpTextView.setText("Inspired by Swami Vivekanand this is the category where cultural and fun activities fuse with social values. Witness the Social Bonanza.");
+        } else if(clubName.equals("Niramayam")){
+            clubDescpTextView.setText("mann shant chitt shant aatma prasan");
         }
         recyclerView=findViewById(R.id.events_list);
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
-        if(dao.countUsers()==0&&!isNetworkAvailable())
-            Toast.makeText(ClubEventListActivity.this, "Check your Internet Connection", Toast.LENGTH_SHORT).show();
-        else
         getEventsByClubName(clubName);
     }
     void getEventsByClubName(String clubName) {

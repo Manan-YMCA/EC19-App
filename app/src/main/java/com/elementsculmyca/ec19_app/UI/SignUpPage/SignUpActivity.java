@@ -1,5 +1,6 @@
 package com.elementsculmyca.ec19_app.UI.SignUpPage;
 
+import android.Manifest;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -23,7 +24,9 @@ import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
+import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
+import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitializer;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
@@ -52,6 +55,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     private String musername;
     private String muserclg,mUserPhone,mUserEmail;
     SharedPreferences sharedPreferences;
+    DatabaseInitializer databaseInitializer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +76,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
+                finishAffinity();
             }
         });
         guest.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +127,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         List<String> listPermissionsNeeded = new ArrayList<>();
 
         if (receiveSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(android.Manifest.permission.RECEIVE_MMS);
+            listPermissionsNeeded.add(Manifest.permission.RECEIVE_SMS);
         }
         if (readSMS != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(android.Manifest.permission.READ_SMS);
@@ -166,11 +171,30 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             return false;
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()) {
-            userEmail.setError("Enter a Valid Email Address");
+//        if (!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()) {
+//            userEmail.setError("Enter a Valid Email Address");
+//            return false;
+//        }
+
+        if(!isEmailValid(userEmail.getText().toString())){
+            userEmail.setError("Enter valid email");
             return false;
         }
         return true;
+    }
+
+    public static boolean isEmailValid(String email) {
+        boolean isValid = false;
+
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
     }
     @Override
     public void updateResult(boolean status) {
@@ -213,18 +237,14 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
                     editor.commit();
                     mProgress.hide();
                     startActivity(new Intent(SignUpActivity.this,MainScreenActivity.class));
-                    finish();
+                    finishAffinity();
                 }
-
             }
-
             @Override
             public void onFailure(Call<ResponseModel> call, Throwable t) {
                 mProgress.dismiss();
-                Log.e( "Response", call.request().url() + "" + call.request().body() );
-
+                Log.e( "Response", call.request().url() + "" + call.request().body());
             }
-
         } );
     }
 }

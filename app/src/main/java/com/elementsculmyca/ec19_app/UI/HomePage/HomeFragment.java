@@ -31,6 +31,7 @@ import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.ClubEventListPage.EventAdapter;
+import com.elementsculmyca.ec19_app.UI.MyTicketsPage.TicketsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,7 +94,6 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate( R.layout.fragment_main_screen, container, false );
         viewPager= root.findViewById(R.id.days_viewpager);
         searchView=  root.findViewById(R.id.search_view);
-        //searchView.setQueryHint("Search for Events");
 
 
         searchView.setOnClickListener(new View.OnClickListener() {
@@ -113,16 +113,8 @@ public class HomeFragment extends Fragment {
         day3=root.findViewById(R.id.btn_day3);
         bar=root.findViewById(R.id.pb);
         viewPager.addOnPageChangeListener(onchange);
-        if(isNetworkAvailable()) {
-            bar.setVisibility(View.VISIBLE);
-            getAllEvents();
-        }
-
-        else{
-            DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
-            viewPager.setAdapter(adapterday);
-        }
-
+        DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
+        viewPager.setAdapter(adapterday);
         day1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,51 +148,18 @@ public class HomeFragment extends Fragment {
         return viewPager.getCurrentItem();
     }
 
-    void getAllEvents() {
-        Call<ArrayList<EventDataModel>> call = apiInterface.getEventList();
-        call.enqueue( new Callback<ArrayList<EventDataModel>>() {
-            @Override
-            public void onResponse(Call<ArrayList<EventDataModel>> call, Response<ArrayList<EventDataModel>> response) {
-                //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
-                ArrayList<EventDataModel> eventList= response.body();
-                databaseInitializer.populateSync(AppDatabase.getAppDatabase(getActivity()),response.body());
-                bar.setVisibility(View.GONE);
-                try {
-                    DayAdapter adapterday = new DayAdapter(getChildFragmentManager());
-                    viewPager.setAdapter(adapterday);
-                }catch (Exception e){
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<EventDataModel>> call, Throwable t) {
-                bar.setVisibility(View.GONE);
-                try {
-                    DayAdapter adapterday= new DayAdapter(getChildFragmentManager());
-                    viewPager.setAdapter(adapterday);
-                }
-                catch (Exception e){
-                }
-
-            }
-
-        } );
-    }
-
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
     private void addData() {
-
         ClubEventModel manan = new ClubEventModel();
         manan.setClubName("Manan");
         manan.setDisplayName("Coding");
         //manan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.manan));
         allSampleData.add(manan);
+
+        ClubEventModel srijan = new ClubEventModel();
+        srijan.setClubName("Srijan");
+        srijan.setDisplayName("Arts");
+        //srijan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.srijan));
+        allSampleData.add(srijan);
 
         ClubEventModel ananya = new ClubEventModel();
         ananya.setClubName("Ananya");
@@ -262,12 +221,6 @@ public class HomeFragment extends Fragment {
         //samarpan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.samarpan));
         allSampleData.add(samarpan);
 
-        ClubEventModel srijan = new ClubEventModel();
-        srijan.setClubName("Srijan");
-        srijan.setDisplayName("Arts");
-        //srijan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.srijan));
-        allSampleData.add(srijan);
-
         ClubEventModel tarannum = new ClubEventModel();
         tarannum.setClubName("Taranuum");
         tarannum.setDisplayName("Music");
@@ -279,6 +232,11 @@ public class HomeFragment extends Fragment {
         vivekanand.setDisplayName("Socio-Cultural");
         //vivekanand.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vivekanand));
         allSampleData.add(vivekanand);
-    }
 
+        ClubEventModel niramayam = new ClubEventModel();
+        niramayam.setClubName("Niramayam");
+        niramayam.setDisplayName("Yoga");
+        //vivekanand.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vivekanand));
+        allSampleData.add(niramayam);
+    }
 }

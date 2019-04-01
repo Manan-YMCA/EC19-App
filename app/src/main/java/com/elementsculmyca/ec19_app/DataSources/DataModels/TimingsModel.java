@@ -11,6 +11,8 @@ public class TimingsModel {
     @SerializedName("to")
     long to;
 
+    public TimingsModel(){}
+
     public TimingsModel(long from, long to) {
         this.from = from;
         this.to = to;

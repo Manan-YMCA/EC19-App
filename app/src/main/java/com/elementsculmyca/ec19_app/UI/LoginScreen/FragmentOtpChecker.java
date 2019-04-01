@@ -57,7 +57,7 @@ public class FragmentOtpChecker extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_otp_checker, container, false);
         phoneNum = getArguments().getString("phone");
-
+    Log.d("yatin", "attached otp fragment");
         if (mContext == null) {
             mContext = getActivity();
         }
