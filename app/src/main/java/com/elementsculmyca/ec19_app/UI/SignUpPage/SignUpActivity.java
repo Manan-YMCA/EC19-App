@@ -75,8 +75,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
-                finishAffinity();
+                finish();
             }
         });
         guest.setOnClickListener(new View.OnClickListener() {
