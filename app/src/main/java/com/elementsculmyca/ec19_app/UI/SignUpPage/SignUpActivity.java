@@ -69,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         userPhone=findViewById(R.id.phone_number);
         userEmail = findViewById(R.id.email);
         mProgress = new ProgressDialog(this);
-        mProgress.setMessage("Registering You");
+        mProgress.setMessage("Registering you");
         mProgress.setTitle("Please Wait");
         mProgress.setCanceledOnTouchOutside(false);
         login.setOnClickListener(new View.OnClickListener() {

@@ -62,7 +62,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="8dp"
-        android:text="Scan the QR code at Venue"
+        android:text="Scan QR code at the venue"
         android:textColor="#4a4a4a"
         android:textSize="12sp"/>
     <ImageView

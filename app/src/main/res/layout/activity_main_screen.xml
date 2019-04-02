@@ -55,7 +55,7 @@
             android:id="@+id/tickets"
             android:paddingTop="6dp"
             android:paddingBottom="6dp"
-            android:src="@drawable/ec_logo_2019" />
+            android:src="@drawable/tickets" />
 
         <ImageView
             android:layout_width="0dp"

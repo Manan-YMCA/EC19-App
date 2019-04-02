@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/overpass_black"
-                        android:text="Fees: Rs."
+                        android:text="Fee: Rs."
                         android:textColor="#4a4a4a"
                         android:textSize="13sp" />
 
@@ -122,7 +122,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/overpass_black"
-                    android:text="Please be present at venue"
+                    android:text="Please be present at the venue"
                     android:textColor="#f5a623"
                     android:textSize="10sp" />
 
