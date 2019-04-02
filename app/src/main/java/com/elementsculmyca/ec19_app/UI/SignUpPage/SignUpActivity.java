@@ -87,6 +87,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Boolean checker = validateCredentials();
                 if (checker) {
                     checkOTP();
@@ -96,6 +97,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
                     mUserPhone = userPhone.getText().toString();
                     mUserEmail = userEmail.getText().toString();
                 }
+
             }
         });
     }
