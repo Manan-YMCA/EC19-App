@@ -192,19 +192,23 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
-                ResponseModel responseModel = response.body();
-                if(responseModel.getStatus().equals("User Not Exist")){
-                    Toast.makeText(LoginActivity.this, "You need to sign up first", Toast.LENGTH_SHORT).show();
-                    mProgress.dismiss();
-                }else{
-                    UserModel user = response.body().getUser();
-                    SharedPreferences.Editor editor= sharedPreferences.edit();
-                    editor.putString("Username",user.getName());
-                    editor.putString("UserClg",user.getCollege());
-                    editor.putString("UserPhone",user.getPhone());
-                    editor.putString("UserEmail",user.getEmail());
-                    editor.commit();
-                    getAllTickets();
+                try {
+                    ResponseModel responseModel = response.body();
+                    if (responseModel.getStatus().equals("User Not Exist")) {
+                        Toast.makeText(LoginActivity.this, "You need to sign up first", Toast.LENGTH_SHORT).show();
+                        mProgress.dismiss();
+                    } else {
+                        UserModel user = response.body().getUser();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("Username", user.getName());
+                        editor.putString("UserClg", user.getCollege());
+                        editor.putString("UserPhone", user.getPhone());
+                        editor.putString("UserEmail", user.getEmail());
+                        editor.commit();
+                        getAllTickets();
+                    }
+                }catch (Exception e){
+
                 }
             }
 

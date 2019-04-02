@@ -46,27 +46,34 @@ public class BookmarksFragment extends Fragment {
         eventList=new ArrayList<>();
         sharedPreferences= this.getActivity().getSharedPreferences("login_details",Context.MODE_PRIVATE);
         Set<String> set = sharedPreferences.getStringSet("bookmarks", new HashSet<String>());
-        if(set.isEmpty())
+        String phoneNumber = sharedPreferences.getString("UserPhone","");
+        if(phoneNumber.equals("")){
             noBookmarks.setVisibility(View.VISIBLE);
-        else {
-            noBookmarks.setVisibility(View.GONE);
-            for (String s : set) {
-                data = dao.getEventByEventId(s);
-                    PrizeModel prizes= new PrizeModel();
+            noBookmarks.setText("LOGIN TO ADD BOOKMARKS");
+        }else {
+            if (set.isEmpty()) {
+                noBookmarks.setVisibility(View.VISIBLE);
+                noBookmarks.setText("NO BOOKMARKS YET");
+            }
+            else {
+                noBookmarks.setVisibility(View.GONE);
+                for (String s : set) {
+                    data = dao.getEventByEventId(s);
+                    PrizeModel prizes = new PrizeModel();
                     List<String> prizeList = Arrays.asList(data.getPrizes().split("%"));
-                    if(prizeList.size()==1){
+                    if (prizeList.size() == 1) {
                         prizes.setPrize1(prizeList.get(0));
-                    }else if(prizeList.size()==2){
+                    } else if (prizeList.size() == 2) {
                         prizes.setPrize1(prizeList.get(0));
                         prizes.setPrize2(prizeList.get(1));
-                    }else if(prizeList.size()==3){
+                    } else if (prizeList.size() == 3) {
                         prizes.setPrize1(prizeList.get(0));
                         prizes.setPrize2(prizeList.get(1));
                         prizes.setPrize3(prizeList.get(2));
                     }
-                    TimingsModel time= new TimingsModel(data.getStartTime(),data.getEndTime());
+                    TimingsModel time = new TimingsModel(data.getStartTime(), data.getEndTime());
 
-                    EventDataModel event= new EventDataModel( data.getId(),
+                    EventDataModel event = new EventDataModel(data.getId(),
                             data.getTitle() + "",
                             data.getClubname() + "",
                             data.getCategory() + "",
@@ -78,10 +85,11 @@ public class BookmarksFragment extends Fragment {
                             time,
                             prizes,
                             data.getEventType() + "",
-                            data.getHitcount() );
+                            data.getHitcount());
                     eventList.add(event);
                 }
             }
+        }
             mAdapter = new EventAdapter(eventList, getContext());
             RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
             recyclerView.setLayoutManager(mLayoutManager);
