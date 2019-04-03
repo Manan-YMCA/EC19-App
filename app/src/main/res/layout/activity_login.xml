@@ -14,7 +14,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/drama_x_9_ad_782_cb" />
+        android:src="@drawable/home2" />
 
     <LinearLayout
         android:layout_width="match_parent"
