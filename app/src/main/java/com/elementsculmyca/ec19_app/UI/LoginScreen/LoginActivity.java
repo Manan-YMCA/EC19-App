@@ -59,6 +59,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
     FragmentManager fm;
     FragmentOtpChecker otpChecker;
     DatabaseInitializer databaseInitializer;
+    String check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,12 +70,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         phoneNumber = findViewById(R.id.phone_number);
         submit = findViewById(R.id.submit);
         signUp=findViewById(R.id.sign_up);
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
-            }
-        });
+        check = getIntent().getStringExtra("check");
         sharedPreferences=getSharedPreferences("login_details",0);
         mProgress = new ProgressDialog(this);
         mProgress.setMessage("Registering You");
@@ -97,7 +93,14 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             }
         });
         guestLogin = findViewById(R.id.button_guest);
-
+        if(check.equals("1"))
+            guestLogin.setVisibility(View.GONE);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,SignUpActivity.class).putExtra("check",check));
+            }
+        });
         guestLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

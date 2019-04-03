@@ -56,10 +56,12 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     private String muserclg,mUserPhone,mUserEmail;
     SharedPreferences sharedPreferences;
     DatabaseInitializer databaseInitializer;
+    String check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        check = getIntent().getStringExtra("check");
         apiInterface = ApiClient.getClient().create( ApiInterface.class );
         login=findViewById(R.id.tv_login);
         submit=findViewById(R.id.submit);
@@ -78,6 +80,8 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
                 finish();
             }
         });
+        if(check.equals("1"))
+            guest.setVisibility(View.GONE);
         guest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
