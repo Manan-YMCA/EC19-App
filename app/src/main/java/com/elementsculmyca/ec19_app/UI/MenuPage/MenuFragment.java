@@ -6,23 +6,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao_Impl;
 import com.elementsculmyca.ec19_app.R;
-import com.elementsculmyca.ec19_app.UI.BookmarksPage.BookmarksFragment;
-import com.elementsculmyca.ec19_app.UI.EventPage.RegisterEventFragment;
 import com.elementsculmyca.ec19_app.UI.LoginScreen.LoginActivity;
+import com.elementsculmyca.ec19_app.UI.WebViewActivity.WebViewActivity;
 import com.elementsculmyca.ec19_app.UI.aboutPage.AboutActivity;
 
 public class MenuFragment extends Fragment {
@@ -60,6 +55,20 @@ public class MenuFragment extends Fragment {
                 startActivity(new Intent(getActivity(),LoginActivity.class));
             }
         });
+        hackon.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent( getActivity(), WebViewActivity.class ).putExtra( "name", "hackon" ) );
+            }
+        } );
+
+        xunbao.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent( getActivity(), WebViewActivity.class ).putExtra( "name", "xunbao" ) );
+            }
+        } );
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

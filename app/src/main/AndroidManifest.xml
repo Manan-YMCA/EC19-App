@@ -66,7 +66,8 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".UI.HomePage.Searchable" />
         <activity android:name=".UI.MenuPage.fragment_menuu" />
-        <activity android:name=".UI.aboutPage.AboutActivity"></activity>
+        <activity android:name=".UI.aboutPage.AboutActivity" />
+        <activity android:name=".UI.WebViewActivity.WebViewActivity"></activity>
     </application>
 
 </manifest>
