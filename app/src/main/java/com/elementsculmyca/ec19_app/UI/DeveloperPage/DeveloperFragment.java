@@ -10,13 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.elementsculmyca.ec19_app.DataSources.LocalServices.AppDatabase;
-import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventLocalModel;
-import com.elementsculmyca.ec19_app.DataSources.LocalServices.EventsDao_Impl;
-import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
-import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
 
 import java.util.ArrayList;
@@ -41,8 +35,9 @@ public class DeveloperFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
-        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://github.com/Prerna1","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
+        developer = new DeveloperModel( "https://i.ibb.co/7Gn02Dd/Whats-App-Image-2019-04-04-at-03-52-12.jpg", "Prerna Suneja", "Team Head", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
         developers.add(developer);
+        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Shubham Sharma", "Team Head ka Head", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
         developers.add(developer);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);

@@ -2,7 +2,6 @@ package com.elementsculmyca.ec19_app.UI.HomePage;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,12 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.R;
 import com.elementsculmyca.ec19_app.UI.ClubEventListPage.ClubEventListActivity;
+import com.squareup.picasso.Picasso;
 
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdapter.Viewholder1> {
@@ -53,6 +51,70 @@ public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdap
         }
         viewholder.mgenres.setText(displayName);
         viewholder.mimage.setImageResource(R.drawable.drama_x_9_ad_782);
+        switch (singleItem.getClubName()) {
+            case "Manan":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/manan.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Taranuum":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/tarannum.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Ananya":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/ananya.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Jhalak":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/jhalak.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Vividha":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/drama.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "IEEE":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/ieee.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "SAE":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/automobiles.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Microbird":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/microbird.jpg" )
+                        .into( viewholder.mimage );
+                break;
+
+            case "Srijan":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/srijan.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Niramayam":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/jhalak.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Samarpan":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/samarpan.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Mechnext":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/mechnext.jpg" )
+                        .into( viewholder.mimage );
+                break;
+
+            case "Vivekanand Manch":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/vivekanand.jpg" )
+                        .into( viewholder.mimage );
+                break;
+            case "Nataraja":
+                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/nataraja.jpg" )
+                        .into( viewholder.mimage );
+                break;
+
+
+        }
+
+
         viewholder.mimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

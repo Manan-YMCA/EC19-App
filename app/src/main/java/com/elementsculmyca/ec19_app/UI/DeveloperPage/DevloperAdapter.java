@@ -5,15 +5,15 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.elementsculmyca.ec19_app.R;
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class DevloperAdapter extends RecyclerView.Adapter<DevloperAdapter.MyViewholder> {
@@ -44,6 +44,7 @@ public class DevloperAdapter extends RecyclerView.Adapter<DevloperAdapter.MyView
         DeveloperModel developer = itemsList.get(i);
 
         Picasso.get().load(developer.getImageUri()).into(viewholder.mimage);
+        viewholder.name.setText( developer.getName() );
         final Intent githubIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getGithubLink()));
         final Intent linkedInIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getLinkedInLink()));
         viewholder.linkd.setOnClickListener(new View.OnClickListener() {
@@ -69,11 +70,13 @@ public class DevloperAdapter extends RecyclerView.Adapter<DevloperAdapter.MyView
     public class MyViewholder extends RecyclerView.ViewHolder{
         private ImageView mimage;
         private TextView mgenres;
+        private TextView name;
         private ImageView linkd, github;
         public  MyViewholder(View itemView)
         {
             super(itemView);
             mimage = itemView.findViewById(R.id.back);
+            name = itemView.findViewById( R.id.name );
             linkd = itemView.findViewById(R.id.linkedin);
             github = itemView.findViewById(R.id.github);
 

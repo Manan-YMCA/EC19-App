@@ -10,8 +10,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/drama_x_9_ad_782">
+        android:layout_height="280dp"
+        android:background="@drawable/home">
         <ImageView
             android:id="@+id/menu"
             android:layout_width="wrap_content"
