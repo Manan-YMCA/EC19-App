@@ -41,10 +41,7 @@ public class DeveloperFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
-        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
+        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://github.com/Prerna1","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
         developers.add(developer);
         developers.add(developer);
 

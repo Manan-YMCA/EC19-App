@@ -109,18 +109,6 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/no_tickets"
-        android:text="Register For Event To Generate Your Tickets"
-        android:textAllCaps="true"
-        android:fontFamily="@font/overpass_bold"
-        android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-
    <android.support.v7.widget.RecyclerView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -137,5 +125,15 @@
         android:id="@+id/login"
         android:fontFamily="@font/overpass_black"
         android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/no_tickets"
+        android:text="Register For Event To Generate Your Tickets"
+        android:textAllCaps="true"
+        android:fontFamily="@font/overpass_bold"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

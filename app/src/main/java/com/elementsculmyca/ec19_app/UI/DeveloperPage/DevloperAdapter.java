@@ -1,6 +1,8 @@
 package com.elementsculmyca.ec19_app.UI.DeveloperPage;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -39,8 +41,23 @@ public class DevloperAdapter extends RecyclerView.Adapter<DevloperAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewholder viewholder, int i) {
+        DeveloperModel developer = itemsList.get(i);
 
-        Picasso.get().load(itemsList.get(i).getImageUri()).into(viewholder.mimage);
+        Picasso.get().load(developer.getImageUri()).into(viewholder.mimage);
+        final Intent githubIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getGithubLink()));
+        final Intent linkedInIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(developer.getLinkedInLink()));
+        viewholder.linkd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mContext.startActivity(linkedInIntent);
+            }
+        });
+        viewholder.github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mContext.startActivity(githubIntent);
+            }
+        });
     }
 
     @Override

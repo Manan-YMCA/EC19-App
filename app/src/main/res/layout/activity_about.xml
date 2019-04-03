@@ -8,12 +8,14 @@
     android:background="#fff"
     tools:context=".UI.aboutPage.AboutActivity">
 
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:id="@+id/rl_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:elevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/iv_back_button"
@@ -22,6 +24,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:rotation="180"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/vector_arrow" />
 
@@ -31,16 +35,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/overpass_black"
             android:text="About"
+            android:layout_centerVertical="true"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#000"
             android:textSize="22dp" />
-    </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -23,7 +23,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".UI.SplashScreen.SplashScreenActivity">
+        <activity android:name=".UI.SplashScreen.SplashScreenActivity"
+            android:theme="@style/AppTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,14 +33,15 @@
         </activity>
         <activity
             android:name=".UI.LoginScreen.LoginActivity"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".UI.MainScreen.MainScreenActivity" />
         <activity
             android:name=".UI.EventPage.SingleEventActivity"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/AppTheme1">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -63,9 +65,9 @@
         <activity android:name=".UI.ClubEventListPage.ClubEventListActivity" />
         <activity
             android:name=".UI.SignUpPage.SignUpActivity"
+            android:theme="@style/AppTheme1"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".UI.HomePage.Searchable" />
-        <activity android:name=".UI.MenuPage.fragment_menuu" />
         <activity android:name=".UI.aboutPage.AboutActivity" />
         <activity android:name=".UI.WebViewActivity.WebViewActivity"></activity>
     </application>
