@@ -51,7 +51,7 @@ public class SplashScreenActivity extends Activity {
             public void run(){
                 String phone = sharedPreferences.getString("UserPhone","");
                 if(phone.equals("")) {
-                    Intent SplashScreen = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                    Intent SplashScreen = new Intent(SplashScreenActivity.this, LoginActivity.class).putExtra("check","0");
                     startActivity(SplashScreen);
                 }
                 else {

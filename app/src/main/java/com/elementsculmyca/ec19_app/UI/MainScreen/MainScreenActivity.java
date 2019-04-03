@@ -101,7 +101,6 @@ public class MainScreenActivity extends AppCompatActivity {
             public void onResponse(Call<ArrayList<EventDataModel>> call, Response<ArrayList<EventDataModel>> response) {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
                 try{
-                    Toast.makeText(MainScreenActivity.this, "abc", Toast.LENGTH_SHORT).show();
                     databaseInitializer.populateSync(AppDatabase.getAppDatabase(MainScreenActivity.this),response.body());
                     Toast.makeText(MainScreenActivity.this, "Done", Toast.LENGTH_SHORT).show();
                 }catch (Exception e){
@@ -111,11 +110,11 @@ public class MainScreenActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ArrayList<EventDataModel>> call, Throwable t) {
-                Log.d("prerna",t.getMessage());
                 Toast.makeText(MainScreenActivity.this, "Not Done", Toast.LENGTH_SHORT).show();
             }
 
         } );
+
     }
 
     private boolean isNetworkAvailable() {

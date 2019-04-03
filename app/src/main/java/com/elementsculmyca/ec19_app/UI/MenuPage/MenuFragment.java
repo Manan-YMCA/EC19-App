@@ -21,7 +21,7 @@ import com.elementsculmyca.ec19_app.UI.WebViewActivity.WebViewActivity;
 import com.elementsculmyca.ec19_app.UI.aboutPage.AboutActivity;
 
 public class MenuFragment extends Fragment {
-    RelativeLayout about,hackon,xunbao,logout;
+    RelativeLayout about,hackon,xunbao,logout,share;
     SharedPreferences sharedPreferences;
     String phoneNumber;
     TextView login;
@@ -36,6 +36,7 @@ public class MenuFragment extends Fragment {
         hackon = root.findViewById(R.id.hackon);
         xunbao  = root.findViewById(R.id.xunbao);
         login = root.findViewById(R.id.tv_login);
+        share=root.findViewById(R.id.share);
         eventsDao=new EventsDao_Impl(AppDatabase.getAppDatabase(getActivity()));
         usersDao=new UserDao_Impl(AppDatabase.getAppDatabase(getActivity()));
         logout = root.findViewById(R.id.logout);
@@ -52,7 +53,20 @@ public class MenuFragment extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),LoginActivity.class));
+                startActivity(new Intent(getActivity(),LoginActivity.class).putExtra("check","1"));
+            }
+        });
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Play store ka link";
+                String shareSub = "Your subject here";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share using"));
             }
         });
         hackon.setOnClickListener( new View.OnClickListener() {

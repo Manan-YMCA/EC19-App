@@ -184,7 +184,7 @@
             android:layout_above="@+id/shaurya"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/overpass_black"
-            android:text="The Golden Jublee Culmyca"
+            android:text="The Golden Jubilee Culmyca"
             android:textColor="#f5a623"
             android:textSize="20sp" />
 

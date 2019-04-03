@@ -2,21 +2,36 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="YOUR BOOKMARKS"
-        android:textSize="25sp"
-        android:fontFamily="@font/overpass_black"
-        android:id="@+id/heading"/>
+        android:layout_margin="10dp"
+        android:id="@+id/parent">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ec_logo_2019"
+            android:tint="#000"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/imagelogo"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Bookmarks"
+            android:textSize="25sp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/overpass_black"
+            android:textColor="#4a4a4a" />
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="NO BOOKMARKS YET"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:fontFamily="@font/overpass_black"
         android:visibility="gone"
         android:id="@+id/tv_no_bookmarks"/>
@@ -24,7 +39,7 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/heading"
+        android:layout_below="@+id/parent"
         android:id="@+id/recycler_view"/>
 
 
