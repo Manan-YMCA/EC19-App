@@ -21,6 +21,7 @@ import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserDao_Impl;
 import com.elementsculmyca.ec19_app.DataSources.LocalServices.UserLocalModel;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
+import com.elementsculmyca.ec19_app.UI.LoginScreen.LoginActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,6 +37,7 @@ public class SingleEventActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     String phone;
     UserLocalModel user;
+    Boolean deep=false;
     UserDao_Impl daoUser;
 
     @Override
@@ -66,6 +68,7 @@ public class SingleEventActivity extends AppCompatActivity {
         String appLinkAction = appLinkIntent.getAction();
         Uri appLinkData = appLinkIntent.getData();
         if (Intent.ACTION_VIEW.equals(appLinkAction) && appLinkData != null) {
+            deep = true;
             String revStr = new StringBuilder(appLinkData.toString()).reverse().toString();
             int i;
             for (i = 0; revStr.charAt(i) != 35; i++) {
@@ -126,7 +129,13 @@ public class SingleEventActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                if(deep){
+                    startActivity(new Intent(SingleEventActivity.this,LoginActivity.class));
+                    finish();
+                }
+                else {
+                    onBackPressed();
+                }
             }
         });
         registerButton.setOnClickListener(new View.OnClickListener() {
@@ -175,5 +184,16 @@ public class SingleEventActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(deep){
+            startActivity(new Intent(SingleEventActivity.this,LoginActivity.class));
+            finish();
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 }

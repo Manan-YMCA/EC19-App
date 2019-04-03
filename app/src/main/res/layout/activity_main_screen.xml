@@ -64,8 +64,8 @@
             android:layout_weight="1"
             android:id="@+id/developers"
             android:src="@drawable/developers"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"/>
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
 
         <ImageView
             android:layout_width="0dp"

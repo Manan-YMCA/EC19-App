@@ -53,7 +53,8 @@ public class MenuFragment extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),LoginActivity.class).putExtra("check","1"));
+                startActivity(new Intent(getActivity(),LoginActivity.class));
+                getActivity().finishAffinity();
             }
         });
 

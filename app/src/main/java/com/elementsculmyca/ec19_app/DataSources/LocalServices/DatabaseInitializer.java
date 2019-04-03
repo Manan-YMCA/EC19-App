@@ -94,7 +94,7 @@ public class DatabaseInitializer {
             UserLocalModel userLocalModel = new UserLocalModel(
                     data.get( i ).getId() + "",
                     data.get( i ).getName() + "",
-                    data.get( i ).getPhone(),
+                     data.get( i ).getPhone(),
                     data.get( i ).getEmail() + "",
                     data.get( i ).getCollege() + "",
                     data.get( i ).getEventid() + "",

@@ -22,9 +22,9 @@ import com.elementsculmyca.ec19_app.R;
 import java.util.ArrayList;
 
 public class DeveloperFragment extends Fragment {
-    private ArrayList<DeveloperModel> developers;
+    private ArrayList<DeveloperModel> developers = new ArrayList<>();
     RecyclerView recyclerView;
-    DeveloperAdapter mAdapter;
+    DevloperAdapter mAdapter;
     DeveloperModel developer;
     Context mContext;
 
@@ -40,10 +40,16 @@ public class DeveloperFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-        developers = new ArrayList<>();
-        addData();
+
+        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
+        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
+        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
+        developer = new DeveloperModel("https://i.ndtvimg.com/i/2018-04/pm-narendra-modi-reuters_650x400_71523504733.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
+        developers.add(developer);
+        developers.add(developer);
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        mAdapter = new DeveloperAdapter(developers, mContext);
+        mAdapter = new DevloperAdapter(developers, mContext);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(mAdapter);
@@ -51,16 +57,7 @@ public class DeveloperFragment extends Fragment {
     }
 
     private void addData() {
-        developer = new DeveloperModel("https://i.ytimg.com/vi/OH2XPFbngvk/maxresdefault.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developers.add(developer);
 
-        developer = new DeveloperModel("https://i.ytimg.com/vi/OH2XPFbngvk/maxresdefault.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developers.add(developer);
 
-        developer = new DeveloperModel("https://i.ytimg.com/vi/OH2XPFbngvk/maxresdefault.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developers.add(developer);
-
-        developer = new DeveloperModel("https://i.ytimg.com/vi/OH2XPFbngvk/maxresdefault.jpg","Prerna Suneja","Team Head","https://www.facebook.com/profile.php?id=100007870874885","https://github.com/Prerna1","https://www.instagram.com/prerna_suneja_07/","https://www.linkedin.com/in/prerna-suneja-96b97714b/");
-        developers.add(developer);
     }
 }

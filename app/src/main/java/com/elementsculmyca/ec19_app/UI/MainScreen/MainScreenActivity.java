@@ -53,7 +53,7 @@ public class MainScreenActivity extends AppCompatActivity {
         if(isNetworkAvailable()) {
             getAllEvents();
         }
-        home.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.orange ), android.graphics.PorterDuff.Mode.MULTIPLY );
+        home.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY );
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         tickets.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         developers.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -125,7 +125,7 @@ public class MainScreenActivity extends AppCompatActivity {
     }
 
     public void switchToFragmentHome() {
-        home.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.orange ), PorterDuff.Mode.MULTIPLY );
+        home.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.Black ), PorterDuff.Mode.MULTIPLY );
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         tickets.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         developers.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -136,7 +136,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     private void switchToFragmentBookmarks() {
         home.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
-        bookmarks.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.orange ), android.graphics.PorterDuff.Mode.MULTIPLY );
+        bookmarks.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.Black ), android.graphics.PorterDuff.Mode.MULTIPLY );
         tickets.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         developers.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         more.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -147,7 +147,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private void switchToFragmentTickets() {
         home.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
-        tickets.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.orange ), android.graphics.PorterDuff.Mode.MULTIPLY );
+        tickets.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.Black ), android.graphics.PorterDuff.Mode.MULTIPLY );
         developers.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         more.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         FragmentManager manager = getSupportFragmentManager();
@@ -158,7 +158,7 @@ public class MainScreenActivity extends AppCompatActivity {
         home.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         tickets.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
-        developers.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.orange ), android.graphics.PorterDuff.Mode.MULTIPLY );
+        developers.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY );
         more.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.frame, new DeveloperFragment()).commit();
@@ -169,7 +169,7 @@ public class MainScreenActivity extends AppCompatActivity {
         bookmarks.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         tickets.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
         developers.setColorFilter(ContextCompat.getColor(MainScreenActivity.this, R.color.Grey), android.graphics.PorterDuff.Mode.MULTIPLY);
-        more.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.orange ), android.graphics.PorterDuff.Mode.MULTIPLY );
+        more.setColorFilter( ContextCompat.getColor( MainScreenActivity.this, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY );
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.frame, new MenuFragment()).commit();
     }
