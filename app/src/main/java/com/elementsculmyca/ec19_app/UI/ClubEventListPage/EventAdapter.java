@@ -11,6 +11,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
@@ -86,7 +87,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
         String timeString= formatter.format(new Date(event.getTime().getFrom()));
         viewHolder.eventTime.setText(timeString);
-        viewHolder.registerButton.setOnClickListener(new View.OnClickListener() {
+        viewHolder.cardEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 context.startActivity(new Intent(context , SingleEventActivity.class)
@@ -147,6 +148,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         private TextView eventName, eventDescription, eventTime,eventVenue,eventType,registerButton;
         ImageView eventTypeImage;
         LinearLayout eventTypeLayout;
+        RelativeLayout cardEvent;
 
         public ViewHolder(View view) {
             super(view);
@@ -160,6 +162,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
             registerButton=view.findViewById(R.id.register);
             eventTypeImage = view.findViewById(R.id.img_type);
             eventTypeLayout = view.findViewById(R.id.ll_event_type);
+            cardEvent = view.findViewById(R.id.image_event);
 
         }
     }

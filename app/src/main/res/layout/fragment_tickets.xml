@@ -115,8 +115,9 @@
         android:visibility="gone"
         android:id="@+id/no_tickets"
         android:text="Register For Event To Generate Your Tickets"
+        android:textAllCaps="true"
         android:fontFamily="@font/overpass_bold"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
@@ -131,6 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="Log In to View Your Tickets"
+        android:textAllCaps="true"
         android:textSize="20sp"
         android:id="@+id/login"
         android:fontFamily="@font/overpass_black"
