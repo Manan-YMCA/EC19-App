@@ -69,12 +69,6 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         phoneNumber = findViewById(R.id.phone_number);
         submit = findViewById(R.id.submit);
         signUp=findViewById(R.id.sign_up);
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
-            }
-        });
         sharedPreferences=getSharedPreferences("login_details",0);
         mProgress = new ProgressDialog(this);
         mProgress.setMessage("Registering You");
@@ -97,7 +91,12 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             }
         });
         guestLogin = findViewById(R.id.button_guest);
-
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+            }
+        });
         guestLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -192,19 +191,23 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
-                ResponseModel responseModel = response.body();
-                if(responseModel.getStatus().equals("User Not Exist")){
-                    Toast.makeText(LoginActivity.this, "You need to sign up first", Toast.LENGTH_SHORT).show();
-                    mProgress.dismiss();
-                }else{
-                    UserModel user = response.body().getUser();
-                    SharedPreferences.Editor editor= sharedPreferences.edit();
-                    editor.putString("Username",user.getName());
-                    editor.putString("UserClg",user.getCollege());
-                    editor.putString("UserPhone",user.getPhone());
-                    editor.putString("UserEmail",user.getEmail());
-                    editor.commit();
-                    getAllTickets();
+                try {
+                    ResponseModel responseModel = response.body();
+                    if (responseModel.getStatus().equals("User Not Exist")) {
+                        Toast.makeText(LoginActivity.this, "You need to sign up first", Toast.LENGTH_SHORT).show();
+                        mProgress.dismiss();
+                    } else {
+                        UserModel user = response.body().getUser();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("Username", user.getName());
+                        editor.putString("UserClg", user.getCollege());
+                        editor.putString("UserPhone", user.getPhone());
+                        editor.putString("UserEmail", user.getEmail());
+                        editor.commit();
+                        getAllTickets();
+                    }
+                }catch (Exception e){
+
                 }
             }
 

@@ -152,91 +152,76 @@ public class HomeFragment extends Fragment {
         ClubEventModel manan = new ClubEventModel();
         manan.setClubName("Manan");
         manan.setDisplayName("Coding");
-        //manan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.manan));
         allSampleData.add(manan);
 
         ClubEventModel srijan = new ClubEventModel();
         srijan.setClubName("Srijan");
         srijan.setDisplayName("Arts");
-        //srijan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.srijan));
         allSampleData.add(srijan);
 
         ClubEventModel ananya = new ClubEventModel();
         ananya.setClubName("Ananya");
         ananya.setDisplayName("Lit-Deb");
-        //ananya.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.ananya));
         allSampleData.add(ananya);
 
         ClubEventModel vividha = new ClubEventModel();
         vividha.setClubName("Vividha");
         vividha.setDisplayName("Dramatics");
-        //vividha.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vividha));
         allSampleData.add(vividha);
 
         ClubEventModel jhalak = new ClubEventModel();
         jhalak.setClubName("Jhalak");
         jhalak.setDisplayName("Photography & Designing");
-        //jhalak.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.jhalak));
         allSampleData.add(jhalak);
 
         ClubEventModel eklavya = new ClubEventModel();
         eklavya.setClubName("Eklavya");
         eklavya.setDisplayName("Fun Events");
-        //eklavya.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.eklavya));
         allSampleData.add(eklavya);
 
         ClubEventModel ieee = new ClubEventModel();
         ieee.setClubName("IEEE");
         ieee.setDisplayName("Techno Fun");
-        //ieee.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.ieee));
         allSampleData.add(ieee);
 
         ClubEventModel mechnext = new ClubEventModel();
         mechnext.setClubName("Mechnext");
         mechnext.setDisplayName("Mechanical");
-        //mechnext.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.mechnext));
         allSampleData.add(mechnext);
 
         ClubEventModel microbird = new ClubEventModel();
         microbird.setClubName("Microbird");
         microbird.setDisplayName("Electronics");
-        //microbird.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.microbird));
         allSampleData.add(microbird);
 
         ClubEventModel natraja = new ClubEventModel();
         natraja.setClubName("Nataraja");
         natraja.setDisplayName("Dance");
-        //natraja.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.natraja));
         allSampleData.add(natraja);
 
         ClubEventModel sae = new ClubEventModel();
         sae.setClubName("SAE");
         sae.setDisplayName("Automobiles");
-        //sae.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.sae));
         allSampleData.add(sae);
 
         ClubEventModel samarpan = new ClubEventModel();
         samarpan.setClubName("Samarpan");
         samarpan.setDisplayName("Electrical");
-        //samarpan.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.samarpan));
         allSampleData.add(samarpan);
 
         ClubEventModel tarannum = new ClubEventModel();
         tarannum.setClubName("Taranuum");
         tarannum.setDisplayName("Music");
-        //tarannum.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.tarannum));
         allSampleData.add(tarannum);
 
         ClubEventModel vivekanand = new ClubEventModel();
         vivekanand.setClubName("Vivekanand Manch");
         vivekanand.setDisplayName("Socio-Cultural");
-        //vivekanand.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vivekanand));
         allSampleData.add(vivekanand);
 
         ClubEventModel niramayam = new ClubEventModel();
         niramayam.setClubName("Niramayam");
         niramayam.setDisplayName("Yoga");
-        //vivekanand.setImage(BitmapFactory.decodeResource(ContentActivity.this.getResources(), R.raw.vivekanand));
         allSampleData.add(niramayam);
     }
 }

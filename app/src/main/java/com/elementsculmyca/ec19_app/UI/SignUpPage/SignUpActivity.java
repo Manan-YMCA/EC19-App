@@ -87,6 +87,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Boolean checker = validateCredentials();
                 if (checker) {
                     checkOTP();
@@ -96,6 +97,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
                     mUserPhone = userPhone.getText().toString();
                     mUserEmail = userEmail.getText().toString();
                 }
+
             }
         });
     }
@@ -175,26 +177,9 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
 //            return false;
 //        }
 
-        if(!isEmailValid(userEmail.getText().toString())){
-            userEmail.setError("Enter valid email");
-            return false;
-        }
         return true;
     }
 
-    public static boolean isEmailValid(String email) {
-        boolean isValid = false;
-
-        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-        CharSequence inputStr = email;
-
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(inputStr);
-        if (matcher.matches()) {
-            isValid = true;
-        }
-        return isValid;
-    }
     @Override
     public void updateResult(boolean status) {
         if (status) {
@@ -223,20 +208,24 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 //TODO YAHAN PE LIST AAEGI API SE UI ME LAGA LENA
-                ResponseModel responseModel= response.body();
-                if(responseModel.getStatus().equals("error")){
-                    Toast.makeText(SignUpActivity.this, "User already exists", Toast.LENGTH_SHORT).show();
-                    mProgress.dismiss();
-                }else {
-                    SharedPreferences.Editor editor= sharedPreferences.edit();
-                    editor.putString("Username",musername);
-                    editor.putString("UserClg",muserclg);
-                    editor.putString("UserPhone",mUserPhone);
-                    editor.putString("UserEmail",mUserEmail);
-                    editor.commit();
-                    mProgress.hide();
-                    startActivity(new Intent(SignUpActivity.this,MainScreenActivity.class));
-                    finishAffinity();
+                try {
+                    ResponseModel responseModel = response.body();
+                    if (responseModel.getStatus().equals("error")) {
+                        Toast.makeText(SignUpActivity.this, "User already exists", Toast.LENGTH_SHORT).show();
+                        mProgress.dismiss();
+                    } else {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("Username", musername);
+                        editor.putString("UserClg", muserclg);
+                        editor.putString("UserPhone", mUserPhone);
+                        editor.putString("UserEmail", mUserEmail);
+                        editor.commit();
+                        mProgress.hide();
+                        startActivity(new Intent(SignUpActivity.this, MainScreenActivity.class));
+                        finishAffinity();
+                    }
+                }catch (Exception e){
+
                 }
             }
             @Override

@@ -10,8 +10,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/drama_x_9_ad_782">
+        android:layout_height="280dp"
+        android:background="@drawable/home">
         <ImageView
             android:id="@+id/menu"
             android:layout_width="wrap_content"
@@ -151,6 +151,41 @@
             android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
             />
     </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d8d8d8" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#0000"
+            android:id="@+id/share"
+            android:padding="15dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/share_img"
+                android:id="@+id/share_img"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHARE"
+                android:layout_centerVertical="true"
+                android:textSize="20sp"
+                android:layout_toRightOf="@+id/share_img"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/overpass_bold"
+                android:textColor="#000"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                />
+        </RelativeLayout>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"

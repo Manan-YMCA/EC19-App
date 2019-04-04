@@ -1,15 +1,13 @@
 package com.elementsculmyca.ec19_app.UI.DeveloperPage;
 
 public class DeveloperModel {
-    String imageUri,name,designation,facebookLink,githubLink,instagramLink,linkedInLink;
+    String imageUri,name,designation,githubLink,linkedInLink;
 
-    public DeveloperModel(String imageUri,String name, String designation, String facebookLink, String githubLink, String instagramLink, String linkedInLink) {
+    public DeveloperModel(String imageUri,String name, String designation, String githubLink,  String linkedInLink) {
         this.imageUri = imageUri;
         this.name = name;
         this.designation = designation;
-        this.facebookLink = facebookLink;
         this.githubLink = githubLink;
-        this.instagramLink = instagramLink;
         this.linkedInLink = linkedInLink;
     }
 
@@ -29,13 +27,6 @@ public class DeveloperModel {
         this.designation = designation;
     }
 
-    public String getFacebookLink() {
-        return facebookLink;
-    }
-
-    public void setFacebookLink(String facebookLink) {
-        this.facebookLink = facebookLink;
-    }
 
     public String getGithubLink() {
         return githubLink;
@@ -43,14 +34,6 @@ public class DeveloperModel {
 
     public void setGithubLink(String githubLink) {
         this.githubLink = githubLink;
-    }
-
-    public String getInstagramLink() {
-        return instagramLink;
-    }
-
-    public void setInstagramLink(String instagramLink) {
-        this.instagramLink = instagramLink;
     }
 
     public String getLinkedInLink() {

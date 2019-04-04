@@ -53,7 +53,7 @@
       "title": "Alphaaz",
       "eventtype": "solo",
       "category": "Cultural",
-      "desc": "Alphaaz is a bilingual creative writing competition that will provide the participants a platform to showcase their writing skills and give their own interpretations to a given topic.\n\nRegistration Link: https://goo.gl/forms/Xl1GAuKaIfGZ531p1",
+      "desc": "Alphaaz is a bilingual creative writing competition that will provide the participants a platform to showcase their writing skills and give their own interpretations to a given topic.",
       "rules": "1. Only individual participation is allowed.\n2. The topic will be given on the spot.\n3. One can present their ideas either in English or Hindi.\n4. Entries can be in any form of prose that is essay, letter, article, story, plays etc. \n(Poetry is not allowed.)\n5. Plagiarism is highly condemned.",
       "fee": 0,
       "venue": "LT-02",
@@ -61,12 +61,12 @@
         {
           "name": "Bhumika Mudgal",
           "phone": 9818437867,
-          "_id": "5c9cced43ffa1800042886a1"
+          "_id": "5ca10c5d19fb490004bca421"
         },
         {
           "name": "Utkarsh Srivastava",
           "phone": 9654005801,
-          "_id": "5c9cced43ffa1800042886a0"
+          "_id": "5ca10c5d19fb490004bca420"
         }
       ],
       "__v": 0
@@ -333,7 +333,7 @@
       "title": "Witsvilla",
       "eventtype": "solo",
       "category": "Cultural",
-      "desc": "WITSVILLA is a multi-level debate that tests your wits and spontaneity. It comprises of three rounds namely:\n\nROUND I -GROUP DISCUSSION\nGet into a discussion with your fellow participants on the given topic.\n \nROUND II -TURNCOAT\nSpeak both for and against the motion on the topic given.\n\nROUND III -FACE OFF\nGo face to face with your competitor, debating either for or against the motion.\n\nRegistration Link: https://goo.gl/forms/Xl1GAuKaIfGZ531p1",
+      "desc": "WITSVILLA is a multi-level debate that tests your wits and spontaneity. It comprises of three rounds namely:\n\nROUND I -GROUP DISCUSSION\nGet into a discussion with your fellow participants on the given topic.\n \nROUND II -TURNCOAT\nSpeak both for and against the motion on the topic given.\n\nROUND III -FACE OFF\nGo face to face with your competitor, debating either for or against the motion.\n",
       "rules": "Rules:\n1. The event is bilingual.\n2. Topics will be given on the spot.\n3. The decision of the judges will be final and binding.\n4. Separate rules of each round will be announced on the spot.",
       "fee": 0,
       "venue": "IT-05",
@@ -341,12 +341,12 @@
         {
           "name": "Bhumika Mudgal",
           "phone": 9818437867,
-          "_id": "5c9ccf203ffa1800042886a3"
+          "_id": "5ca10cc519fb490004bca423"
         },
         {
           "name": "Utkarsh Srivastava",
           "phone": 9654005801,
-          "_id": "5c9ccf203ffa1800042886a2"
+          "_id": "5ca10cc519fb490004bca422"
         }
       ],
       "__v": 0
@@ -1093,9 +1093,9 @@
         "to": 1552473000000
       },
       "prizes": {
-        "prize1": null,
-        "prize2": null,
-        "prize3": null
+        "prize1": "0",
+        "prize2": "0",
+        "prize3": "0"
       },
       "tags": null,
       "_id": "5c953afcfd86f90004edca11",
@@ -1105,19 +1105,19 @@
       "eventtype": "team",
       "category": "Technical",
       "desc": "A complete bowling alley with all the international standards for an amazing and fantastic game of ten-pin bowling with automatic pin-setters for the purpose of recreation.",
-      "rules": "•\tThe game is divided into ten frames.\n•\tIn each frame the bowler will be given two chances to knock down as many  pins \n        as possible\n•       Each participant will be given 3 chances.",
+      "rules": "•  The game is divided into ten frames.\n•  In each frame, the bowler will be given two chances to knock down as many pins as possible.\n•  Each participant will be given 3 chances.",
       "fee": 50,
       "venue": "Shakuntalam",
       "coordinators": [
         {
           "name": "",
           "phone": null,
-          "_id": "5c95aca2ae5a3c0004c7e45c"
+          "_id": "5ca3b1299f5c4600049a2113"
         },
         {
           "name": "",
           "phone": null,
-          "_id": "5c95aca2ae5a3c0004c7e45b"
+          "_id": "5ca3b1299f5c4600049a2112"
         }
       ],
       "__v": 0,

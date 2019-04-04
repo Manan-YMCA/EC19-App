@@ -321,10 +321,6 @@ public class RegisterEventFragment extends Fragment {
             return false;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()){
-            userEmail.setError("Enter a valid email address");
-            return false;
-        }
         return true;
     }
 

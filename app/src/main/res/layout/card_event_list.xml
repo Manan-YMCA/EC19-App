@@ -10,12 +10,15 @@
     app:cardCornerRadius="20dp">
 
     <RelativeLayout
-        android:id="@+id/Image_event"
+        android:id="@+id/image_event"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content">
 
-        android:background="@drawable/drama_x_9_ad_782">
-
+        <ImageView
+            android:id="@+id/back_imge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/drama_x_9_ad_782" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,6 +71,7 @@
                 android:fontFamily="@font/overpass_bold"
                 android:text="Coding Relay is a coding contest in which a team or individual could participate.Paticipants are provided with random competitive programming questions."
                 android:textColor="#fff"
+                android:maxLines="4"
                 android:textSize="12sp" />
 
             <LinearLayout

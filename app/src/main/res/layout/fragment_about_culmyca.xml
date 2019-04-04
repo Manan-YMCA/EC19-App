@@ -11,7 +11,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="60dp">
 
             <ImageView
                 android:id="@+id/ec-logo"
@@ -78,7 +78,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/overpass_bold"
-                android:text="The Golden Jublee Culmyca"
+                android:text="The Golden Jubilee Culmyca"
                 android:textColor="#f5a623"
                 android:textSize="14sp"
 
