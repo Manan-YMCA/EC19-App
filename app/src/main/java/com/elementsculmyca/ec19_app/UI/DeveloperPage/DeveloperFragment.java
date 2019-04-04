@@ -35,15 +35,15 @@ public class DeveloperFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_developers, container, false);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
-        developer = new DeveloperModel( "https://i.ibb.co/kX7yn2k/pp.jpg", "Prerna Suneja", "Team Head", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
+        developer = new DeveloperModel( "https://i.ibb.co/2q1RWsQ/Whats-App-Image-2019-04-04-at-8-33-41-PM.jpg", "Prerna Suneja", "Team Head", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
         developers.add(developer);
-        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Team Head", "Godfather", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
+        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Shubham Sharma", "Team Head", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
         developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/QFJQBqw/20190404-151234.jpg", "Jayati", "Team Head", "https://github.com/jayati2016", "https://www.linkedin.com/mwlite/me" );
+        developer = new DeveloperModel( "https://i.ibb.co/nw02hyG/20190404-204205.jpg", "Jayati", "Team Head", "https://github.com/jayati2016", "https://www.linkedin.com/mwlite/me" );
         developers.add(developer);
-        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Prince Batra", "Backend Developer", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
+        developer = new DeveloperModel( "https://i.ibb.co/0qhvj1w/pp-1.jpg", "Prince Batra", "Backend Developer", "https://github.com/princebatra2315", "http://linkedin.com/in/prince-batra" );
         developers.add(developer);
-        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Manmeet", "Backend Developer", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
+        developer = new DeveloperModel( "https://i.ibb.co/rknH6Wn/pp-2.jpg", "Manmeet", "Backend Developer", "https://github.com/manmeet-rana", "http://linkedin.com/in/manmeet-kalirawana" );
         developers.add(developer);
         developer = new DeveloperModel( "https://i.ibb.co/nDTMmpt/IMG-20190307-180455-596.jpg", "Rishabh Mahajan", "App Developer", "www.github.com/rishabhrishabh", "https://www.linkedin.com/in/rishabh-mahajan-a12764151" );
         developers.add(developer);

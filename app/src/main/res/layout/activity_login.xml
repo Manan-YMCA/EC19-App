@@ -110,7 +110,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/overpass_black"
             android:text="Continue as guest"
-            android:textColor="#e1e1e1"
+            android:textColor="#fff"
             android:textSize="20sp" />
 
     </LinearLayout>

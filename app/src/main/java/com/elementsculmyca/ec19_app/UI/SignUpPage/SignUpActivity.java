@@ -70,7 +70,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
         userEmail = findViewById(R.id.email);
         mProgress = new ProgressDialog(this);
         mProgress.setMessage("Registering you");
-        mProgress.setTitle("Please Wait");
+        mProgress.setTitle("Please wait");
         mProgress.setCanceledOnTouchOutside(false);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,7 +142,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     }
     private Boolean validateCredentials() {
         if (!isNetworkAvailable()) {
-            Toast.makeText(SignUpActivity.this, "Check your Internet Connection", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUpActivity.this, "Check your internet connection", Toast.LENGTH_SHORT).show();
             return false;
         }
         if (userName.getText().toString().equals("")) {

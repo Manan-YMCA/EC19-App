@@ -52,9 +52,11 @@ public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.ViewHold
         Boolean paymentStatus = ticketDetail.getPaymentstatus();
         if(paymentStatus) {
             viewHolder.textViewstatus.setText("PAID");
+            viewHolder.textViewstatus.setTextColor(Color.parseColor("#417505"));
         }else {
             if(eventDetails.getFee()==0){
                 viewHolder.textViewstatus.setText("FREE");
+                viewHolder.textViewstatus.setTextColor(Color.parseColor("#417505"));
             }else {
                 viewHolder.textViewstatus.setText("UNPAID");
                 viewHolder.textViewstatus.setTextColor(Color.parseColor("#d0021b"));

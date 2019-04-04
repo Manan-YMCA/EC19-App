@@ -103,7 +103,7 @@ public class FragmentOtpChecker extends DialogFragment {
     private void sendSMS(final String phone) {
         bar.setVisibility(View.VISIBLE);
         String url = getResources().getString(R.string.send_sms_api);
-        url = url + phoneNum + "/" + otpNum + "/culmyca18";
+        url = url + phoneNum + "/" + otpNum + "/culmyca19";
         RequestQueue queue = Volley.newRequestQueue(mContext);
         StringRequest smsReq = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
