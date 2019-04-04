@@ -39,6 +39,24 @@ public class DeveloperFragment extends Fragment {
         developers.add(developer);
         developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Shubham Sharma", "Team Head ka Head", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
         developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/whdW6v7/IMG-20180623-020715.jpg", "Jayati", "Team Head", "https://github.com/jayati2016", "https://www.linkedin.com/mwlite/me" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Rishabh Mahajan", "App Developer", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Priyanka", "App Developer", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/1qt9pcN/IMG-20190404-124641.jpg", "Milind", "App Developer", "https://github.com/milindbishnoi", "https://www.linkedin.com/in/milind-bishnoi-7b7446182" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/1qt9pcN/IMG-20190404-124641.jpg", "Rahul", "App Developer", "https://github.com/rahulydav", "https://www.linkedin.com/in/rahul-yadav-b22a32150" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Naman", "App Developer", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Sayantanu", "App Developer", "https://github.com/sayantanu-dey", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Vishal", "App Developer", "https://github.com/vishalymca", "https://www.linkedin.com/in/vishal-garg-b09628157" );
+        developers.add(developer);
+        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Yash", "App Developer", "https://github.com/yashdhingra0", "https://www.linkedin.com/in/yash-dhingra-5ab39a155" );
+        developers.add(developer);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mAdapter = new DevloperAdapter(developers, mContext);

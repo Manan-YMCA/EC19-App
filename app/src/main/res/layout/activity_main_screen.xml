@@ -65,7 +65,7 @@
             android:id="@+id/developers"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:src="@drawable/dev" />
+            android:src="@drawable/developers" />
 
         <ImageView
             android:layout_width="0dp"

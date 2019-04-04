@@ -208,7 +208,11 @@ public class SplashScreenActivity extends Activity {
 
         private void updateDatabase() {
             //Log.d("prerna",Integer.toString(allEvents.size()));
-            databaseInitializer.populateSync(AppDatabase.getAppDatabase(SplashScreenActivity.this),allEvents);
+            try {
+                databaseInitializer.populateSync(AppDatabase.getAppDatabase(SplashScreenActivity.this), allEvents);
+            }catch (Exception e){
+
+            }
         }
     }
 }

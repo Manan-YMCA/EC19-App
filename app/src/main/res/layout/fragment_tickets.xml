@@ -113,6 +113,16 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/recyclertickets" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/no_tickets"
+        android:text="REGISTER FOR EVENTS TO \n GENERATE YOUR TICKETS"
+        android:fontFamily="@font/overpass_black"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>
 </RelativeLayout>
     <TextView
@@ -121,19 +131,10 @@
         android:layout_centerInParent="true"
         android:text="Log In to View Your Tickets"
         android:textAllCaps="true"
+        android:layout_margin="10dp"
         android:textSize="20sp"
         android:id="@+id/login"
         android:fontFamily="@font/overpass_black"
         android:visibility="gone"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/no_tickets"
-        android:text="Register For Event To Generate Your Tickets"
-        android:textAllCaps="true"
-        android:fontFamily="@font/overpass_bold"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
