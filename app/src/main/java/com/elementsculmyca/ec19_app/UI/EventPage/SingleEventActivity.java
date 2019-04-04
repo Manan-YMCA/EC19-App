@@ -179,7 +179,7 @@ public class SingleEventActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String baseUrl = "http://elementsculmyca.com/events/";
                 String parsedUrl = baseUrl + "#" + eventData.getTitle().replaceAll( " ", "%20" );
-                String message = "Elements Culmyca 2K19: " + eventData.getTitle() + " View event by clicking the link: " + parsedUrl;
+                String message = "Elements Culmyca 2K19: " + eventData.getTitle() + ". View event by clicking the link: " + parsedUrl;
 
                 Intent intent = new Intent( Intent.ACTION_SEND );
                 intent.setType( "text/plain" );
