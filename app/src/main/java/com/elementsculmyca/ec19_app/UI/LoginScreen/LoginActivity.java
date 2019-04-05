@@ -43,7 +43,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.elementsculmyca.ec19_app.UI.LoginScreen.FragmentOtpChecker.REQUEST_ID_MULTIPLE_PERMISSIONS;
 
 public class LoginActivity extends Activity implements FragmentOtpChecker.otpCheckStatus {
     TextView guestLogin,signUp;
@@ -132,35 +131,21 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
     private void checkOTP() {
-        checkAndRequestPermissions( REQUEST_ID_MULTIPLE_PERMISSIONS );
-        if(ContextCompat.checkSelfPermission(LoginActivity.this, android.Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED){
-            FragmentManager fm = getFragmentManager();
-            FragmentOtpChecker otpChecker = new FragmentOtpChecker();
-            Bundle bundle = new Bundle();
-            bundle.putString("phone", phoneNumber.getText().toString());
-            otpChecker.setArguments(bundle);
-            otpChecker.show(fm, "otpCheckerFragment");
-        }
+        checkAndRequestPermissions( REQUEST_ID );
+        FragmentManager fm = getFragmentManager();
+        FragmentOtpChecker otpChecker = new FragmentOtpChecker();
+        Bundle bundle = new Bundle();
+        bundle.putString("phone", phoneNumber.getText().toString());
+        otpChecker.setArguments(bundle);
+        otpChecker.show(fm, "otpCheckerFragment");
         mProgress.dismiss();
     }
 
     private void checkAndRequestPermissions(int CALL_REQUEST_ID) {
-        int receiveSMS = ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.RECEIVE_SMS);
-
-        int readSMS = ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.READ_SMS);
 
         int storage = ContextCompat.checkSelfPermission( this,
                 Manifest.permission.READ_EXTERNAL_STORAGE );
         List<String> listPermissionsNeeded = new ArrayList<>();
-
-        if (receiveSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(Manifest.permission.RECEIVE_SMS);
-        }
-        if (readSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(android.Manifest.permission.READ_SMS);
-        }
         if (storage != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add( Manifest.permission.READ_EXTERNAL_STORAGE );
         }
@@ -182,18 +167,6 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == REQUEST_ID_MULTIPLE_PERMISSIONS){
-
-            fm = getFragmentManager();
-            otpChecker = new FragmentOtpChecker();
-            Bundle bundle = new Bundle();
-            bundle.putString("phone", phoneNumber.getText().toString());
-            otpChecker.setArguments(bundle);
-            otpChecker.show(fm, "otpCheckerFragment");
-        }
-        if (requestCode == REQUEST_ID) {
-
-        }
     }
 
     void registerUser() {

@@ -44,7 +44,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.elementsculmyca.ec19_app.UI.LoginScreen.FragmentOtpChecker.REQUEST_ID_MULTIPLE_PERMISSIONS;
 
 public class SignUpActivity extends AppCompatActivity implements FragmentOtpChecker.otpCheckStatus  {
     TextView login,guest;
@@ -56,6 +55,7 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     private String muserclg,mUserPhone,mUserEmail;
     SharedPreferences sharedPreferences;
     DatabaseInitializer databaseInitializer;
+    private int REQUEST_ID = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,35 +109,28 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     }
     private void checkOTP() {
         checkAndRequestPermissions();
-        if(ContextCompat.checkSelfPermission(SignUpActivity.this, android.Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED){
-            FragmentManager fm = getFragmentManager();
-            FragmentOtpChecker otpChecker = new FragmentOtpChecker();
-            Bundle bundle = new Bundle();
-            bundle.putString("phone", userPhone.getText().toString());
-            otpChecker.setArguments(bundle);
-            otpChecker.show(fm, "otpCheckerFragment");
-        }
+        FragmentManager fm = getFragmentManager();
+        FragmentOtpChecker otpChecker = new FragmentOtpChecker();
+        Bundle bundle = new Bundle();
+        bundle.putString("phone", userPhone.getText().toString());
+        otpChecker.setArguments(bundle);
+        otpChecker.show(fm, "otpCheckerFragment");
         mProgress.dismiss();
     }
     private void checkAndRequestPermissions() {
-        int receiveSMS = ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.RECEIVE_SMS);
 
-        int readSMS = ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.READ_SMS);
+        int storage = ContextCompat.checkSelfPermission( this,
+                Manifest.permission.READ_EXTERNAL_STORAGE );
         List<String> listPermissionsNeeded = new ArrayList<>();
+        if (storage != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add( Manifest.permission.READ_EXTERNAL_STORAGE );
+        }
 
-        if (receiveSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(Manifest.permission.RECEIVE_SMS);
-        }
-        if (readSMS != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(android.Manifest.permission.READ_SMS);
-        }
 
         if (!listPermissionsNeeded.isEmpty()) {
             ActivityCompat.requestPermissions(this,
                     listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]),
-                    REQUEST_ID_MULTIPLE_PERMISSIONS);
+                    REQUEST_ID);
         }
     }
     private Boolean validateCredentials() {
@@ -191,15 +184,6 @@ public class SignUpActivity extends AppCompatActivity implements FragmentOtpChec
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == REQUEST_ID_MULTIPLE_PERMISSIONS){
-
-            FragmentManager fm = getFragmentManager();
-            FragmentOtpChecker otpChecker = new FragmentOtpChecker();
-            Bundle bundle = new Bundle();
-            bundle.putString("phone", userPhone.getText().toString());
-            otpChecker.setArguments(bundle);
-            otpChecker.show(fm, "otpCheckerFragment");
-        }
     }
 
     void registerUser() {

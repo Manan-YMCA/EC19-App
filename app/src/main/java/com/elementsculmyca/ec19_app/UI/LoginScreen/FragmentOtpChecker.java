@@ -5,7 +5,6 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.text.Editable;
@@ -17,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,8 +27,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.elementsculmyca.ec19_app.R;
-import com.elementsculmyca.ec19_app.Util.IncomingSms;
-import com.elementsculmyca.ec19_app.Util.SmsListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,7 +38,6 @@ public class FragmentOtpChecker extends DialogFragment {
     String otp, otpSms;
     private String otpNum;
     private String phoneNum;
-    public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
 //    private ProgressBar bar;
     private Context mContext;
 
@@ -127,10 +122,6 @@ public class FragmentOtpChecker extends DialogFragment {
             }
         };
         queue.add(smsReq);
-        if (ActivityCompat.checkSelfPermission(mContext, android.Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED) {
-//            bar.setVisibility(View.GONE);
-        }
-
     }
 
 
@@ -356,7 +347,6 @@ public class FragmentOtpChecker extends DialogFragment {
     public void onDestroyView() {
         otpCheckStatus activity = (otpCheckStatus) mContext;
         activity.updateResult(false);
-        IncomingSms.removeListenr();
         super.onDestroyView();
     }
 
@@ -375,10 +365,4 @@ public class FragmentOtpChecker extends DialogFragment {
         getDialog().setCancelable(true);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.d("OTPChecker", "fragment paused");
-        IncomingSms.removeListenr();
-    }
 }
