@@ -63,8 +63,8 @@ public class MenuFragment extends Fragment {
             public void onClick(View view) {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                String shareBody = "Play store ka link";
-                String shareSub = "Your subject here";
+                String shareBody = "Download the official app of Culmyca 2019 \"elementsculmyca.com/app";
+                String shareSub = "elementsculmyca.com/app";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(sharingIntent, "Share using"));
