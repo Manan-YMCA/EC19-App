@@ -97,7 +97,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:background="@drawable/buttonshape"
             android:backgroundTint="#d8d8d8"
             android:hint="Email"

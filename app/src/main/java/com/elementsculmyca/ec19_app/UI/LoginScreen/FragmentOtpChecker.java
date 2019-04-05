@@ -43,7 +43,7 @@ public class FragmentOtpChecker extends DialogFragment {
     private String otpNum;
     private String phoneNum;
     public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
-    private ProgressBar bar;
+//    private ProgressBar bar;
     private Context mContext;
 
     @Override
@@ -62,7 +62,7 @@ public class FragmentOtpChecker extends DialogFragment {
             mContext = getActivity();
         }
 
-        bar = (ProgressBar) rootView.findViewById(R.id.pb_otp);
+//        bar = (ProgressBar) rootView.findViewById(R.id.pb_otp);
         et1 = (EditText) rootView.findViewById(R.id.et_otp_dig_1);
         et2 = (EditText) rootView.findViewById(R.id.et_otp_dig_2);
         et3 = (EditText) rootView.findViewById(R.id.et_otp_dig_3);
@@ -101,7 +101,7 @@ public class FragmentOtpChecker extends DialogFragment {
     }
 
     private void sendSMS(final String phone) {
-        bar.setVisibility(View.VISIBLE);
+//        bar.setVisibility(View.VISIBLE);
         String url = getResources().getString(R.string.send_sms_api);
         url = url + phoneNum + "/" + otpNum + "/culmyca19";
         RequestQueue queue = Volley.newRequestQueue(mContext);
@@ -116,7 +116,7 @@ public class FragmentOtpChecker extends DialogFragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // TODO
-                bar.setVisibility(View.GONE);
+//                bar.setVisibility(View.GONE);
             }
         }) {
             @Override
@@ -128,37 +128,9 @@ public class FragmentOtpChecker extends DialogFragment {
         };
         queue.add(smsReq);
         if (ActivityCompat.checkSelfPermission(mContext, android.Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED) {
-            bar.setVisibility(View.GONE);
-        } else {
-            IncomingSms.bindListener(new SmsListener() {
-                @Override
-                public void messageReceived(String messageText) {
-                    if (messageText.contains("Culmyca")) {
-                        otpSms = messageText.substring(0, 6);
-                        if (otpSms.length() == 6) {
-                            et1.setText(otpSms.substring(0, 1));
-                            et2.setText(otpSms.substring(1, 2));
-                            et3.setText(otpSms.substring(2, 3));
-                            et4.setText(otpSms.substring(3, 4));
-                            et5.setText(otpSms.substring(4, 5));
-                            et6.setText(otpSms.substring(5, 6));
-                        } else {
-                            bar.setVisibility(View.GONE);
-                        }
-                    } else {
-                        bar.setVisibility(View.GONE);
-                    }
-                }
-            });
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    bar.setVisibility(View.GONE);
-                    et1.requestFocus();
-                }
-            }, 10000);
+//            bar.setVisibility(View.GONE);
         }
+
     }
 
 
@@ -346,14 +318,14 @@ public class FragmentOtpChecker extends DialogFragment {
 
     private void checkOtp() {
         final otpCheckStatus activity = (otpCheckStatus) mContext;
-        bar.setVisibility(View.VISIBLE);
+//        bar.setVisibility(View.VISIBLE);
         String enteredOtp = retrieveEnteredText();
         if (enteredOtp.equals(otpNum)) {
             activity.updateResult(true);
-            bar.setVisibility(View.GONE);
+//            bar.setVisibility(View.GONE);
         } else {
             Toast.makeText(mContext, "OTP didn't match", Toast.LENGTH_SHORT).show();
-            bar.setVisibility(View.GONE);
+//            bar.setVisibility(View.GONE);
         }
     }
 
