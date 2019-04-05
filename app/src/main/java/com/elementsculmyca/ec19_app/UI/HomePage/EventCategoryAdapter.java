@@ -2,6 +2,8 @@ package com.elementsculmyca.ec19_app.UI.HomePage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -29,6 +31,13 @@ public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdap
 
     }
 
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) mContext.getSystemService( Context.CONNECTIVITY_SERVICE );
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
     @NonNull
     @Override
     public Viewholder1 onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -51,6 +60,7 @@ public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdap
         }
         viewholder.mgenres.setText(displayName);
         viewholder.mimage.setImageResource(R.drawable.drama_x_9_ad_782);
+//      if(isNetworkAvailable()) {
         switch (singleItem.getClubName()) {
             case "Manan":
                 Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/manan.jpg" )
@@ -90,7 +100,9 @@ public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdap
                         .into( viewholder.mimage );
                 break;
             case "Niramayam":
-                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/jhalak.jpg" )
+                Picasso.get().load( "https://www.elementsculmyca.com/images/bg/nirmayam2.jpg" )
+                        .centerCrop()
+                        .fit()
                         .into( viewholder.mimage );
                 break;
             case "Samarpan":
@@ -111,8 +123,12 @@ public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdap
                         .into( viewholder.mimage );
                 break;
 
+            default:
+                viewholder.mimage.setImageResource( R.drawable.drama_x_9_ad_782 );
+
 
         }
+//      }
 
 
         viewholder.mimage.setOnClickListener(new View.OnClickListener() {
@@ -143,5 +159,6 @@ public class EventCategoryAdapter extends RecyclerView.Adapter<EventCategoryAdap
                 mgenres=(TextView) itemView.findViewById(R.id.categories_genre);
                 }
         }
+
 
 }

@@ -3,132 +3,143 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="#ffff"
+    android:orientation="vertical"
     android:paddingLeft="15dp"
     android:paddingTop="10dp"
     android:paddingRight="10dp"
-    android:paddingBottom="10dp"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/ll">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/overpass_black"
-        android:text="Rules"
-        android:id="@+id/tv_rules"
-        android:textColor="#4a4a4a"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rules"
-        android:fontFamily="@font/overpass_bold"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        android:textColor="#4a4a4a"
-        android:textSize="14sp" />
+    android:paddingBottom="10dp">
 
     <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
+
         <TextView
+            android:id="@+id/tv_rules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/overpass_black"
-            android:text="Contact"
-            android:id="@+id/tv_contact"
+            android:text="Rules"
             android:textColor="#4a4a4a"
             android:textSize="20sp" />
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/rules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/overpass_bold"
-            android:text="Shubham : "
-            android:id="@+id/coordinator1_name"
-            android:textColor="#f5a623"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            android:textColor="#4a4a4a"
             android:textSize="14sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/overpass_bold"
-        android:text="+91-78121-12112"
-        android:id="@+id/coordinator1_phone"
-        android:textColor="#f5a623"
-        android:textSize="14sp" />
-    </LinearLayout>
+
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overpass_black"
+                android:text="Contact"
+                android:textColor="#4a4a4a"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/coordinator1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overpass_bold"
+                    android:text="Shubham : "
+                    android:textColor="#f5a623"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/coordinator1_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overpass_bold"
+                    android:text="+91-78121-12112"
+                    android:textColor="#f5a623"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/coordinator2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overpass_bold"
+                    android:text="Sachin : "
+                    android:textColor="#f5a623"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/coordinator2_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overpass_bold"
+                    android:text="+91-78121-12112"
+                    android:textColor="#f5a623"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_prizes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/overpass_black"
+            android:gravity="center"
+            android:text="Prizes"
+            android:textColor="#4a4a4a"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_prize1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/overpass_bold"
-            android:text="Sachin : "
-            android:id="@+id/coordinator2_name"
-            android:textColor="#f5a623"
-            android:textSize="14sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/overpass_bold"
-                android:text="+91-78121-12112"
-                android:textColor="#f5a623"
-                android:id="@+id/coordinator2_phone"
+                android:text="1st Prize : RS "
+                android:textColor="#4a4a4a"
                 android:textSize="14sp" />
-    </LinearLayout>
-    </LinearLayout>
 
+            <TextView
+                android:id="@+id/prize1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overpass_bold"
+                android:text="1000"
+                android:textColor="#4a4a4a"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/overpass_black"
-            android:gravity="center"
-            android:text="Prizes"
-            android:id="@+id/tv_prizes"
-            android:textColor="#4a4a4a"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"/>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:id="@+id/ll_prize1">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/overpass_bold"
-            android:text="1st Prize : RS "
-            android:textColor="#4a4a4a"
-            android:textSize="14sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/overpass_bold"
-        android:text="1000"
-        android:id="@+id/prize1"
-        android:textColor="#4a4a4a"
-        android:textSize="14sp" />
-</LinearLayout>
         <LinearLayout
+            android:id="@+id/ll_prize2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/ll_prize2">
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -136,20 +147,23 @@
                 android:text="2nd Prize : RS "
                 android:textColor="#4a4a4a"
                 android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/prize2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/overpass_bold"
                 android:text="1000"
-                android:id="@+id/prize2"
                 android:textColor="#4a4a4a"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/ll_prize3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/ll_prize3">
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -157,12 +171,13 @@
                 android:text="3rd Prize : RS "
                 android:textColor="#4a4a4a"
                 android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/prize3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/overpass_bold"
                 android:text="1000"
-                android:id="@+id/prize3"
                 android:textColor="#4a4a4a"
                 android:textSize="14sp" />
         </LinearLayout>

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.elementsculmyca.ec19_app.DataSources.DataModels.CoordinatorModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
@@ -45,21 +44,25 @@ public class SplashScreenActivity extends Activity {
         setContentView(R.layout.activity_splash_screen);
         incomingHandler = new IncomingHandler(SplashScreenActivity.this);
         allEvents = new ArrayList<>();
-        sharedPreferences=getSharedPreferences("login_details",0);
-        new Handler().postDelayed(new Runnable(){
+//        getVersionInfo();
+
+        sharedPreferences = getSharedPreferences( "login_details", 0 );
+        new Handler().postDelayed( new Runnable() {
             @Override
-            public void run(){
-                String phone = sharedPreferences.getString("UserPhone","");
-                if(phone.equals("")) {
-                    Intent SplashScreen = new Intent(SplashScreenActivity.this, LoginActivity.class).putExtra("check","0");
-                    startActivity(SplashScreen);
-                }
-                else {
-                    startActivity(new Intent(SplashScreenActivity.this,MainScreenActivity.class));
+            public void run() {
+                String phone = sharedPreferences.getString( "UserPhone", "" );
+                if (phone.equals( "" )) {
+
+                    Intent SplashScreen = new Intent( SplashScreenActivity.this, LoginActivity.class ).putExtra( "check", "0" );
+                    startActivity( SplashScreen );
+                } else {
+                    startActivity( new Intent( SplashScreenActivity.this, MainScreenActivity.class ) );
                 }
                 finish();
             }
-        },SPLASH_TIME_OUT);
+        }, SPLASH_TIME_OUT );
+        //    startNextActivity();
+
 
     }
 
@@ -215,4 +218,43 @@ public class SplashScreenActivity extends Activity {
             }
         }
     }
+
+
+//    private void getVersionInfo() {
+//
+//        AppUpdater appUpdater =  new AppUpdater(this)
+//                .setUpdateFrom(UpdateFrom.GITHUB)
+//                .setUpdateFrom(UpdateFrom.GOOGLE_PLAY)
+//                .setTitleOnUpdateAvailable("Update available")
+//                .setContentOnUpdateAvailable("Check out the latest version available of my app!")
+//                .setTitleOnUpdateNotAvailable("Update not available")
+//                .setContentOnUpdateNotAvailable("No update available. Check for updates again later!")
+//                .setButtonUpdate("Update now?")
+//                .setButtonUpdateClickListener( new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                } )
+//                .setButtonDismiss("Maybe later")
+//                .setButtonDismissClickListener( new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                } )
+//                .setButtonDoNotShowAgain("Huh, not interested")
+//                .setButtonDoNotShowAgainClickListener( new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                } )
+//                .setIcon(R.drawable.ec_logo_2019) // Notification icon
+//                .setCancelable(false);
+//        appUpdater.start();
+//
+//    }
+
+
 }

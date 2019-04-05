@@ -4,13 +4,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Matrix;
 import android.support.v4.content.res.ResourcesCompat;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
 
 import com.elementsculmyca.ec19_app.R;
 import com.google.zxing.BarcodeFormat;
@@ -41,7 +36,7 @@ public class TicketsGenerator {
             String charset = "UTF-8";
             Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
             hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
-            userTicket =  CreateQRCode(qrCodeData, charset, hintMap, smallestDimension, smallestDimension, logoWidth, logoHeight);
+            userTicket = CreateQRCode( qrCodeData, charset, hintMap, smallestDimension, smallestDimension, 40, 30 );
 
         } catch (Exception ex) {
         }
@@ -74,7 +69,7 @@ public class TicketsGenerator {
             bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
             //setting bitmap to image view
 
-            Bitmap b = BitmapFactory.decodeResource(context.getResources(), R.drawable.qr_logo);
+            Bitmap b = BitmapFactory.decodeResource( context.getResources(), R.drawable.ec_qr );
             Bitmap overlay = Bitmap.createScaledBitmap(b, logoWidth, logoHeight, false);
             return mergeBitmaps(overlay, bitmap);
 

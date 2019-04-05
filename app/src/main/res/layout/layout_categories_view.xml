@@ -14,7 +14,8 @@
             android:layout_height="130dp"
             android:id="@+id/Categories_image"
             android:scaleType="centerCrop"
-            android:src="@color/colorPrimaryDark" />
+            android:background="@drawable/drama_x_9_ad_782"
+            android:src="@drawable/drama_x_9_ad_782" />
 
         <TextView
             android:layout_width="wrap_content"

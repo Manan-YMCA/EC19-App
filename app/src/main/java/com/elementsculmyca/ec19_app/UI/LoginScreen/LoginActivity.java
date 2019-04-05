@@ -3,7 +3,6 @@ package com.elementsculmyca.ec19_app.UI.LoginScreen;
 import android.Manifest;
 import android.app.Activity;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -26,7 +25,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.elementsculmyca.ec19_app.DataSources.DataModels.EventDataModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.ResponseModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.TicketModel;
 import com.elementsculmyca.ec19_app.DataSources.DataModels.UserModel;
@@ -35,7 +33,6 @@ import com.elementsculmyca.ec19_app.DataSources.LocalServices.DatabaseInitialize
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiClient;
 import com.elementsculmyca.ec19_app.DataSources.RemoteServices.ApiInterface;
 import com.elementsculmyca.ec19_app.R;
-import com.elementsculmyca.ec19_app.UI.HomePage.DayAdapter;
 import com.elementsculmyca.ec19_app.UI.MainScreen.MainScreenActivity;
 import com.elementsculmyca.ec19_app.UI.SignUpPage.SignUpActivity;
 
@@ -59,6 +56,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
     FragmentManager fm;
     FragmentOtpChecker otpChecker;
     DatabaseInitializer databaseInitializer;
+    private int REQUEST_ID = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +78,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         String color = "#0f0f0f";
         window.setStatusBarColor(Color.parseColor(color));
 
+        checkAndRequestPermissions( REQUEST_ID );
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,7 +132,7 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
     private void checkOTP() {
-        checkAndRequestPermissions();
+        checkAndRequestPermissions( REQUEST_ID_MULTIPLE_PERMISSIONS );
         if(ContextCompat.checkSelfPermission(LoginActivity.this, android.Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED){
             FragmentManager fm = getFragmentManager();
             FragmentOtpChecker otpChecker = new FragmentOtpChecker();
@@ -144,12 +143,16 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         }
         mProgress.dismiss();
     }
-    private void checkAndRequestPermissions() {
+
+    private void checkAndRequestPermissions(int CALL_REQUEST_ID) {
         int receiveSMS = ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.RECEIVE_SMS);
 
         int readSMS = ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.READ_SMS);
+
+        int storage = ContextCompat.checkSelfPermission( this,
+                Manifest.permission.READ_EXTERNAL_STORAGE );
         List<String> listPermissionsNeeded = new ArrayList<>();
 
         if (receiveSMS != PackageManager.PERMISSION_GRANTED) {
@@ -158,11 +161,16 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
         if (readSMS != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(android.Manifest.permission.READ_SMS);
         }
+        if (storage != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add( Manifest.permission.READ_EXTERNAL_STORAGE );
+        }
+
 
         if (!listPermissionsNeeded.isEmpty()) {
             ActivityCompat.requestPermissions(this,
                     listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]),
-                    REQUEST_ID_MULTIPLE_PERMISSIONS);
+                    CALL_REQUEST_ID );
+
         }
     }
     @Override
@@ -182,6 +190,9 @@ public class LoginActivity extends Activity implements FragmentOtpChecker.otpChe
             bundle.putString("phone", phoneNumber.getText().toString());
             otpChecker.setArguments(bundle);
             otpChecker.show(fm, "otpCheckerFragment");
+        }
+        if (requestCode == REQUEST_ID) {
+
         }
     }
 

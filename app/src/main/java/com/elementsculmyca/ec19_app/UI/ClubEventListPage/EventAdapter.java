@@ -133,7 +133,9 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
                         .into( viewHolder.backImg );
                 break;
             case "Niramayam":
-                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/jhalak.jpg" )
+                Picasso.get().load( "https://www.elementsculmyca.com/images/bg/nirmayam2.jpg" )
+                        .centerCrop()
+                        .fit()
                         .into( viewHolder.backImg );
                 break;
             case "Samarpan":

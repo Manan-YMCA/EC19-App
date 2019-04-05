@@ -363,7 +363,7 @@ public class SingleEventActivity extends AppCompatActivity {
                         } );
                 break;
             case "Niramayam":
-                Picasso.get().load( "https://www.elementsculmyca.com/EC19Website/images/bg/jhalak.jpg" )
+                Picasso.get().load( "https://www.elementsculmyca.com/images/bg/nirmayam2.jpg" )
                         .into( new Target() {
                             @Override
                             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {

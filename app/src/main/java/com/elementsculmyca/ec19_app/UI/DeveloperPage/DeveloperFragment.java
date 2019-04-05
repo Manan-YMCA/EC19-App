@@ -24,7 +24,7 @@ public class DeveloperFragment extends Fragment {
 
     @Override
     public void onAttach(Context context) {
-        super.onAttach(context);
+        super.onAttach( context );
         mContext = context;
     }
 
@@ -32,41 +32,44 @@ public class DeveloperFragment extends Fragment {
     @NonNull
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_developers, container, false);
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+        View view = inflater.inflate( R.layout.fragment_developers, container, false );
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled( true );
 
         developer = new DeveloperModel( "https://i.ibb.co/2q1RWsQ/Whats-App-Image-2019-04-04-at-8-33-41-PM.jpg", "Prerna Suneja", "Team Head", "https://github.com/Prerna1", "https://www.linkedin.com/in/prerna-suneja-96b97714b/" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Shubham Sharma", "Team Head", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/nw02hyG/20190404-204205.jpg", "Jayati", "Team Head", "https://github.com/jayati2016", "https://www.linkedin.com/mwlite/me" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/0qhvj1w/pp-1.jpg", "Prince Batra", "Backend Developer", "https://github.com/princebatra2315", "http://linkedin.com/in/prince-batra" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/rknH6Wn/pp-2.jpg", "Manmeet", "Backend Developer", "https://github.com/manmeet-rana", "http://linkedin.com/in/manmeet-kalirawana" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/nDTMmpt/IMG-20190307-180455-596.jpg", "Rishabh Mahajan", "App Developer", "www.github.com/rishabhrishabh", "https://www.linkedin.com/in/rishabh-mahajan-a12764151" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/Zz8bbVW/IMG-20190404-133650.jpg", "Priyanka", "App Developer", "https://github.com/priyanka1698", "https://www.linkedin.com/in/priyanka-garg-9b386215b" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/1qt9pcN/IMG-20190404-124641.jpg", "Milind", "App Developer", "https://github.com/milindbishnoi", "https://www.linkedin.com/in/milind-bishnoi-7b7446182" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/h2tyY4n/IMG-20190404-131254.jpg", "Rahul", "App Developer", "https://github.com/rahulydav", "https://www.linkedin.com/in/rahul-yadav-b22a32150" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/FKb67gk/dummy.jpg", "Naman", "App Developer", "https://github.com/njnaman", "https://www.linkedin.com/" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/R0rYWbx/Whats-App-Image-2019-04-04-at-5-47-12-PM.jpg", "Sayantanu", "App Developer", "https://github.com/sayantanu-dey", "https://www.linkedin.com/in/sayantanu-dey-434b93168/" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/sHwKjdW/2018-11-25-21-33-08-334.jpg", "Vishal", "App Developer", "https://github.com/vishalymca", "https://www.linkedin.com/in/vishal-garg-b09628157" );
-        developers.add(developer);
-        developer = new DeveloperModel( "https://i.ibb.co/RbHVYPw/Whats-App-Image-2019-04-04-at-2-57-47-PM.jpg", "Yash", "App Developer", "https://github.com/yashdhingra0", "https://www.linkedin.com/in/yash-dhingra-5ab39a155" );
-        developers.add(developer);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        mAdapter = new DevloperAdapter(developers, mContext);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setAdapter(mAdapter);
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/nw02hyG/20190404-204205.jpg", "Jayati", "Team Head", "https://github.com/jayati2016", "https://www.linkedin.com/mwlite/me" );
+
+        developers.add( developer );
+        developer = new DeveloperModel( "https://www.elementsculmyca.com/EC19Website/images/team/dev/shubham.jpeg", "Shubham Sharma", "Team Coordinator & Design", "https://github.com/shubham0008", "https://www.linkedin.com/in/shubham0008/" );
+
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/0qhvj1w/pp-1.jpg", "Prince Batra", "Backend Developer", "https://github.com/princebatra2315", "http://linkedin.com/in/prince-batra" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/rknH6Wn/pp-2.jpg", "Manmeet", "Backend Developer", "https://github.com/manmeet-rana", "http://linkedin.com/in/manmeet-kalirawana" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/nDTMmpt/IMG-20190307-180455-596.jpg", "Rishabh Mahajan", "Lead Developer", "www.github.com/rishabhrishabh", "https://www.linkedin.com/in/rishabh-mahajan-a12764151" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/Zz8bbVW/IMG-20190404-133650.jpg", "Priyanka", "App Developer", "https://github.com/priyanka1698", "https://www.linkedin.com/in/priyanka-garg-9b386215b" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/1qt9pcN/IMG-20190404-124641.jpg", "Milind", "App Developer", "https://github.com/milindbishnoi", "https://www.linkedin.com/in/milind-bishnoi-7b7446182" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/h2tyY4n/IMG-20190404-131254.jpg", "Rahul", "App Developer", "https://github.com/rahulydav", "https://www.linkedin.com/in/rahul-yadav-b22a32150" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/YyCMT17/Screenshot-2019-04-04-at-5-58-47-PM.png", "Naman", "App Developer", "https://github.com/njnaman", "https://www.linkedin.com/" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/R0rYWbx/Whats-App-Image-2019-04-04-at-5-47-12-PM.jpg", "Sayantanu", "App Developer", "https://github.com/sayantanu-dey", "https://www.linkedin.com/in/sayantanu-dey-434b93168/" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/sHwKjdW/2018-11-25-21-33-08-334.jpg", "Vishal", "App Developer", "https://github.com/vishalymca", "https://www.linkedin.com/in/vishal-garg-b09628157" );
+        developers.add( developer );
+        developer = new DeveloperModel( "https://i.ibb.co/RbHVYPw/Whats-App-Image-2019-04-04-at-2-57-47-PM.jpg", "Yash", "App Developer", "https://github.com/yashdhingra0", "https://www.linkedin.com/in/yash-dhingra-5ab39a155" );
+        developers.add( developer );
+
+        recyclerView = (RecyclerView) view.findViewById( R.id.recycler_view );
+        mAdapter = new DevloperAdapter( developers, mContext );
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager( mContext );
+        recyclerView.setLayoutManager( mLayoutManager );
+        recyclerView.setAdapter( mAdapter );
         return view;
     }
 

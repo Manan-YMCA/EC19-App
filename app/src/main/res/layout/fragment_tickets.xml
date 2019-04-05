@@ -1,140 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
+
     <RelativeLayout
+        android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:id="@+id/parent">
+        android:layout_margin="10dp">
+
         <ImageView
+            android:id="@+id/imagelogo"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ec_logo_2019"
-            android:tint="#000"
             android:layout_marginLeft="5dp"
-            android:id="@+id/imagelogo"
-            />
+            android:src="@drawable/ec_logo_2019"
+            android:tint="#000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Tickets"
-            android:textSize="25sp"
             android:layout_marginRight="5dp"
             android:fontFamily="@font/overpass_black"
-            android:textColor="#4a4a4a" />
-    </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/parent"
-            android:id="@+id/rl"
-            android:visibility="visible"
-            >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/ll_username">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username : "
-            android:fontFamily="@font/overpass_black"
-            android:id="@+id/tv_username"
-            android:textSize="13sp"
-            android:textColor="#f5a623"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shubham Sharma"
-                android:fontFamily="@font/overpass_black"
-                android:id="@+id/tv_name"
-                android:textSize="13sp"
-                android:textColor="#f5a623"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/ll_username"
-            android:id="@+id/ll_phone"
-            android:layout_marginTop="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registered mobile number: "
+            android:text="Tickets"
             android:textColor="#4a4a4a"
-            android:textSize="13sp"
-            android:fontFamily="@font/overpass_black"
-            android:layout_below="@+id/username"
-            android:id="@+id/tv_number"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+91-67839686892"
-                android:fontFamily="@font/overpass_black"
-                android:textColor="#4a4a4a"
-                android:textSize="13sp"
-                android:layout_below="@+id/username"
-                android:id="@+id/number"/>
-        </LinearLayout>
-        <TextView
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overpass_black"
+                android:text="Username : "
+                android:textColor="#f5a623"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overpass_black"
+                android:text="Shubham Sharma"
+                android:textColor="#f5a623"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:fontFamily="@font/overpass_black"
+                android:text="Registered mobile number: "
+                android:textColor="#4a4a4a"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:fontFamily="@font/overpass_black"
+                android:text="+91-67839686892"
+                android:textColor="#4a4a4a"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/overpass_black"
             android:text="You have registered for"
             android:textColor="#9b9b9b"
-            android:layout_marginTop="15dp"
-            android:id="@+id/tv_reg"
-            android:fontFamily="@font/overpass_black"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/ll_phone"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/tv_reg">
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/pb"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_reg">
 
-   <android.support.v7.widget.RecyclerView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/recyclertickets" />
+            <ProgressBar
+                android:id="@+id/pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclertickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/no_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/overpass_black"
+                android:text="REGISTER FOR EVENTS TO \n GENERATE YOUR TICKETS"
+                android:textSize="16dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/no_tickets"
-        android:text="REGISTER FOR EVENTS TO \n GENERATE YOUR TICKETS"
-        android:fontFamily="@font/overpass_black"
-        android:textSize="20sp"
-        android:layout_margin="20dp"
-        android:layout_centerInParent="true"/>
-</RelativeLayout>
-</RelativeLayout>
-    <TextView
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/overpass_black"
         android:text="Log In to View Your Tickets"
         android:textAllCaps="true"
-        android:layout_margin="10dp"
         android:textSize="20sp"
-        android:id="@+id/login"
-        android:fontFamily="@font/overpass_black"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </RelativeLayout>
